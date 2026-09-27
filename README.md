@@ -1,4 +1,8 @@
-# Experiment-Runner
+# LLM routing: When is a larger model worth it?
+
+
+
+## Experiment-Runner
 
 [![DOI](https://zenodo.org/badge/505379793.svg)](https://doi.org/10.5281/zenodo.15430328)
 
@@ -6,7 +10,7 @@ Experiment Runner is a generic framework to automatically execute measurement-ba
 
 The technical details, main features, software architecture, and example experiment using Experiment Runner are presented in our [SCICO 2025 publication](https://www.sciencedirect.com/science/article/pii/S0167642325001546).
 
-## Features
+### Features
 
 - **Run Table Model**: Framework support to easily define an experiment's measurements with Factors, their Treatment levels, exclude certain combinations of Treatments, and add data columns for storing aggregated data.
 - **Restarting**: If an experiment was not entirely completed on the last invocation (e.g. some variations crashes), experiment runner can be re-invoked to finish any remaining experiment variations.
@@ -15,7 +19,7 @@ The technical details, main features, software architecture, and example experim
 - **Progress Indicator**: Keeps track of the execution of each run of the experiment
 - **Target and profiler agnostic**: Can be used with any target to measure (e.g. ELF binary, .apk over adb, etc.) and with any profiler (e.g. WattsUpPro, etc.)
 
-## Requirements
+### Requirements
 
 The framework has been tested with Python3 version 3.8, but should also work with any higher version. It has been tested under Linux and macOS. It does **not** work on Windows (at the moment).
 
@@ -33,11 +37,11 @@ To verify installation, run:
 python experiment-runner/ examples/hello-world/RunnerConfig.py
 ```
 
-## Running
+### Running
 
 In this section, we assume as the current working directory, the root directory of the project.
 
-### Starting with the examples
+#### Starting with the examples
 
 To run any of the examples, run the following command:
 
@@ -56,7 +60,7 @@ The experiment was restarted, but all runs are already completed.
 
 This is to prevent you from accidentally overwriting the results of a previously run experiment! In order to run again the experiment, either delete any previously generated data (by default "experiments/" directory), or modify the config's `name` variable to a different name.
 
-### Creating a new experiment
+#### Creating a new experiment
 
 First, generate a config for your experiment:
 
@@ -78,7 +82,7 @@ The results of the experiment will be stored in the directory `RunnerConfig.resu
 
 **More information about the profilers and use cases can be found in the [Wiki tab](https://github.com/S2-group/experiment-runner/wiki).**
 
-## How to cite Experiment Runner
+### How to cite Experiment Runner
 
 If Experiment Runner is helping your research, consider to cite it as follows, thank you!
 
@@ -96,6 +100,6 @@ If Experiment Runner is helping your research, consider to cite it as follows, t
 }
 ``` 
 
-### Contributing
+#### Contributing
 If you want to develop a new feature or ER, or found some bug you want to report we would love to hear from you! Please refer to our [contribution guidelines](https://github.com/S2-group/experiment-runner/wiki/Contributing-to-ER) for information on how to submit PRs or bug reports.
 
