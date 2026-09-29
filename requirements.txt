@@ -1,5 +1,2 @@
-pandas
-psutil
-tabulate
-dill
-jsonpickle
+# Experiment Runner's dependencies (pandas is also used by llm-routing/RunnerConfig.py)
+-r experiment-runner/requirements.txt

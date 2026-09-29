@@ -1,26 +1,16 @@
-.vagrant
-macos-sonoma.conf
-macos-sonoma/
-Vagrantfile
-Session.vim
-.idea
-.venv
-venv
-.vagrant
-*/__pycache__/*
-examples/linux-ps-profiling/primer
-examples/linux-powerjoular-profiling/primer
-**/__pycache__/
-**/experiments/
-*/.DS_Store
-.DS_Store
-.vscode
-.python-version
-tmp/
-_trial_temp/
-pycharm-interpreter.sh
-python
-Session.vim
-Vagrantfile
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
 
-__MACOSX/
+# Experiment output (Experiment Runner writes one folder per experiment)
+**/experiments/
+
+# Generated question sample (recreate with sample_test_questions.py)
+# llm-routing/questions.jsonl
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
