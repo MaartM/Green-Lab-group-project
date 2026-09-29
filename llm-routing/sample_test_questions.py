@@ -14,7 +14,7 @@ import re
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-TEST_SET = HERE / "gsm8k_test.jsonl"
+TEST_SET = HERE.parent / "data" / "dataset" / "test.jsonl"
 OUT_QUESTIONS = HERE / "questions.jsonl"
 
 

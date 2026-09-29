@@ -1,0 +1,33 @@
+[project]
+name = "greenlab-llm-routing"
+version = "0.1.0"
+description = "Green Lab LLM routing experiment"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "datasets>=4.0,<5",
+    "dill",
+    "joblib>=1.5,<2",
+    "jsonpickle",
+    "pandas",
+    "psutil",
+    "scikit-learn>=1.7,<2",
+    "tabulate",
+]
+
+[project.scripts]
+download_dataset = "scripts.download_dataset:main"
+generate_labels = "router.generate_labels:main"
+train_router = "router.train_router:main"
+evaluate_router = "router.evaluate_router:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["config", "ollama_client"]
+packages = ["router", "scripts"]
+package-dir = { "" = "llm-routing", scripts = "scripts" }
+
+[tool.pyright]
+extraPaths = ["llm-routing"]

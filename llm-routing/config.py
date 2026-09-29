@@ -2,6 +2,10 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 
+SMALL_MODEL = "qwen3.5:2b-q4_K_M"
+BIG_MODEL = "qwen3.5:9b-q4_K_M"
+ROUTER_THRESHOLD = 0.65
+
 MODELS = {
     "small": {"tag": "qwen3.5:0.8b", "gpu": 1, "port": 11501},
     "large": {"tag": "qwen3.5:9b",   "gpu": 0, "port": 11500},
