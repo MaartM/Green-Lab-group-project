@@ -3,6 +3,7 @@ Start and stop the Ollama instances per strategy.
 
   python llm-routing/ollama_server.py pull        # download both models
   python llm-routing/ollama_server.py up R        # start strategy R, wait for Enter, stop
+  python llm-routing/ollama_server.py hold R      # start strategy R, print READY, stop on SIGTERM (used by RunnerConfig over SSH)
 """
 
 import json
@@ -37,9 +38,16 @@ def start(name: str) -> None:
            "OLLAMA_HOST": f"127.0.0.1:{model['port']}",
            "OLLAMA_KEEP_ALIVE": "-1",
            "OLLAMA_NUM_PARALLEL": "1"}
-    process = subprocess.Popen(["ollama", "serve"], env=env, start_new_session=True)
+    log = open(config.HERE / f"ollama_{name}.log", "a")   # server logs out of stdout
+    process = subprocess.Popen(["ollama", "serve"], env=env, start_new_session=True,
+                               stdout=log, stderr=subprocess.STDOUT)
     running.append(process)
+    deadline = time.time() + config.SERVER_START_TIMEOUT_S
     while not is_up(name):
+        if process.poll() is not None:
+            raise RuntimeError(f"ollama serve for {name} exited with {process.returncode}, see {log.name}")
+        if time.time() > deadline:
+            raise RuntimeError(f"ollama serve for {name} not up after {config.SERVER_START_TIMEOUT_S}s")
         time.sleep(0.5)
 
 def warm_up(name: str) -> None:
@@ -71,5 +79,14 @@ if __name__ == "__main__":
         start_strategy(sys.argv[2])
         input(f"Strategy {sys.argv[2]} up. Press Enter to stop.")
         stop_all()
+    elif sys.argv[1:2] == ["hold"]:
+        # Non-interactive `up` for the laptop orchestrator: no stdin over SSH, stop on SIGTERM
+        signal.signal(signal.SIGTERM, lambda *_: sys.exit(0))
+        try:
+            start_strategy(sys.argv[2])
+            print("READY", flush=True)
+            signal.pause()
+        finally:
+            stop_all()
     else:
         sys.exit(__doc__)

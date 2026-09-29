@@ -1,9 +1,3 @@
-"""
-Send the questions to the model(s) of one strategy and log one row per question.
-
-  python llm-routing/run_queries.py <S|L|R> <out.csv>
-"""
-
 import csv
 import json
 import re
@@ -15,13 +9,19 @@ import ollama_server
 NUMBER = r"-?\d[\d,]*\.?\d*"
 
 
-def choose_model(strategy, question):
+def load_router():
+    import joblib
+    return joblib.load(config.router_model_path())
+
+
+def choose_model(strategy, question, router):
+    """Returns (model, p_small_ok). p_small_ok is the router's P(small model answers correctly), R only."""
     if strategy == "S":
-        return "small"
+        return "small", None
     if strategy == "L":
-        return "large"
-    # R: STUB for now.
-    return "small" if len(question.split()) < 45 else "large"
+        return "large", None
+    p_small_ok = float(router.predict_proba([question])[0, 1])
+    return ("small" if p_small_ok > config.ROUTER_THRESHOLD else "large"), p_small_ok
 
 
 def extract_answer(response):
@@ -44,18 +44,39 @@ def ask(model, question):
     })
 
 
-strategy, out_path = sys.argv[1], sys.argv[2]
-questions = [json.loads(line) for line in open(config.QUESTIONS_FILE)]
+def main():
+    if sys.argv[1:2] == ["check-router"]:
+        t = time.perf_counter()
+        load_router()
+        print(f"router OK: {config.router_model_path()} ({time.perf_counter() - t:.2f}s to load)")
+        return
 
-with open(out_path, "w", newline="") as f:
-    writer = csv.writer(f)
-    writer.writerow(["qid", "model", "latency_s", "completion_tokens", "correct", "response"])
+    strategy, out_path = sys.argv[1], sys.argv[2]
+    questions = [json.loads(line) for line in open(config.QUESTIONS_FILE)]
 
-    for q in questions:
-        start = time.perf_counter()
-        model = choose_model(strategy, q["question"])
-        result = ask(model, q["question"])
-        latency = time.perf_counter() - start
+    router = None
+    if strategy == "R":
+        t = time.perf_counter()
+        router = load_router()
+        print(f"router {config.router_model_path().name} loaded in {time.perf_counter() - t:.2f}s", file=sys.stderr, flush=True)
 
-        correct = extract_answer(result["response"]) == float(q["reference_answer"])
-        writer.writerow([q["qid"], model, latency, result["eval_count"], int(correct), result["response"]])
+    with open(out_path, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["qid", "model", "p_small_ok", "routing_s", "latency_s", "completion_tokens",
+                         "correct", "response"])
+
+        for q in questions:
+            start = time.perf_counter()
+            model, p_small_ok = choose_model(strategy, q["question"], router)
+            routed = time.perf_counter()
+            result = ask(model, q["question"])
+            latency = time.perf_counter() - start # includes routing time
+
+            correct = extract_answer(result["response"]) == float(q["reference_answer"])
+            writer.writerow([q["qid"], model, "" if p_small_ok is None else f"{p_small_ok:.4f}",
+                             f"{routed - start:.6f}", latency, result["eval_count"], int(correct),
+                             result["response"]])
+
+
+if __name__ == "__main__":
+    main()
