@@ -2,6 +2,12 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 
+# The testbed is driven from the laptop over SSH. TESTBED_HOST is a host alias
+# from ~/.ssh/config, which also takes care of the glgate jump host.
+# TESTBED_DIR is where the experiment files go, relative to the testbed home.
+TESTBED_HOST = "glg2"
+TESTBED_DIR = "llm-routing"
+
 SMALL_MODEL = "qwen3.5:2b-q4_K_M"
 BIG_MODEL = "qwen3.5:9b-q4_K_M"
 ROUTER_THRESHOLD = 0.65

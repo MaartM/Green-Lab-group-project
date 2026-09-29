@@ -1,4 +1,10 @@
-import subprocess
+"""
+Experiment Runner config. Runs on the laptop and drives the testbed over SSH
+(see testbed.py): the testbed only runs the Ollama servers and run_queries.py.
+
+  python experiment-runner/experiment-runner/ llm-routing/RunnerConfig.py
+"""
+
 import sys
 from pathlib import Path
 
@@ -12,7 +18,12 @@ from ConfigValidator.Config.Models.OperationType import OperationType
 
 HERE = Path(__file__).resolve().parent
 sys.path.append(str(HERE))
-import ollama_server
+import testbed
+
+# Everything the testbed needs to run the experiment, copied once per experiment.
+TESTBED_FILES = [HERE / name for name in
+                 ("config.py", "ollama_server.py", "run_queries.py", "questions.jsonl")]
+
 
 class RunnerConfig:
     name = "llm_routing"
@@ -23,6 +34,7 @@ class RunnerConfig:
 
     def __init__(self):
         EventSubscriptionController.subscribe_to_multiple_events([
+            (RunnerEvents.BEFORE_EXPERIMENT, self.before_experiment),
             (RunnerEvents.START_RUN,         self.start_run),
             (RunnerEvents.INTERACT,          self.interact),
             (RunnerEvents.STOP_RUN,          self.stop_run),
@@ -39,18 +51,24 @@ class RunnerConfig:
                           "correct", "sent_to_large", "tokens", "latency_mean_s", "latency_p95_s"])
         return self.run_table_model
 
+    def before_experiment(self):
+        testbed.copy_to(TESTBED_FILES)
+
     def start_run(self, context):
-        ollama_server.start_strategy(context.execute_run["strategy"])
+        testbed.run("python3", "ollama_server.py", "start", context.execute_run["strategy"])
 
     def interact(self, context):
-        subprocess.run(["sudo", "energibridge", "--gpu", "-o", context.run_dir / "energibridge.csv", "--",
-                        sys.executable, HERE / "run_queries.py",
-                        context.execute_run["strategy"], context.run_dir / "queries.csv"], check=True)
+        run_dir = self.testbed_run_dir(context)
+        testbed.run("mkdir", "-p", run_dir)
+        testbed.run("energibridge", "--gpu", "-o", f"{run_dir}/energibridge.csv", "--",
+                    "python3", "run_queries.py",
+                    context.execute_run["strategy"], f"{run_dir}/queries.csv")
 
     def stop_run(self, context):
-        ollama_server.stop_all()
+        testbed.run("python3", "ollama_server.py", "stop")
 
     def populate_run_data(self, context):
+        testbed.copy_from(self.testbed_run_dir(context), context.run_dir)
         eb = pd.read_csv(context.run_dir / "energibridge.csv")
         q = pd.read_csv(context.run_dir / "queries.csv")
         seconds = eb["Time"].diff().fillna(0) / 1000
@@ -69,3 +87,7 @@ class RunnerConfig:
             "latency_mean_s": q["latency_s"].mean(),
             "latency_p95_s":  q["latency_s"].quantile(0.95),
         }
+
+    def testbed_run_dir(self, context):
+        """Where this run's output files are written on the testbed."""
+        return f"runs/{self.name}/{context.run_dir.name}"
