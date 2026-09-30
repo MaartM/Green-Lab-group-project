@@ -8,14 +8,11 @@ HERE = Path(__file__).resolve().parent
 TESTBED_HOST = "glg2"
 TESTBED_DIR = "llm-routing"
 
-SMALL_MODEL = "qwen3.5:2b-q4_K_M"
-BIG_MODEL = "qwen3.5:9b-q4_K_M"
-ROUTER_THRESHOLD = 0.65
-
 MODELS = {
-    "small": {"tag": "qwen3.5:0.8b", "gpu": 1, "port": 11501},
-    "large": {"tag": "qwen3.5:9b",   "gpu": 0, "port": 11500},
+    "small": {"tag": "qwen3.5:2b-q4_K_M", "gpu": 1, "port": 11501},
+    "large": {"tag": "qwen3.5:9b-q4_K_M", "gpu": 0, "port": 11500},
 }
+ROUTER_THRESHOLD = 0.65
 
 STRATEGY_MODELS = {
     "S": ["small"],
@@ -23,14 +20,17 @@ STRATEGY_MODELS = {
     "R": ["small", "large"],
 }
 
+# How every question is asked, in labelling and in the experiment alike
+# (see ollama_server.ask).
+SYSTEM_PROMPT = ("Solve the math word problem using at most three short calculation lines. "
+                 "Do not repeat the question. On the final line write exactly #### followed "
+                 "by the numeric answer, without units or commas.")
 OPTIONS = {
     "temperature": 0,
     "seed": 42,
     "num_predict": 512,
-    "num_ctx": 2048,
+    "num_ctx": 4096,
 }
 THINK = False
 QUESTIONS_FILE = HERE / "questions.jsonl"
-WARMUP_PROMPT = "What is 2 + 3? Answer with a number."
-PROMPT = ("Solve the following math problem step by step. "
-          "End with the final numeric answer on its own line in the form '#### <number>'.\n\n{question}")
+WARMUP_QUESTION = "What is 2 + 3?"

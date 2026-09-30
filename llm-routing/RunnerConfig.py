@@ -22,7 +22,7 @@ import testbed
 
 # Everything the testbed needs to run the experiment, copied once per experiment.
 TESTBED_FILES = [HERE / name for name in
-                 ("config.py", "ollama_server.py", "run_queries.py", "questions.jsonl")]
+                 ("config.py", "ollama_server.py", "answers.py", "run_queries.py", "questions.jsonl")]
 
 
 class RunnerConfig:

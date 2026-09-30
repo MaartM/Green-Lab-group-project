@@ -6,13 +6,11 @@ Send the questions to the model(s) of one strategy and log one row per question.
 
 import csv
 import json
-import re
 import sys
 import time
 import config
 import ollama_server
-
-NUMBER = r"-?\d[\d,]*\.?\d*"
+from answers import is_correct
 
 
 def choose_model(strategy, question):
@@ -22,26 +20,6 @@ def choose_model(strategy, question):
         return "large"
     # R: STUB for now.
     return "small" if len(question.split()) < 45 else "large"
-
-
-def extract_answer(response):
-    if "####" in response:
-        numbers = re.findall(NUMBER, response.split("####")[-1])[:1]
-    else:
-        numbers = re.findall(NUMBER, response)[-1:]
-    if not numbers:
-        return None
-    return float(numbers[0].replace(",", "").rstrip("."))
-
-
-def ask(model, question):
-    return ollama_server.request(model, "/api/generate", {
-        "model": config.MODELS[model]["tag"],
-        "prompt": config.PROMPT.format(question=question),
-        "stream": False,
-        "think": config.THINK,
-        "options": config.OPTIONS,
-    })
 
 
 strategy, out_path = sys.argv[1], sys.argv[2]
@@ -54,8 +32,9 @@ with open(out_path, "w", newline="") as f:
     for q in questions:
         start = time.perf_counter()
         model = choose_model(strategy, q["question"])
-        result = ask(model, q["question"])
+        result = ollama_server.ask(model, q["question"])
         latency = time.perf_counter() - start
 
-        correct = extract_answer(result["response"]) == float(q["reference_answer"])
-        writer.writerow([q["qid"], model, latency, result["eval_count"], int(correct), result["response"]])
+        response = result["message"]["content"]
+        correct = is_correct(response, q["answer"])
+        writer.writerow([q["qid"], model, latency, result["eval_count"], int(correct), response])

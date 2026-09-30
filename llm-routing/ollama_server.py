@@ -52,10 +52,21 @@ def start(name: str) -> None:
     while not is_up(name):
         time.sleep(0.5)
 
+def ask(name: str, question: str) -> dict:
+    """Ask one model one question. Router training labelling and the experiment both use this."""
+    return request(name, "/api/chat", {
+        "model": config.MODELS[name]["tag"],
+        "messages": [{"role": "system", "content": config.SYSTEM_PROMPT},
+                     {"role": "user", "content": question}],
+        "stream": False,
+        "think": config.THINK,
+        "keep_alive": -1,
+        "options": config.OPTIONS,
+    })
+
 def warm_up(name: str) -> None:
     tag = config.MODELS[name]["tag"]
-    request(name, "/api/generate", {"model": tag, "prompt": config.WARMUP_PROMPT, "stream": False,
-                                    "options": config.OPTIONS})
+    ask(name, config.WARMUP_QUESTION)
     loaded = request(name, "/api/ps")["models"]
     assert any(m["name"] == tag and m["size_vram"] == m["size"] for m in loaded), f"{tag} not fully in VRAM"
 

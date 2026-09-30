@@ -11,7 +11,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import FeatureUnion, make_pipeline
 from sklearn.preprocessing import FunctionTransformer, StandardScaler
 
-from config import SMALL_MODEL
 from router.generate_labels import generate_labels
 
 
@@ -45,12 +44,11 @@ def main() -> None:
         "--name", default="tfidf-logreg",
         help="Model ID used in the saved filename (default: %(default)s).",
     )
-    parser.add_argument("--small-model", default=SMALL_MODEL, help="Ollama model to learn to route to (default: %(default)s).")
     args = parser.parse_args()
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]*", args.name):
         parser.error("--name must start with a letter or digit and contain only letters, digits, underscores or hyphens")
 
-    rows = generate_labels(args.small_model)["train"]
+    rows = generate_labels()["train"]
     questions = [row["question"] for row in rows]
     labels = [row["correct"] for row in rows]
     X_train, X_test, y_train, y_test = train_test_split(

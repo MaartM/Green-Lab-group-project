@@ -4,7 +4,8 @@ from pathlib import Path
 import joblib
 from sklearn.metrics import accuracy_score, confusion_matrix
 
-from config import ROUTER_THRESHOLD, SMALL_MODEL
+import config
+from config import ROUTER_THRESHOLD
 from router.generate_labels import generate_labels
 
 
@@ -16,9 +17,6 @@ def main() -> None:
     parser.add_argument(
         "--model", type=Path,
         help="Path to a router .joblib file (default: newest timestamped model).",
-    )
-    parser.add_argument(
-        "--small-model", default=SMALL_MODEL, help="Ollama model to evaluate (default: %(default)s).",
     )
     args = parser.parse_args()
     models_path = ROOT / "data" / "router_model"
@@ -32,7 +30,7 @@ def main() -> None:
 
     print(f"Loading router from {model_path}")
     router = joblib.load(model_path)
-    rows = generate_labels(args.small_model)["test"]
+    rows = generate_labels()["test"]
     questions = [row["question"] for row in rows]
     labels = [row["correct"] for row in rows]
     probabilities = router.predict_proba(questions)[:, 1]
@@ -44,7 +42,7 @@ def main() -> None:
     accuracy = accuracy_score(labels, predictions)
     small_count = int(predictions.sum())
     print(f"\nTest questions: {total}")
-    print(f"Small model: {args.small_model}")
+    print(f"Small model: {config.MODELS['small']['tag']}")
     print(f"Small-model success probability threshold: > {ROUTER_THRESHOLD}")
     print(f"Routed to small model: {small_count} ({small_count / total:.2%})")
     print(f"Redirected to large model: {total - small_count} ({1 - small_count / total:.2%})")

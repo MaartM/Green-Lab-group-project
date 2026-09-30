@@ -1,24 +1,22 @@
 import argparse
 import json
-import re
-from decimal import Decimal
 from pathlib import Path
 
-from config import SMALL_MODEL
-from ollama_client import chat
+import config
+import ollama_server
+from answers import is_correct
 
 
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def extract_answer(text):
-    matches = re.findall(r"####\s*([-+]?\d[\d,]*(?:\.\d+)?)", text)
-    if matches:
-        return Decimal(matches[-1].replace(",", ""))
-    return None
+def generate_labels():
+    """Label each GSM8K question with whether the small model answers it correctly.
 
-
-def generate_labels(model):
+    Labels are cached per question. Delete the cache after changing the model,
+    prompt or options in config.py, or old labels are silently reused.
+    """
+    model = config.MODELS["small"]["tag"]
     model_dir = ROOT / "data" / "dataset" / model
     model_dir.mkdir(parents=True, exist_ok=True)
     splits = {}
@@ -40,15 +38,13 @@ def generate_labels(model):
             for index, row in enumerate(rows, start=1):
                 question = row["question"]
                 if question not in cached:
-                    response = chat(model, question)
+                    response = ollama_server.ask("small", question)
                     answer = response["message"]["content"]
-                    predicted = extract_answer(answer)
-                    reference = extract_answer(row["answer"])
                     cached[question] = {
                         "model": model,
                         "question": question,
                         "answer": answer,
-                        "correct": int(predicted is not None and predicted == reference),
+                        "correct": int(is_correct(answer, row["answer"])),
                     }
                     stream.write(json.dumps(cached[question], ensure_ascii=False) + "\n")
                     stream.flush()
@@ -62,10 +58,15 @@ def generate_labels(model):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate reusable train and test labels for an Ollama model.")
-    parser.add_argument("--model", default=SMALL_MODEL, help="Ollama model name (default: %(default)s).")
-    args = parser.parse_args()
-    generate_labels(args.model)
+    argparse.ArgumentParser(description="Label GSM8K train and test questions with the small model.").parse_args()
+    # Use the small model's own server, as in the experiment. Start it here if
+    # it is not running, and stop it again afterwards.
+    if not ollama_server.is_up("small"):
+        ollama_server.start_strategy("S")
+    try:
+        generate_labels()
+    finally:
+        ollama_server.stop_all()
 
 
 if __name__ == "__main__":
