@@ -1,0 +1,6 @@
+# Libraries the experiment needs on the testbed, pinned to the versions in uv.lock.
+# The saved router only loads reliably with the scikit-learn version it was trained with.
+scikit-learn==1.9.1
+joblib==1.6.0
+numpy==2.5.3
+scipy==1.18.1

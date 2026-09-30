@@ -4,9 +4,15 @@ HERE = Path(__file__).resolve().parent
 
 # The testbed is driven from the laptop over SSH. TESTBED_HOST is a host alias
 # from ~/.ssh/config, which also takes care of the glgate jump host.
-# TESTBED_DIR is where the experiment files go, relative to the testbed home.
+# The files the testbed needs are copied into TESTBED_ROOT (relative to the
+# testbed home) with the same layout as in this repository, so paths such as
+# ROUTER_FILE work on both sides. Commands run in TESTBED_DIR, with the Python
+# environment created there by RunnerConfig.
+REPO_ROOT = HERE.parent
 TESTBED_HOST = "glg2"
-TESTBED_DIR = "llm-routing"
+TESTBED_ROOT = "green-lab"
+TESTBED_DIR = f"{TESTBED_ROOT}/llm-routing"
+TESTBED_PYTHON = ".venv/bin/python"
 
 MODELS = {
     "small": {"tag": "qwen3.5:2b-q4_K_M", "gpu": 1, "port": 11501},

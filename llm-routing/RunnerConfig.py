@@ -18,11 +18,24 @@ from ConfigValidator.Config.Models.OperationType import OperationType
 
 HERE = Path(__file__).resolve().parent
 sys.path.append(str(HERE))
+import config
 import testbed
 
 # Everything the testbed needs to run the experiment, copied once per experiment.
-TESTBED_FILES = [HERE / name for name in
-                 ("config.py", "ollama_server.py", "answers.py", "run_queries.py", "questions.jsonl")]
+# Paths are relative to the repository root and keep that layout on the testbed.
+TESTBED_FILES = [
+    "llm-routing/config.py",
+    "llm-routing/ollama_server.py",
+    "llm-routing/answers.py",
+    "llm-routing/run_queries.py",
+    "llm-routing/questions.jsonl",
+    "llm-routing/testbed-requirements.txt",
+    # The saved router refers to router.features.question_features.
+    "llm-routing/router/__init__.py",
+    "llm-routing/router/features.py",
+    "data/router_model/router.joblib",
+]
+PYTHON = config.TESTBED_PYTHON
 
 
 class RunnerConfig:
@@ -53,20 +66,24 @@ class RunnerConfig:
 
     def before_experiment(self):
         testbed.copy_to(TESTBED_FILES)
-        testbed.run("python3", "ollama_server.py", "warmup")
+        # Create the Python environment once and install the pinned libraries
+        # (both steps do nothing if already done), then warm up the machine.
+        testbed.run("python3", "-m", "venv", ".venv")
+        testbed.run(PYTHON, "-m", "pip", "install", "--quiet", "-r", "testbed-requirements.txt")
+        testbed.run(PYTHON, "ollama_server.py", "warmup")
 
     def start_run(self, context):
-        testbed.run("python3", "ollama_server.py", "start", context.execute_run["strategy"])
+        testbed.run(PYTHON, "ollama_server.py", "start", context.execute_run["strategy"])
 
     def interact(self, context):
         run_dir = self.testbed_run_dir(context)
         testbed.run("mkdir", "-p", run_dir)
         testbed.run("energibridge", "--gpu", "-o", f"{run_dir}/energibridge.csv", "--",
-                    "python3", "run_queries.py",
+                    PYTHON, "run_queries.py",
                     context.execute_run["strategy"], f"{run_dir}/queries.csv")
 
     def stop_run(self, context):
-        testbed.run("python3", "ollama_server.py", "stop")
+        testbed.run(PYTHON, "ollama_server.py", "stop")
 
     def populate_run_data(self, context):
         testbed.copy_from(self.testbed_run_dir(context), context.run_dir)

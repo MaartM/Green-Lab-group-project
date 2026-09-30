@@ -5,6 +5,7 @@ Experiment Runner runs on the laptop and reaches the testbed only through
 these functions. Remote paths are relative to config.TESTBED_DIR.
 """
 
+import os
 import shlex
 import subprocess
 from pathlib import Path
@@ -20,11 +21,16 @@ def run(*command: str | Path) -> str:
     return result.stdout
 
 
-def copy_to(paths: list[Path]) -> None:
-    """Copy local files into TESTBED_DIR, creating it if needed."""
-    subprocess.run(["ssh", config.TESTBED_HOST, f"mkdir -p {config.TESTBED_DIR}"], check=True)
-    subprocess.run(["scp", "-O", "-q", *map(str, paths),
-                    f"{config.TESTBED_HOST}:{config.TESTBED_DIR}/"], check=True)
+def copy_to(paths: list[str]) -> None:
+    """Copy files into TESTBED_ROOT, keeping their paths relative to the repository root."""
+    archive = subprocess.Popen(["tar", "--no-xattrs", "-czf", "-", "-C", str(config.REPO_ROOT), *paths],
+                               stdout=subprocess.PIPE, env={**os.environ, "COPYFILE_DISABLE": "1"})
+    subprocess.run(["ssh", config.TESTBED_HOST,
+                    f"mkdir -p {config.TESTBED_ROOT} && tar -xzf - -C {config.TESTBED_ROOT}"],
+                   stdin=archive.stdout, check=True)
+    archive.stdout.close()
+    if archive.wait():
+        raise subprocess.CalledProcessError(archive.returncode, "tar")
 
 
 def copy_from(remote_dir: str, local_dir: Path) -> None:
