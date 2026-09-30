@@ -40,9 +40,12 @@ def is_up(name: str) -> bool:
 def start(name: str) -> None:
     model = config.MODELS[name]
     assert not is_up(name), f"port {model['port']} already in use"
+    # OLLAMA_VULKAN=false keeps Ollama on CUDA: its Vulkan backend ignores
+    # CUDA_VISIBLE_DEVICES, sees the other GPU too, and may load the model there.
     env = {**os.environ,
            "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
            "CUDA_VISIBLE_DEVICES": str(model["gpu"]),
+           "OLLAMA_VULKAN": "false",
            "OLLAMA_HOST": f"127.0.0.1:{model['port']}",
            "OLLAMA_KEEP_ALIVE": "-1",
            "OLLAMA_NUM_PARALLEL": "1"}
