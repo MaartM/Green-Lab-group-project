@@ -21,7 +21,7 @@ MODELS = {
 # Strategy R sends a question to the small model when the router's predicted
 # probability that the small model answers it correctly is above the threshold.
 ROUTER_FILE = HERE.parent / "data" / "router_model" / "router.joblib"
-ROUTER_THRESHOLD = 0.6
+ROUTER_THRESHOLD = 0.55
 
 STRATEGY_MODELS = {
     "S": ["small"],
