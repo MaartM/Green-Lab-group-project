@@ -38,8 +38,6 @@ def is_up(name: str) -> bool:
 def start(name: str) -> None:
     model = config.MODELS[name]
     assert not is_up(name), f"port {model['port']} already in use"
-    # PCI_BUS_ID makes CUDA number the GPUs like nvidia-smi and EnergiBridge do.
-    # CUDA's default order differs on glg2, which would swap the GPUs in the results.
     env = {**os.environ,
            "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
            "CUDA_VISIBLE_DEVICES": str(model["gpu"]),

@@ -9,22 +9,15 @@ from config import ROUTER_THRESHOLD
 from router.generate_labels import generate_labels
 
 
-ROOT = Path(__file__).resolve().parents[2]
-
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Evaluate a saved router model.")
     parser.add_argument(
-        "--model", type=Path,
-        help="Path to a router .joblib file (default: newest timestamped model).",
+        "--model", type=Path, default=config.ROUTER_FILE,
+        help="Path to a router .joblib file (default: the experiment's router, %(default)s).",
     )
     args = parser.parse_args()
-    models_path = ROOT / "data" / "router_model"
-    model_path = args.model or max(
-        models_path.glob("router-*.joblib"),
-        key=lambda path: path.stem.rsplit("-", 1)[-1],
-        default=models_path / "router.joblib",
-    )
+    model_path = args.model
     if not model_path.is_file():
         parser.error(f"Router model not found: {model_path}. Run train_router first.")
 

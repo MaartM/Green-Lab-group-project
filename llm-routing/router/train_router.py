@@ -1,6 +1,5 @@
 import argparse
 import re
-from math import log1p
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -11,32 +10,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import FeatureUnion, make_pipeline
 from sklearn.preprocessing import FunctionTransformer, StandardScaler
 
+from router.features import question_features
 from router.generate_labels import generate_labels
 
 
 ROOT = Path(__file__).resolve().parents[2]
 
-
-def question_features(questions):
-    features = []
-    for question in questions:
-        text = question.lower()
-        words = text.split()
-        numbers = [float(n.replace(",", "")) for n in re.findall(r"\d[\d,]*(?:\.\d+)?", text)]
-        values = [
-            len(words),
-            len(text),
-            len(numbers),
-            sum(c.isdigit() for c in text),
-            max(numbers, default=0),
-            len(re.findall(r"\d+\.\d+", text)),
-            len(re.findall(r"\d+/\d+", text)),
-            len(re.findall(r"%|percent", text)),
-            sum(w in {"each", "per", "every"} for w in words),
-            sum(w in {"more", "less", "than", "twice", "half"} for w in words),
-        ]
-        features.append([log1p(value) for value in values])
-    return features
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Train and save a named router model.")

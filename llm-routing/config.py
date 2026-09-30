@@ -12,7 +12,10 @@ MODELS = {
     "small": {"tag": "qwen3.5:2b-q4_K_M", "gpu": 1, "port": 11501},
     "large": {"tag": "qwen3.5:9b-q4_K_M", "gpu": 0, "port": 11500},
 }
-ROUTER_THRESHOLD = 0.65
+# Strategy R sends a question to the small model when the router's predicted
+# probability that the small model answers it correctly is above the threshold.
+ROUTER_FILE = HERE.parent / "data" / "router_model" / "router.joblib"
+ROUTER_THRESHOLD = 0.6
 
 STRATEGY_MODELS = {
     "S": ["small"],
