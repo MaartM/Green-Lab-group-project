@@ -53,6 +53,7 @@ class RunnerConfig:
 
     def before_experiment(self):
         testbed.copy_to(TESTBED_FILES)
+        testbed.run("python3", "ollama_server.py", "warmup")
 
     def start_run(self, context):
         testbed.run("python3", "ollama_server.py", "start", context.execute_run["strategy"])

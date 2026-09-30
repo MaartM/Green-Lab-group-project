@@ -5,6 +5,7 @@ Start and stop the Ollama instances per strategy.
   python llm-routing/ollama_server.py up R        # start strategy R, wait for Enter, stop
   python llm-routing/ollama_server.py start R     # start strategy R and leave it running
   python llm-routing/ollama_server.py stop        # stop what `start` left running
+  python llm-routing/ollama_server.py warmup      # warm up the machine before the experiment
 
 `start` and `stop` are separate commands because the laptop calls them in
 separate SSH sessions: the servers must outlive the session that started them.
@@ -16,6 +17,7 @@ import signal
 import subprocess
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 import urllib.request
 import config
 
@@ -95,6 +97,31 @@ def stop_detached() -> None:
             time.sleep(0.2)
     PID_FILE.unlink()
 
+def warm_up_machine(seconds: float) -> None:
+    """Bring the testbed to a steady temperature before the first measured run.
+
+    Both models answer experiment questions at the same time, each on its own
+    GPU, until the time is up.
+    """
+    questions = [json.loads(line)["question"] for line in open(config.QUESTIONS_FILE)]
+    deadline = time.monotonic() + seconds
+
+    def keep_busy(name: str) -> None:
+        index = 0
+        while time.monotonic() < deadline:
+            ask(name, questions[index % len(questions)])
+            index += 1
+
+    start_strategy("R")
+    try:
+        # result() re-raises a failed question, so a broken warm-up stops the
+        # experiment instead of silently leaving the testbed cold.
+        with ThreadPoolExecutor() as pool:
+            for future in [pool.submit(keep_busy, name) for name in config.MODELS]:
+                future.result()
+    finally:
+        stop_all()
+
 def is_alive(pid: int) -> bool:
     try:
         os.kill(pid, 0)
@@ -117,5 +144,7 @@ if __name__ == "__main__":
         start_detached(sys.argv[2])
     elif sys.argv[1:2] == ["stop"]:
         stop_detached()
+    elif sys.argv[1:2] == ["warmup"]:
+        warm_up_machine(config.WARMUP_SECONDS)
     else:
         sys.exit(__doc__)

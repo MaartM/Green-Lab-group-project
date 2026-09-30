@@ -37,3 +37,6 @@ OPTIONS = {
 THINK = False
 QUESTIONS_FILE = HERE / "questions.jsonl"
 WARMUP_QUESTION = "What is 2 + 3?"
+# Machine warm-up before the first run, so early runs are not measured on a
+# cold testbed.
+WARMUP_SECONDS = 300
