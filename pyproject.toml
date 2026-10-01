@@ -16,6 +16,7 @@ dependencies = [
 
 [project.scripts]
 download_dataset = "scripts.download_dataset:main"
+sample_test_questions = "scripts.sample_test_questions:main"
 generate_labels = "router.generate_labels:main"
 train_router = "router.train_router:main"
 evaluate_router = "router.evaluate_router:main"

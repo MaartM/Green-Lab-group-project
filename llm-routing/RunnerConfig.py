@@ -21,8 +21,7 @@ sys.path.append(str(HERE))
 import config
 import testbed
 
-# Everything the testbed needs to run the experiment, copied once per experiment.
-# Paths are relative to the repository root and keep that layout on the testbed.
+# Files the testbed needs, relative to the repository root; copied at the start of the experiment.
 TESTBED_FILES = [
     "llm-routing/config.py",
     "llm-routing/ollama_server.py",
@@ -40,7 +39,7 @@ PYTHON = config.TESTBED_PYTHON
 
 class RunnerConfig:
     name = "llm_routing"
-    results_output_path = HERE / "experiments"
+    results_output_path = config.REPO_ROOT / "data" / "experiments"
     operation_type = OperationType.AUTO
     time_between_runs_in_ms = 60_000
     experiment_path = None
@@ -66,8 +65,7 @@ class RunnerConfig:
 
     def before_experiment(self):
         testbed.copy_to(TESTBED_FILES)
-        # Create the Python environment once and install the pinned libraries
-        # (both steps do nothing if already done), then warm up the machine.
+        # Set up the testbed's Python environment (no-op if done), then warm up the machine.
         testbed.run("python3", "-m", "venv", ".venv")
         testbed.run(PYTHON, "-m", "pip", "install", "--quiet", "-r", "testbed-requirements.txt")
         testbed.run(PYTHON, "ollama_server.py", "warmup")

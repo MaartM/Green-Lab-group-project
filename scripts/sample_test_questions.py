@@ -1,10 +1,6 @@
-"""Sample the fixed set of GSM8K questions used in every run of the experiment.
+"""Sample the fixed set of GSM8K test questions used in every run (llm-routing/questions.jsonl).
 
-Output:
-  questions.jsonl
-
-Usage:
-  python llm-routing/sample_test_questions.py [--n 100] [--seed 42]
+  uv run sample_test_questions [--n 100] [--seed 42]
 """
 
 import argparse
@@ -13,9 +9,9 @@ import random
 import re
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-TEST_SET = HERE.parent / "data" / "dataset" / "test.jsonl"
-OUT_QUESTIONS = HERE / "questions.jsonl"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+TEST_SET = REPO_ROOT / "data" / "dataset" / "test.jsonl"
+OUT_QUESTIONS = REPO_ROOT / "llm-routing" / "questions.jsonl"
 
 
 def load_jsonl(path: Path) -> list[dict]:
