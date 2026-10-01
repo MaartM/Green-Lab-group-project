@@ -13,8 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 def generate_labels():
     """Label each GSM8K question with whether the small model answers it correctly.
 
-    Labels are cached per question. Delete the cache after changing the model,
-    prompt or options in config.py, or old labels are silently reused.
+    Labels are cached: delete them after changing the model, prompt or options in config.py.
     """
     model = config.MODELS["small"]["tag"]
     model_dir = ROOT / "data" / "dataset" / model
@@ -59,8 +58,7 @@ def generate_labels():
 
 def main():
     argparse.ArgumentParser(description="Label GSM8K train and test questions with the small model.").parse_args()
-    # Use the small model's own server, as in the experiment. Start it here if
-    # it is not running, and stop it again afterwards.
+    # Use the small model's own server, as in the experiment.
     if not ollama_server.is_up("small"):
         ollama_server.start_strategy("S")
     try:

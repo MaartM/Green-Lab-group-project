@@ -1,7 +1,4 @@
 import argparse
-import re
-from datetime import datetime, timezone
-from pathlib import Path
 
 import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -10,22 +7,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import FeatureUnion, make_pipeline
 from sklearn.preprocessing import FunctionTransformer, StandardScaler
 
+import config
 from router.features import question_features
 from router.generate_labels import generate_labels
 
 
-ROOT = Path(__file__).resolve().parents[2]
-
-
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Train and save a named router model.")
-    parser.add_argument(
-        "--name", default="tfidf-logreg",
-        help="Model ID used in the saved filename (default: %(default)s).",
-    )
-    args = parser.parse_args()
-    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]*", args.name):
-        parser.error("--name must start with a letter or digit and contain only letters, digits, underscores or hyphens")
+    argparse.ArgumentParser(description="Train the router and save it as the experiment's router.").parse_args()
 
     rows = generate_labels()["train"]
     questions = [row["question"] for row in rows]
@@ -46,11 +34,9 @@ def main() -> None:
     print(f"Router holdout accuracy: {router.score(X_test, y_test):.2%}")
 
     router.fit(questions, labels)
-    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
-    model_path = ROOT / "data" / "router_model" / f"router-{args.name}-{timestamp}.joblib"
-    model_path.parent.mkdir(parents=True, exist_ok=True)
-    joblib.dump(router, model_path)
-    print(f"Saved router to {model_path}")
+    config.ROUTER_FILE.parent.mkdir(parents=True, exist_ok=True)
+    joblib.dump(router, config.ROUTER_FILE)
+    print(f"Saved router to {config.ROUTER_FILE}")
 
 
 if __name__ == "__main__":

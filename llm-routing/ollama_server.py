@@ -17,8 +17,9 @@ import signal
 import subprocess
 import sys
 import time
-from concurrent.futures import ThreadPoolExecutor
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
+
 import config
 
 running: list[subprocess.Popen] = []
@@ -40,8 +41,7 @@ def is_up(name: str) -> bool:
 def start(name: str) -> None:
     model = config.MODELS[name]
     assert not is_up(name), f"port {model['port']} already in use"
-    # OLLAMA_VULKAN=false keeps Ollama on CUDA: its Vulkan backend ignores
-    # CUDA_VISIBLE_DEVICES, sees the other GPU too, and may load the model there.
+    # Without OLLAMA_VULKAN=false, Ollama's Vulkan backend ignores CUDA_VISIBLE_DEVICES and may use the other GPU.
     env = {**os.environ,
            "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
            "CUDA_VISIBLE_DEVICES": str(model["gpu"]),
@@ -49,8 +49,7 @@ def start(name: str) -> None:
            "OLLAMA_HOST": f"127.0.0.1:{model['port']}",
            "OLLAMA_KEEP_ALIVE": "-1",
            "OLLAMA_NUM_PARALLEL": "1"}
-    # Output goes to a log file and input comes from /dev/null, so a detached
-    # server holds nothing open that would keep the SSH session from closing.
+    # No open stdin/stdout, so a detached server does not keep the SSH session open.
     log = open(config.HERE / f"ollama_{name}.log", "a")
     process = subprocess.Popen(["ollama", "serve"], env=env, start_new_session=True,
                                stdin=subprocess.DEVNULL, stdout=log, stderr=log)
@@ -92,8 +91,7 @@ def start_detached(strategy: str) -> None:
     PID_FILE.write_text("".join(f"{process.pid}\n" for process in running))
 
 def stop_detached() -> None:
-    # These servers were started by an earlier process, so there is no Popen
-    # to wait on: poll until each is gone, so its port and VRAM are free again.
+    # Wait until each server is gone, so its port and GPU memory are free again.
     for pid in map(int, PID_FILE.read_text().split()):
         os.killpg(pid, signal.SIGTERM)
         while is_alive(pid):
@@ -101,11 +99,7 @@ def stop_detached() -> None:
     PID_FILE.unlink()
 
 def warm_up_machine(seconds: float) -> None:
-    """Bring the testbed to a steady temperature before the first measured run.
-
-    Both models answer experiment questions at the same time, each on its own
-    GPU, until the time is up.
-    """
+    """Keep both models busy, each on its own GPU, to bring the testbed to a steady temperature."""
     questions = [json.loads(line)["question"] for line in open(config.QUESTIONS_FILE)]
     deadline = time.monotonic() + seconds
 
@@ -117,8 +111,7 @@ def warm_up_machine(seconds: float) -> None:
 
     start_strategy("R")
     try:
-        # result() re-raises a failed question, so a broken warm-up stops the
-        # experiment instead of silently leaving the testbed cold.
+        # result() re-raises errors, so a failed warm-up stops the experiment.
         with ThreadPoolExecutor() as pool:
             for future in [pool.submit(keep_busy, name) for name in config.MODELS]:
                 future.result()

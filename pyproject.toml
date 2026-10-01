@@ -4,13 +4,16 @@ version = "0.1.0"
 description = "Green Lab LLM routing experiment"
 requires-python = ">=3.12,<3.14"
 dependencies = [
+    # GSM8K download
     "datasets>=4.0,<5",
-    "dill",
+    # Router
     "joblib>=1.5,<2",
+    "scikit-learn>=1.7,<2",
+    # Experiment Runner (pandas is also used in RunnerConfig.py)
+    "dill",
     "jsonpickle",
     "pandas",
     "psutil",
-    "scikit-learn>=1.7,<2",
     "tabulate",
 ]
 

@@ -1,8 +1,7 @@
 """
 Run commands on the testbed and copy files to and from it, over SSH.
 
-Experiment Runner runs on the laptop and reaches the testbed only through
-these functions. Remote paths are relative to config.TESTBED_DIR.
+Experiment Runner runs on the laptop and reaches the testbed only through these functions.
 """
 
 import os

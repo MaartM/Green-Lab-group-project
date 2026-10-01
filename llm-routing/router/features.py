@@ -1,8 +1,4 @@
-"""Hand-crafted question features used by the router next to TF-IDF.
-
-This lives in its own module because the saved router refers to it as
-router.features.question_features: the experiment needs it to load the router.
-"""
+"""Question features used by the router next to TF-IDF (the saved router imports them from here)."""
 
 import re
 from math import log1p
