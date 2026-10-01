@@ -1,69 +1,96 @@
 # LLM routing: When is a larger model worth it?
 
+Replication package of a Green Lab 2026/2027 experiment (Vrije Universiteit Amsterdam). It compares the energy consumption and accuracy of three inference strategies on 100 GSM8K math questions:
+
+- **S**: every question goes to the small model, Qwen3.5 2B.
+- **L**: every question goes to the large model, Qwen3.5 9B.
+- **R**: a router picks one of the two models per question, before generation.
+
+The router is a logistic regression on TF-IDF and question features. It predicts whether the small model answers a question correctly, and R uses the small model when that probability is above 0.55.
+
 ## Repository structure
 
 | Location | Contents |
 |---|---|
-| `llm-routing/config.py` | Configs for generation options, prompt, models, strategy |
-| `llm-routing/sample_test_questions.py` | Samples the GSM8K test questions |
-| `llm-routing/gsm8k_test.jsonl` | The split the sample is drawn from |
-| `llm-routing/ollama_server.py` | Handles one Ollama server per model on its own GPU |
-| `llm-routing/run_queries.py` | Answers questions with a specific strategy |
-| `llm-routing/RunnerConfig.py` | Configuration for experiment runner |
-| `llm-routing/testbed.py` | Runs commands on the testbed and handles file sharing to/from it |
-| `experiment-runner/` | included as a git submodule |
+| `llm-routing/config.py` | Models, GPUs, prompt, generation options, router threshold, warm-up, testbed paths |
+| `llm-routing/RunnerConfig.py` | Experiment Runner configuration: run table, hooks, measurements |
+| `llm-routing/testbed.py` | Runs commands on the testbed and copies files to and from it over SSH |
+| `llm-routing/ollama_server.py` | Starts and stops one Ollama server per model, each on its own GPU; machine warm-up |
+| `llm-routing/run_queries.py` | Answers the questions with one strategy and logs one row per question |
+| `llm-routing/answers.py` | Scores answers: only the number after `####` counts |
+| `llm-routing/questions.jsonl` | The 100 sampled GSM8K test questions used in every run |
+| `llm-routing/testbed-requirements.txt` | Python libraries installed on the testbed (pinned to `uv.lock`) |
+| `llm-routing/router/` | Router: labelling, features, training, evaluation |
+| `scripts/` | GSM8K download and question sampling |
+| `data/router_model/router.joblib` | The trained router used in the experiment |
+| `data/experiments/llm_routing/` | Experiment results (see [Results](#results)) |
+| `experiment-runner/` | [Experiment Runner](https://github.com/S2-group/experiment-runner), git submodule pinned to commit `56620fa` (v1.0.1 + 13 commits) |
 
 ## Setup
 
-Clone with the submodule:
+On the laptop that runs Experiment Runner (macOS or Linux), install [uv](https://docs.astral.sh/uv/), then:
 
 ```bash
 git clone --recurse-submodules https://github.com/MaartM/Green-Lab-group-project.git
 cd Green-Lab-group-project
+uv sync
 ```
 
-If you already cloned without it:
+The testbed needs [Ollama](https://ollama.com) 0.34.4 or newer, [EnergiBridge](https://github.com/tdurieux/EnergiBridge), Python 3.12 and two NVIDIA GPUs. Add it to `~/.ssh/config` under the host alias `glg2`, following the course's server usage guide; `ssh glg2` must log in without a password.
+
+Download the two models on the testbed once:
 
 ```bash
-git submodule update --init
+scp -O llm-routing/config.py llm-routing/ollama_server.py glg2:
+ssh glg2 'python3 ollama_server.py pull'
 ```
 
-Create a Python environment and install the dependencies:
+## Run the experiment
+
+From the repository root, on the laptop:
 
 ```bash
-python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
+caffeinate -i uv run python experiment-runner/experiment-runner/ llm-routing/RunnerConfig.py
 ```
 
-The experiment also needs [Ollama](https://ollama.com) and [EnergiBridge](https://github.com/tdurieux/EnergiBridge) on the measured machine.
+`caffeinate -i` keeps a Mac awake; on Linux use `systemd-inhibit`. The laptop must stay on and connected for the whole experiment (about 4.5 hours).
 
-Experiment Runner runs on your laptop and drives the testbed (`glg2`) over SSH, as the course requires. Add the testbed to `~/.ssh/config` as described in the server usage guide. You will know if the setup was done correctly when you can do: `ssh glg2`   in a shell and it works without a password.
+What happens:
 
-```
-Host glgate
-    Hostname 145.108.225.3
-    Port 42224
-    User gl_team42
-    IdentityFile ~/.ssh/<your_private_key>
-    IdentitiesOnly yes
+1. Experiment Runner copies the files the testbed needs to `~/green-lab` on the testbed, creates a Python environment there, and warms up the machine for 5 minutes with both models.
+2. It runs 3 strategies × 30 repetitions = 90 runs in random order. Each run starts the strategy's Ollama servers and loads the models, answers the 100 questions under EnergiBridge, stops the servers and copies the run's files back.
+3. It waits 60 seconds between runs.
 
-Host glg2
-    User gl_team42
-    ProxyJump glgate
-```
+Testbed details:
 
-## Run
+- The large model runs on GPU 0 and the small model on GPU 1, each in its own Ollama server.
+- Models are loaded and warmed up before EnergiBridge starts; energy covers only answering the questions.
 
-Sample the test questions once:
+## Results
+
+see `data/experiments/llm_routing/` has one row per run:
+
+| Column | Meaning |
+|---|---|
+| `strategy` | S, L or R |
+| `cpu_energy_j`, `gpu_energy_j` | CPU energy and energy of both GPUs during the run (J) |
+| `runtime_s` | Duration of the measured interval (s) |
+| `gpu0_util_pct`, `gpu1_util_pct` | Mean utilization of GPU 0 (large model) and GPU 1 (small model) (%) |
+| `ram_peak_mib`, `vram_peak_mib` | Peak host memory and peak GPU memory of both GPUs (MiB) |
+| `correct` | Correct answers out of 100 |
+| `sent_to_large` | Questions answered by the large model |
+| `tokens` | Generated tokens |
+| `latency_mean_s`, `latency_p95_s` | Mean and 95th-percentile latency per question, including routing (s) |
+
+## Rebuild the router (optional)
+
+The experiment uses the committed `data/router_model/router.joblib`. To rebuild it, with Ollama installed locally:
 
 ```bash
-.venv/bin/python llm-routing/sample_test_questions.py --n 100 --seed 42
+uv run download_dataset       # GSM8K into data/dataset/
+uv run generate_labels        # small model answers every train and test question
+uv run train_router           # overwrites data/router_model/router.joblib
+uv run evaluate_router        # router accuracy on the GSM8K test split
 ```
 
-Run the experiment from the repository root, on your laptop:
-
-```bash
-.venv/bin/python experiment-runner/experiment-runner/ llm-routing/RunnerConfig.py
-```
-
-Per run, Experiment Runner starts the strategy's Ollama servers on the testbed, runs `run_queries.py` there under EnergiBridge, stops the servers and copies the run's files back. The experiment files are copied to `~/llm-routing` on the testbed at the start of the experiment. Results are written to `llm-routing/experiments/` on the laptop.
+The question sample is committed too; `uv run sample_test_questions` recreates it from the downloaded test split.
