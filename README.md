@@ -1,21 +1,17 @@
 # LLM routing: When is a larger model worth it?
 
-Green Lab 2026/2027, team 42, Vrije Universiteit Amsterdam.
-
-This repository contains the experiment that compares three inference strategies on GSM8K math questions: always using a small LLM, always using a large LLM, and routing each question to one of the two before generation. It measures energy consumption, accuracy, latency, GPU utilization and memory usage.
-
 ## Repository structure
 
-| Path | Contents |
+| Location | Contents |
 |---|---|
-| `llm-routing/config.py` | Models, strategies, generation options and prompt |
-| `llm-routing/sample_test_questions.py` | Samples the fixed set of GSM8K test questions used in every run |
-| `llm-routing/gsm8k_test.jsonl` | The GSM8K test split the sample is drawn from |
-| `llm-routing/ollama_server.py` | Starts, warms up and stops one Ollama server per model, each on its own GPU |
-| `llm-routing/run_queries.py` | Answers every question with one strategy and logs one row per question |
-| `llm-routing/RunnerConfig.py` | Experiment Runner configuration: run table, randomization, cool-down, measurement |
-| `llm-routing/testbed.py` | Runs commands on the testbed and copies files to and from it, over SSH |
-| `experiment-runner/` | [Experiment Runner](https://github.com/S2-group/experiment-runner), included as a git submodule pinned to commit `56620fa` |
+| `llm-routing/config.py` | Configs for generation options, prompt, models, strategy |
+| `llm-routing/sample_test_questions.py` | Samples the GSM8K test questions |
+| `llm-routing/gsm8k_test.jsonl` | The split the sample is drawn from |
+| `llm-routing/ollama_server.py` | Handles one Ollama server per model on its own GPU |
+| `llm-routing/run_queries.py` | Answers questions with a specific strategy |
+| `llm-routing/RunnerConfig.py` | Configuration for experiment runner |
+| `llm-routing/testbed.py` | Runs commands on the testbed and handles file sharing to/from it |
+| `experiment-runner/` | included as a git submodule |
 
 ## Setup
 
