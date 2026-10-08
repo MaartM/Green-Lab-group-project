@@ -17,6 +17,15 @@ dependencies = [
     "tabulate",
 ]
 
+[dependency-groups]
+# Analysis notebooks (analysis/): uv sync --group analysis
+analysis = [
+    "jupyterlab",
+    "matplotlib",
+    "scipy",
+    "statsmodels",
+]
+
 [project.scripts]
 download_dataset = "scripts.download_dataset:main"
 sample_test_questions = "scripts.sample_test_questions:main"
