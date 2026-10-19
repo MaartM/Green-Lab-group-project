@@ -5,6 +5,7 @@ Experiment Runner config. Runs on the laptop and drives the testbed over SSH
   python experiment-runner/experiment-runner/ llm-routing/RunnerConfig.py
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -21,6 +22,12 @@ sys.path.append(str(HERE))
 import config
 import testbed
 
+# Optional settings for additional experiments; the defaults are the main experiment.
+EXPERIMENT_NAME = os.environ.get("EXPERIMENT_NAME", "llm_routing")
+QUESTIONS = os.environ.get("QUESTIONS", "questions.jsonl")  # a file in llm-routing/
+REPETITIONS = int(os.environ.get("REPETITIONS", "30"))
+COOLDOWN_S = int(os.environ.get("COOLDOWN_S", "60"))
+
 # Files the testbed needs, relative to the repository root; copied at the start of the experiment.
 TESTBED_FILES = [
     "llm-routing/config.py",
@@ -34,14 +41,16 @@ TESTBED_FILES = [
     "llm-routing/router/features.py",
     "data/router_model/router.joblib",
 ]
+if QUESTIONS != "questions.jsonl":
+    TESTBED_FILES.append(f"llm-routing/{QUESTIONS}")
 PYTHON = config.TESTBED_PYTHON
 
 
 class RunnerConfig:
-    name = "llm_routing"
+    name = EXPERIMENT_NAME
     results_output_path = config.REPO_ROOT / "data" / "experiments"
     operation_type = OperationType.AUTO
-    time_between_runs_in_ms = 60_000
+    time_between_runs_in_ms = COOLDOWN_S * 1000
     experiment_path = None
 
     def __init__(self):
@@ -56,7 +65,7 @@ class RunnerConfig:
     def create_run_table_model(self):
         self.run_table_model = RunTableModel(
             factors=[FactorModel("strategy", ["S", "L", "R"])],
-            repetitions=30,
+            repetitions=REPETITIONS,
             shuffle=True,
             data_columns=["cpu_energy_j", "gpu_energy_j", "runtime_s",
                           "gpu0_util_pct", "gpu1_util_pct", "ram_peak_mib", "vram_peak_mib",
@@ -78,7 +87,7 @@ class RunnerConfig:
         testbed.run("mkdir", "-p", run_dir)
         testbed.run("energibridge", "--gpu", "-o", f"{run_dir}/energibridge.csv", "--",
                     PYTHON, "run_queries.py",
-                    context.execute_run["strategy"], f"{run_dir}/queries.csv")
+                    context.execute_run["strategy"], f"{run_dir}/queries.csv", QUESTIONS)
 
     def stop_run(self, context):
         testbed.run(PYTHON, "ollama_server.py", "stop")

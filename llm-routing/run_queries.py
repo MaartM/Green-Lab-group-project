@@ -1,7 +1,7 @@
 """
 Send the questions to the model(s) of one strategy and log one row per question.
 
-  python llm-routing/run_queries.py <S|L|R> <out.csv>
+  python llm-routing/run_queries.py <S|L|R> <out.csv> [questions.jsonl]
 """
 
 import csv
@@ -31,7 +31,8 @@ def choose_model(strategy, question, predict):
 
 
 strategy, out_path = sys.argv[1], sys.argv[2]
-questions = [json.loads(line) for line in open(config.QUESTIONS_FILE)]
+questions_file = sys.argv[3] if len(sys.argv) > 3 else config.QUESTIONS_FILE
+questions = [json.loads(line) for line in open(questions_file)]
 predict = load_router() if strategy == "R" else None
 
 with open(out_path, "w", newline="") as f:
