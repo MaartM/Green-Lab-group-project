@@ -62,4 +62,4 @@ save_plot(ggplot(stacked, aes(energy, strategy, fill = component)) +
             geom_col(width = 0.6, colour = "#fcfcfb", position = position_stack(reverse = TRUE)) +
             scale_fill_manual(values = c("#52514e", COLORS[["L"]], COLORS[["S"]]), name = NULL) +
             labs(x = "Mean energy per run (J)", y = NULL, title = "Energy per run by component"),
-          FIGURES, "energy_components.png", 6, 3)
+          FINAL_FIGURES, "energy_components.png", 6, 3)

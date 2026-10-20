@@ -4,8 +4,8 @@ For each share of questions sent to the large model, the router sends the questi
 it rates least likely to be answered by the small model. The figure compares the
 resulting accuracy with choosing the model at random, and marks the router's
 threshold used in the experiment. Labels come from data/labels/test_{small,large}.jsonl.
-Also writes the router's predictions to data/analysis/router_test_predictions.csv,
-which analysis/04_accuracy_tradeoff.R reads.
+Writes the figure and the router's predictions to data/analysis_results/router_full_test_split/;
+analysis/04_accuracy_tradeoff.R reads the predictions.
 
   uv run --group analysis python scripts/plot_router_test_split.py
 """
@@ -27,8 +27,9 @@ sys.path.insert(0, str(REPO_ROOT / "llm-routing"))
 
 import config  # noqa: E402
 
-OUT = REPO_ROOT / "data" / "analysis" / "figures" / "router_test_split.png"
-PREDICTIONS = REPO_ROOT / "data" / "analysis" / "router_test_predictions.csv"
+RESULTS = REPO_ROOT / "data" / "analysis_results" / "router_full_test_split"
+OUT = RESULTS / "router_vs_random.png"
+PREDICTIONS = RESULTS / "router_predictions.csv"
 GREEN, INK, SECONDARY, MUTED = "#1baf7a", "#0b0b0b", "#52514e", "#898781"
 
 

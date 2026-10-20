@@ -11,7 +11,7 @@ for (pair in PAIRS) {
 accuracy_omnibus <- tests$omnibus[tests$omnibus$variable == "accuracy", ]
 cat(sprintf("Cochran's Q = %.1f, p = %.2g, p_bh = %.2g\n", accuracy$q, accuracy_omnibus$p, accuracy_omnibus$p_bh))
 print(tests$accuracy, row.names = FALSE, digits = 3)
-write.csv(tests$accuracy, file.path(OUT_DIR, "tests_accuracy.csv"), row.names = FALSE)
+write.csv(tests$accuracy, file.path(TESTS, "accuracy_tests.csv"), row.names = FALSE)
 
 outcomes <- as.matrix(answers[STRATEGIES])
 
@@ -46,7 +46,7 @@ save_plot(ggplot(means, aes(energy_per_query_j, accuracy_pct, colour = strategy)
             scale_x_continuous(limits = c(0, max(means$energy_per_query_j) * 1.35)) +
             scale_y_continuous(limits = c(0, 100)) +
             labs(x = "Energy per question (J)", y = "Accuracy (%)", title = "Energy-accuracy trade-off"),
-          FIGURES, "tradeoff.png", 5.5, 3.8)
+          FINAL_FIGURES, "tradeoff.png", 5.5, 3.8)
 
 cat("\n4.3 Routing decisions and the energy of R\n")
 routed <- first_queries$R[order(first_queries$R$qid), ]
@@ -59,7 +59,7 @@ cat(sprintf("weighted mix of S and L costs: %.0f J/question; measured R: %.0f J/
 
 cat("\n4.4 The router on the full test split\n")
 # Router predictions come from the Python router; scripts/plot_router_test_split.py writes them.
-predictions_file <- file.path(REPO_ROOT, "data", "analysis", "router_test_predictions.csv")
+predictions_file <- ROUTER_PREDICTIONS
 if (!file.exists(predictions_file)) {
   stop(predictions_file, " not found; run scripts/plot_router_test_split.py first")
 } else {

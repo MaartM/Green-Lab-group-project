@@ -27,23 +27,30 @@ Rscript analysis/main.R llm_routing   # data/experiments/llm_routing
 
 Run it from the repository root, with `Rscript` as above or with `source("analysis/main.R")` in R.
 
-Section 4.4 reads the committed router predictions, `data/analysis/router_test_predictions.csv`. To regenerate them:
+Section 4.4 reads the committed router predictions, `data/analysis_results/router_full_test_split/router_predictions.csv`. To regenerate them:
 
 ```bash
 uv run download_dataset
 uv run --group analysis python scripts/plot_router_test_split.py
 ```
 
-Results are printed. Output files, with `<experiment>` the experiment's folder name:
+Results are printed and saved to `data/analysis_results/`:
 
-| Path | Contents |
-|---|---|
-| `data/analysis/<experiment>/runs.csv` | One row per run with all run-level variables |
-| `data/analysis/<experiment>/answers.csv` | Correctness per question and strategy |
-| `data/analysis/<experiment>/tests_omnibus.csv` | Assumption checks and omnibus test per variable |
-| `data/analysis/<experiment>/tests_pairwise.csv` | Pairwise tests and effect sizes |
-| `data/analysis/<experiment>/tests_accuracy.csv` | McNemar tests on accuracy |
-| `data/analysis/router_test_predictions.csv` | Router predictions, threshold and both models' correctness on all 1,319 test questions (from the Python script) |
-| `data/analysis/<experiment>/figures/` | Final figures |
-| `data/analysis/<experiment>/figures/exploratory/` | Exploratory figures |
-| `data/analysis/figures/router_test_split.png` | Router figure (from the Python script) |
+```
+data/analysis_results/
+├── main_experiment_500_questions/      # Rscript analysis/main.R
+│   ├── processed_data/
+│   │   ├── runs.csv                    # one row per run, all run-level variables
+│   │   └── answers.csv                 # correctness per question and strategy
+│   ├── statistical_tests/
+│   │   ├── omnibus_tests.csv           # assumption checks and overall test per variable
+│   │   ├── pairwise_tests.csv          # pairwise tests and effect sizes
+│   │   └── accuracy_tests.csv          # McNemar tests on accuracy
+│   └── figures/
+│       ├── final/                      # figures for the report
+│       └── exploratory/
+├── first_experiment_100_questions/     # Rscript analysis/main.R llm_routing (same structure)
+└── router_full_test_split/             # from scripts/plot_router_test_split.py
+    ├── router_predictions.csv          # router predictions, threshold and both models' correctness, 1,319 questions
+    └── router_vs_random.png
+```

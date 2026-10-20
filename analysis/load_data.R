@@ -91,5 +91,5 @@ for (run_id in run_ids) {
 }
 
 write.csv(transform(runs, start = format(start, "%Y-%m-%dT%H:%M:%SZ")),
-          file.path(OUT_DIR, "runs.csv"), row.names = FALSE)
-write.csv(answers, file.path(OUT_DIR, "answers.csv"), row.names = FALSE)
+          file.path(PROCESSED, "runs.csv"), row.names = FALSE)
+write.csv(answers, file.path(PROCESSED, "answers.csv"), row.names = FALSE)

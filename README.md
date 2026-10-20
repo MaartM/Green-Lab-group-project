@@ -22,7 +22,7 @@ The router is a logistic regression on TF-IDF and question features that predict
 | `data/experiments/llm_routing/` | Raw results of the first experiment (100 questions) |
 | `data/labels/` | Whether each model answers each GSM8K question correctly |
 | `data/router_model/router.joblib` | The trained router |
-| `data/analysis/` | Processed data, test results and figures, per experiment |
+| `data/analysis_results/` | Processed data, statistical tests and figures, per experiment |
 | `experiment-runner/` | [Experiment Runner](https://github.com/S2-group/experiment-runner), submodule pinned to `56620fa` |
 
 ## Setup

@@ -6,7 +6,7 @@ cat("\n3.1 Assumptions and omnibus tests (p_bh: Benjamini-Hochberg within each r
 accuracy <- accuracy_tests(answers)
 tests <- run_tests(runs, accuracy)
 print(tests$omnibus, row.names = FALSE, digits = 3)
-write.csv(tests$omnibus, file.path(OUT_DIR, "tests_omnibus.csv"), row.names = FALSE)
+write.csv(tests$omnibus, file.path(TESTS, "omnibus_tests.csv"), row.names = FALSE)
 
 qq <- do.call(rbind, lapply(STRATEGIES, function(strategy) {
   values <- sort(runs$energy_per_query_j[runs$strategy == strategy])
@@ -22,7 +22,7 @@ save_plot(ggplot(qq, aes(theoretical, value, colour = strategy)) + geom_point(si
 
 cat("\n3.2 Pairwise comparisons\n")
 print(tests$pairwise, row.names = FALSE, digits = 4)
-write.csv(tests$pairwise, file.path(OUT_DIR, "tests_pairwise.csv"), row.names = FALSE)
+write.csv(tests$pairwise, file.path(TESTS, "pairwise_tests.csv"), row.names = FALSE)
 
 cat("\n3.3 Sensitivity: without the first run of the experiment\n")
 tests_without_first <- run_tests(runs[runs$order > 0, ], accuracy)

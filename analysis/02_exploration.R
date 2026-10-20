@@ -14,7 +14,7 @@ long <- do.call(rbind, lapply(names(RUN_VARIABLES), function(variable) {
 long$variable <- factor(long$variable, levels = RUN_VARIABLES)
 save_plot(ggplot(long, aes(strategy, value)) +
             geom_boxplot(outlier.shape = NA, width = 0.5, colour = "#898781") +
-            geom_jitter(aes(colour = strategy), width = 0.12, height = 0, size = 0.9, alpha = 0.8) +
+            geom_point(aes(colour = strategy), position = position_jitter(width = 0.12, height = 0, seed = 42), size = 0.9, alpha = 0.8) +
             facet_wrap(~variable, scales = "free_y", ncol = 4) +
             scale_colour_manual(values = COLORS, guide = "none") +
             labs(x = NULL, y = NULL) + theme(strip.text = element_text(size = 7)),
