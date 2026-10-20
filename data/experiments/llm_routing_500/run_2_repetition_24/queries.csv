@@ -1,0 +1,2096 @@
+qid,model,p_small_correct,latency_s,completion_tokens,correct,response
+1,small,0.6733877841031763,0.32572712399996817,51,1,"To find the total number of bolts, first calculate the amount of white fiber: $2 \div 2 = 1$ bolt. Then add this to the blue fiber: $2 + 1 = 3$ bolts.
+
+####3"
+2,large,0.5121948305853976,1.640079626115039,90,0,"Total cost = $80,000 + $50,000 = $130,000
+Value increase = $130,000 × 1.5 = $195,000
+Profit = $195,000 - $130,000 = $65,000
+#### 65000"
+3,small,0.6460443793027141,0.3798915399238467,61,1,"To find the total distance James runs, multiply the number of sprints by the distance per sprint: $3 \times 3 = 9$ sprints, then multiply that by the distance per sprint: $9 \times 60 = 540$.
+
+####540"
+6,small,0.5754761317164897,0.4890334240626544,81,1,"To find the total number of sheep, first calculate Charleston's count by multiplying Seattle's 20 by 4 to get 80. Then, multiply that result by 2 to find Toulouse's 160. Finally, add all three counts (20 + 80 + 160) to reach the total of 260.
+
+####260"
+8,large,0.33028993022303593,2.544031794881448,138,1,"John's distance from home is calculated by subtracting his return trip distance from his initial travel distance:
+Initial distance = $3 \text{ hours} \times 60 \text{ mph} = 180 \text{ miles}$.
+Return distance = $(2 \times 0) + (0.5 \times 30) + (1.5 \times 80) = 0 + 15 + 120 = 135 \text{ miles}$.
+Distance from home = $180 - 135 = 45 \text{ miles}$.
+
+#### 45"
+9,large,0.35193611493227067,1.3670270431321114,73,1,"Regular pay: 40 * 10 = 400
+Overtime pay: (45 - 40) * (10 * 1.2) = 5 * 12 = 60
+Total earnings: 400 + 60 = 460
+#### 460"
+13,small,0.5617844968638084,1.4441132580395788,250,1,"Let $x$ be the initial number of vacuum cleaners.
+First, Melanie sold $\frac{1}{3}$ of her vacs, leaving $\frac{2}{3}x$.
+Next, she sold 2 more to the red house, so the remaining amount is $\frac{2}{3}x - 2$.
+Then, she sold half of what was left at the orange house. Half of $(\frac{2}{3}x - 2)$ is $\frac{1}{2}(\frac{2}{3}x - 2) = \frac{1}{3}x - 1$.
+The remaining vacs after this step are $(\frac{2}{3}x - 2) - (\frac{1}{3}x - 1) = \frac{1}{3}x - 1$.
+We know this final amount equals 5, so we set up the equation: $\frac{1}{3}x - 1 = 5$.
+Adding 1 to both sides gives $\frac{1}{3}x = 6$, and multiplying by 3 yields $x = 18$.
+
+####18"
+14,small,0.6130084586064308,0.7249686259310693,123,0,"To find the percentage of students enrolled in hip-hop dance, we first calculate the number of students in each category: 100% - 20% = 80% remain after contemporary dance; then 75% of that remaining group (25%) equals 60%; finally, 20% of the original total is 4.
+
+#### 100 - 20 = 80
+#### 80 * 0.25 = 20
+#### 20 + 20 = 40
+
+#### 40"
+15,large,0.26907080121918037,1.57594226882793,84,1,"Jewelry profit: $5,000 \times 0.025 = \$125$
+Gadgets profit: $8,000 \times 0.012 = \$96$
+Maximum profit is the higher of the two: $\max(125, 96) = 125$
+#### 125"
+16,small,0.5699121698667396,0.40403802902437747,65,1,"To find the total distance covered by each train, we simply add the distance traveled westward to the distance traveled northward. Since both trains cover the same distances in both directions, the calculation is straightforward: 80 miles plus 150 miles equals 230 miles.
+
+#### 230"
+24,small,0.762756733386542,0.6445696370210499,107,0,"To find the original price, we first determine what portion of the final price represents the discounted amount: 25% of the original price equals $19.50. Therefore, 75% (or 1 - 0.25) of the original price must equal $19.50. Dividing $19.50 by 0.75 yields the original price.
+
+#### 19.50 / 0.75 = 26.00"
+40,small,0.558412502236349,0.5017089690081775,82,1,"To find the age of Brandon's iPhone, we start with Suzy's iPhone which is 1 year old. Since Ben's iPhone is twice as old as Suzy's, we multiply 1 by 2 to get 2 years. Then, since Brandon's iPhone is four times as old as Ben's, we multiply 2 by 4 to get 8 years.
+
+#### 8"
+41,large,0.4200500770733007,0.8279385708738118,41,1,"400 * 3 = 1200 feet thrown distance
+1200 - 1000 = 200 feet outside reach
+#### 200"
+44,large,0.3952606578975252,1.6258575560059398,88,1,"Cost per candle = $10.00 / 10 candles = $1.00
+Total revenue from 20 candles = 20 * $2.00 = $40.00
+Net profit = Total revenue - (20 * Cost per candle) = $40.00 - $20.00 = $20.00
+#### 20"
+46,large,0.4354734246578415,0.7655452820472419,38,1,"80 + x - 220 = 23
+x - 140 = 23
+x = 163
+#### 163"
+51,large,0.5161894370301378,1.0616904979106039,56,1,"Time traveling out: 3 hours (1 PM - 4 PM).
+Distance traveled: 10 mph × 3 hours = 30 miles.
+Time returning: 30 miles ÷ 6 mph = 5 hours.
+#### 5"
+53,large,0.28648541256169163,1.639150309143588,88,1,"Thursday Revenue: (6 × $60) + (4 × $40) = $360 + $160 = $520
+Friday Revenue: (12 × $40) + (0 × $60) = $480 + $0 = $480
+Difference: $520 - $480 = $40
+#### 40"
+54,large,0.3812642840156846,0.4826505621895194,22,1,"7 + (3 × 7) + 12 = 40
+#### 40"
+55,small,0.7357887923882362,0.501301224110648,82,1,"First, calculate the number of lollipops remaining after Jean eats 2: $30 - 2 = 28$.
+Next, divide the remaining lollipops by the capacity of each bag (2): $28 \div 2 = 14$.
+Finally, since there are no leftovers, Jean can fill exactly 14 bags.
+
+####14"
+57,large,0.5416112059414866,1.719947487814352,93,1,"Let $n$ be the number of boxes. The total weight is the sum of the truck/driver weight and the boxes' weight: $3755 + 15n \leq 5000$. Subtracting 3755 from both sides gives $15n \leq 1245$. Dividing by 15 yields $n \leq 83$.
+#### 83"
+58,large,0.3623274607571577,2.9567172199022025,163,0,"Let $G$ be the cost of the groceries. The total bill is $40.00, which includes the 25% fee on $G$, the $3.00 delivery fee, and the $4.00 tip.
+Equation: $G + 0.25G + 3.00 + 4.00 = 40.00$
+Combine terms: $1.25G + 7.00 = 40.00 \Rightarrow 1.25G = 33.00$
+Solve for $G$: $G = 33.00 / 1.25 = 26.40$
+
+#### 26.40"
+61,large,0.3801330155099733,1.4879875120241195,80,1,"Material cost: $500
+Construction cost: $800
+Insurance (10% of total): $0.10 \times (500 + 800) = 130$
+Total paid: $500 + 800 + 130 = 1430$
+#### 1430"
+62,large,0.2632397910180053,0.7848001630045474,40,0,"Pension = $50,000 × (30 - 20) / 40 = $12,500
+#### 12500"
+63,large,0.40822394735829964,1.3296894941013306,71,1,"Initial charge: $140 \times 6 = 840$
+Reduced charge: $(140 \times 0.9) \times 6 = 756$
+Total paid: $840 + 756 = 1596$
+#### 1596"
+64,large,0.3130456805640736,0.7819383188616484,39,1,"100 miles / 4 gallons = 25 miles per gallon
+25 miles per gallon * 12 gallons = 300 miles
+#### 300"
+65,large,0.4503699929444778,1.3263837799895555,71,1,"TV time per session: 2 hours; Reading time per session: 1 hour (half of 2). Total per session: 3 hours. Weekly total: 3 sessions × 3 hours = 9 hours. Four-week total: 9 hours/week × 4 weeks = 36 hours.
+#### 36"
+66,small,0.6512345164019903,0.5455403288360685,90,0,"To find the total number of people sent by four schools, we first calculate the number of people per school: there are two teams (girls and boys) with 5 players each plus one coach for each team. That is $2 \times 5 + 1 = 11$ people per school. Since there are four schools, the total is $4 \times 11 = 44$.
+
+#### 44"
+67,small,0.6906553807765521,0.7839653759729117,133,1,"To find the total number of gems, I will calculate the count for each type step-by-step:
+1.  **Diamonds**: Given as 175.
+2.  **Rubies**: 35 fewer than diamonds ($175 - 35 = 140$).
+3.  **Emeralds**: Twice the number of rubies ($140 \times 2 = 280$).
+4.  **Total**: Sum of all gems ($175 + 140 + 280 = 595$).
+
+#### 595"
+69,small,0.5516452443177752,0.44250099500641227,73,1,"To find out how much money Bailey started with, we first calculate her total income from the weekly allowance: $5 times 8 weeks equals $40. Then, by subtracting this amount from her final total of $100, we determine her starting balance ($100 - $40 = $60).
+
+#### 60"
+70,large,0.44521613935834076,1.3277690310496837,71,1,"Weekdays: 5 classes/day × 5 days = 25 classes
+Saturday: 8 classes
+Total classes: 25 + 8 = 33 classes
+Total revenue: 33 classes × 15 students/class × $15/student = $7,425
+#### 7425"
+74,large,0.214351879256227,1.3522229730151594,71,1,"Rounded prices: Marigolds $3, Petunias $2, Begonias $2.
+Total revenue: (12 × $3) + (9 × $2) + (17 × $2) = $36 + $18 + $34 = $88.
+#### 88"
+75,large,0.5398710804146175,1.9035372738726437,104,0,"Level 4: 16 sq ft
+Level 3: 16 * 2 = 32 sq ft
+Level 2: 32 * 2 = 64 sq ft; Level 1: 64 * 2 = 128 sq ft
+Average: (16 + 32 + 64 + 128) / 4 = 576 / 4 = 144
+#### 144"
+79,small,0.6121012380296602,0.5334626329131424,87,1,"To calculate the final cost after the discount, first find the discounted price by multiplying the original cost ($100) by 70%, then subtract that result from the original amount to get the savings, or more directly, multiply $100 by 0.70 to get the new price. The calculation is $100 \times 0.70 = 70$.
+
+####70"
+80,small,0.7256601041040861,0.529279325157404,88,1,"First, calculate the amount of water each girl received: $1/6 \times 24 = 4$ liters per girl.
+Next, determine the total water taken by the girls: $4 + 4 = 8$ liters.
+Finally, subtract the boys' share from the total to find what remains: $24 - 8 - 6 = 10$ liters.
+
+####10"
+82,small,0.7100279166330924,0.4555777641944587,76,1,"To find Alex's weight, first calculate 4 times Grace's weight (4 * 125 = 500), then subtract 2 to get Alex's weight (500 - 2 = 498). Finally, add their weights together (125 + 498 = 623).
+
+####623"
+87,large,0.24067267430966913,1.4482430720236152,77,1,"Monthly salary = $600; Annual base = $7,200.
+After 3 more years (total 8 years), increase is 10% × 3 = 30%.
+Final annual salary = $7,200 × 1.30 = $9,360.
+#### 9360"
+88,small,0.6867155105761339,0.7750265309587121,133,1,"Let $H$ be the number of copies Harald sold and $M$ be the number Marilyn sold.
+We are given two equations:
+1) $M = 10H$
+2) $M + H = 88,000$
+
+Substitute equation 1 into equation 2:
+$10H + H = 88,000$
+$11H = 88,000$
+$H = \frac{88,000}{11}$
+$H = 8,000$
+
+#### 8,000"
+89,small,0.597385090701397,0.6678662009071559,112,0,"To calculate the total cost, first determine the number of guests who actually arrive by subtracting the non-showers from the total invitations: $16 - (1/4 \times 16) = 12$. Next, multiply the number of attendees by the bags needed per person ($12 \times 0.75$) to get the total bags required ($9$). Finally, multiply the total bags by the cost per bag ($9 \times \$2$) to find the final expense.
+
+#### 48"
+93,small,0.5712768717045962,0.8698688491713256,147,0,"To find Gerald's new time, we first calculate Lee's original speed by dividing the distance (400 meters) by his time (38 seconds), which gives approximately 10.526 meters per second. Then, we apply Gerald's 10% improvement to this speed to get his new rate, and finally multiply that rate by the distance again to find the new time in seconds.
+
+#### 400 / 38 * (1 - 0.1) = 10.526315789473684 * 0.9 = 9.473684210526316"
+95,small,0.6273713505876358,0.9017281339038163,155,1,"First, calculate the number of boys by taking 2/5 of 200: $200 \times \frac{2}{5} = 80$.
+Next, find the number of girls by subtracting the boys from the total: $200 - 80 = 120$.
+Then, calculate how many girls are in the girl scout group by taking 2/3 of the 120 girls: $120 \times \frac{2}{3} = 80$.
+Finally, determine the number of girls not in the girl scout by subtracting those from the total number of girls: $120 - 80 = 40$.
+
+####40"
+100,large,0.4021387237187877,1.487773876870051,79,1,"First friend: 20 rings.
+Second friend: 20 + (1/4 * 20) = 25 rings.
+Third friend: 60 + 10 = 70 rings.
+Total: 20 + 25 + 70 + 60 = 175.
+#### 175"
+101,large,0.5026289321924572,1.0179399428889155,53,1,"Total pages = 4 + 20 + 7 + 8 = 39
+Pages remaining = 39 - 15 = 24
+Average per day = 24 / 4 = 6
+#### 6"
+102,large,0.47209365566320105,1.526942355092615,82,0,"John drinks 4 glasses of water per weekday (breakfast, lunch, dinner, bed).
+There are 5 weekdays in a week, so $5 \times 4 = 20$ glasses.
+On weekends (Saturday and Sunday), he drinks 0 glasses of water.
+Total glasses per week = $20 + 0 = 20$.
+#### 20"
+103,small,0.5712194107735167,0.4780443259514868,78,1,"To calculate the total time required, first determine how many 3-mile segments are in the 42-mile distance by dividing the total distance by the segment length ($42 \div 3 = 14$). Then, multiply this count by the time per segment ($14 \times 10 = 140$ minutes).
+
+#### 140"
+107,large,0.32894963921084414,3.794936563121155,210,1,"Monday + Tuesday: 2 hours × 2 nights = 4 hours
+Thursday + Friday: (1 hour + 0.5 hour) + (2 × 1 hour) = 3.5 hours
+Wednesday remaining time: 7 total - 4 - 3.5 = -0.5 hours (Error in problem statement logic or my reading; let's re-read carefully).
+
+Re-evaluating the sum:
+Mon/Tue: 1 + 1 = 2 hours.
+Thu: 1 + 0.5 = 1.5 hours.
+Fri: 1 + 1 = 2 hours.
+Total known time = 2 + 1.5 + 2 = 5.5 hours.
+Total watched = 7 hours.
+Wednesday time = 7 - 5.5 = 1.5 hours.
+Number of 30-minute episodes = 1.5 / 0.5 = 3.
+
+#### 3"
+109,large,0.400730053082846,1.2412165340501815,66,1,"Cost = 10 * $3.00 = $30.00
+Cashback = 10 * $0.20 = $2.00
+Final Cost = $30.00 - $2.00 = $28.00
+#### 28"
+113,small,0.7101208579335433,0.6573339952155948,109,0,"To calculate the total number of flowers Ryan has, first determine how many grew by subtracting those that didn't from the daily count: $2 - 5 = -3$. Then multiply this result by the number of days: $-3 \times 15 = -45$. However, since you cannot plant negative flowers, the calculation implies a scenario where the net change is negative. Given the constraints to provide a single numeric answer without units or commas, the final output must be formatted as requested.
+
+####-45"
+114,large,0.49995701447982266,0.9214052329771221,47,1,"Brittany's phone capacity = $1800 / 6 = 300$.
+Number of birds (ducks) = $300 / 50 = 6$.
+#### 6"
+117,small,0.6637536904740602,0.44469914794899523,73,1,"To calculate the total cost, first determine the number of shoe pairs by multiplying the number of children (3) by the number of pairs per child (2), which equals 6 pairs. Then multiply this quantity by the price per pair ($60). The calculation is $6 \times 60 = 360$.
+
+####360"
+119,large,0.19165187687219198,2.519420281983912,138,0,"Adrien's current salary = $40,000 \times 1.40 = \$56,000$.
+Lylah's initial salary = $\$40,000 / 1.30 \approx \$30,769.23$.
+Lylah's current salary = $\$30,769.23 \times 1.30 = \$40,000$.
+Total combined salary = $\$56,000 + \$40,000 = \$96,000$.
+
+#### 96000"
+122,large,0.46686820890959907,1.6432422089856118,88,0,"Monday: 8 hours
+Tuesday & Wednesday: $8 - 2 = 6$ hours each ($6 \times 2 = 12$)
+Thursday through Sunday (5 days): $6 + 1 = 7$ hours each ($7 \times 5 = 35$)
+Total: $8 + 12 + 35 = 55$
+
+#### 55"
+126,small,0.6701445411912564,0.3847470779437572,62,1,"To find the total number of sausages, first calculate the number of fish sausages by adding 6 to the 38 chicken sausages, then sum both quantities together.
+
+38 + 6 = 44
+44 + 38 = 82
+
+####82"
+128,large,0.40204912337974325,1.7617385650519282,94,1,"Pepper cost = $15; Watermelon cost = 3 * 15 = $45; Orange cost = 45 - 5 = $40.
+Total cost = (4 * 45) + (20 * 15) + (10 * 40) = 180 + 300 + 400 = 880.
+#### 880"
+130,small,0.5513420306706245,0.6293971319682896,105,1,"To find the number of elves remaining, we start with the initial count of 60 workers. First, one-third of these elves quit, which is $60 \div 3 = 20$ elves. Subtracting this from the total leaves $60 - 20 = 40$ elves. Next, 10 of the remaining elves quit, so we subtract 10 from the current count: $40 - 10 = 30$.
+
+####30"
+135,small,0.6592685636291756,0.5318810450844467,88,1,"First, calculate Brian's current number of video games by subtracting 5 from his initial count: $20 - 5 = 15$. Next, determine three times this amount to find the base for the comparison: $15 \times 3 = 45$. Finally, subtract 5 from that result to get Bobby's total: $45 - 5 = 40$.
+
+####40"
+139,small,0.7576335163705419,0.5229611960239708,87,1,"To find the number of pink gumballs, we first calculate the number of blue gumballs given as 12. Then, we multiply this value by four to get the base amount for pink gumballs. Finally, we add 22 to that result to get the final answer.
+
+12 * 4 = 48
+48 + 22 = 70
+
+####70"
+140,small,0.5513410063330333,0.5061912140809,84,1,"To find the percentage of semi-automatic cars, first determine how many are semi-automatic by subtracting the automatic and manual counts from the total: $20 - (12 + 4) = 4$. Then, calculate the percentage relative to the total number of cars: $(4 / 20) \times 100\% = 20\%$.
+
+#### 20"
+142,large,0.41615929382644684,0.728091002907604,37,1,"2 hours/day × 7 days/week = 14 hours total
+14 hours × $10/hour = $140
+#### 140"
+143,large,0.4884012422765725,1.6096721419598907,87,1,"Food items (milk, eggs) total $2 + $3 = $5.
+Non-food items (bulbs, cups, traps) total $3 + $3 + $4 = $10.
+Tax on non-food is 10% of $10 = $1, so the final cost is $5 + $10 + $1 = $16.
+#### 16"
+144,large,0.34437221545218727,1.2126016849651933,63,1,"Total clients = 3 + 5 = 8
+Total expense per client = (2 × $2) + $5 = $9
+Total weekly expenses = 8 × $9 = $72
+Profit = $92 - $72 = $20
+#### 20"
+145,small,0.5699685620597151,0.6873623859137297,115,1,"To find the total number of pineapples, first calculate the annual yield by multiplying the hectares by the count per hectare ($10 \times 100 = 1000$). Then, determine how many harvest cycles occur in a year by dividing the number of months in a year (12) by the harvest interval (3), resulting in 4 cycles. Finally, multiply the total annual yield by the number of cycles ($1000 \times 4 = 4000$).
+
+####4000"
+146,large,0.39251471718831665,0.9914182659704238,51,1,"500 + (3 * 500) + (500 / 4) = 500 + 1500 + 125 = 2125
+#### 2125"
+148,large,0.47214615790051256,0.5372128619346768,26,1,"12 + 10 = 22
+22 + 8 = 30
+#### 30"
+149,small,0.5739524876828035,0.41969918995164335,69,0,"To find the number of friends James has, first determine Dorothy's count by dividing Charlie's total by three (since Charlie has three times as many), which gives 4. Then multiply that result by four to get James's total, resulting in 16.
+
+#### 12 / 3 * 4 = 16"
+152,small,0.7273778425093333,0.6014141389168799,101,1,"To find the total cost, first calculate the number of cookies by multiplying the number of packs (10) by the cookies per pack (6), which equals 60 cookies. Then, multiply the total cookies by the cost per cookie ($0.10), resulting in a total cost of $6.00. Finally, subtract this amount from the payment given ($10.00 - $6.00) to determine the change received.
+
+####4.00"
+153,large,0.48522668315259015,3.008786397986114,165,0,"Dave ate 14 fries.
+The seagull ate half that amount: $14 / 2 = 7$.
+Three pigeons ate $3 \times 3 = 9$ fries.
+A raccoon stole two-thirds of the remaining fries, leaving one-third behind.
+Ants took 1 fry, leaving 5, so there were $5 + 1 = 6$ before the ants.
+Since 6 represents one-third of the amount after the raccoon, the total before the raccoon was $6 \times 3 = 18$.
+The initial total is the sum of all eaten fries plus the final remainder: $14 + 7 + 9 + 18 + 6 = 54$.
+
+#### 54"
+154,large,0.45318414567752435,1.6140538267791271,87,1,"Mon/Wed/Fri: 3 days/week × 3 hours/day = 9 hours/week
+Tue/Thu: 2 days/week × 4 hours/day = 8 hours/week
+Total weekly hours: 9 + 8 = 17 hours
+Total semester hours: 17 hours/week × 16 weeks = 272 hours
+#### 272"
+156,large,0.40509242292603526,1.2848756660241634,68,1,"Total monthly consumption = 200 (monkeys) + 400 (gorillas) + 100 (baboons) = 700 bananas.
+Consumption for 2 months = 700 * 2 = 1400 bananas.
+#### 1400"
+157,large,0.3503913475030388,1.9634721130132675,106,1,"Blake's distance: $15 \times (2 \times 100) = 3000$ yards.
+Kelly's distance: $(1 \times 2 \times 100) + (34 \times 2 \times 40) = 200 + 2720 = 2920$ yards.
+Difference: $3000 - 2920 = 80$ yards.
+#### 80"
+161,large,0.54827037522501,1.476123568834737,79,1,"Anakin's total: $10 + 6 + 3 = 19$
+Locsin's totals: $(10-5) + (6-3) + (3+2) = 5 + 3 + 5 = 13$
+Combined total: $19 + 13 = 32$
+#### 32"
+163,large,0.5342424223287351,1.0631001540459692,56,1,"Cost of doll = 3 * $5 = $15
+Total value = (5 * $4) + (3 * $5) + $15 = $20 + $15 + $15 = $50
+#### 50"
+171,large,0.42083779757512746,0.9067169961053878,47,1,"80 * 8 + 90 * 6 + 3 * 10 = 640 + 540 + 30 = 1210
+#### 1210"
+172,large,0.42135660752281073,1.310590760083869,70,1,"Sally Thirtytwo = 8
+Sally Four = 8
+Granny Red = 2 * 8 = 16
+Sally Two = 16 + 3 = 19
+Total Age = 8 + 8 + 16 + 19 = 51
+#### 51"
+174,large,0.33286813802021525,1.258591930847615,66,1,"Total peeling time: $60 \times 1.5 = 90$ minutes.
+Total cutting time: $60 \times (5/60) = 5$ minutes.
+Total time: $90 + 5 = 95$ minutes.
+#### 95"
+176,small,0.6470899494806747,0.5364977130666375,88,1,"To find the number of girls on the Chinese team, first determine the total number of Chinese participants by subtracting the Japanese from the total Asian population: $240 - 80 = 160$. Next, calculate the number of girls by subtracting the number of boys (60) from the total Chinese count: $160 - 60 = 100$.
+
+####100"
+178,small,0.665631411467429,0.6512813710141927,111,1,"First, determine how many crabs Monic has by subtracting 4 from Bo's count: $40 - 4 = 36$.
+Next, find out how many crabs Rani has by adding 10 to Monic's count: $36 + 10 = 46$.
+Finally, sum the counts of all three individuals: $40 (Bo) + 36 (Monic) + 46 (Rani) = 122$.
+
+####122"
+179,large,0.43467582549238104,0.5005629330407828,24,1,"$10 \times (5 + 8) = 130$
+#### 130"
+182,small,0.6034075790169968,0.40435798396356404,65,0,"To find Jean's age, first determine Mark's current age using the relationship that two years ago he was 5 years older than half of Jan's age (which is 15). This makes Mark 20. Since Jean is two years older than Mark, she is 22.
+####22"
+184,large,0.531588803598717,1.830677059944719,100,0,"P(>3) = 3/6 = 0.5
+P(even, even) = (2/6) * (2/6) = 1/9 ≈ 0.111...
+Difference = 0.5 - 0.111... = 0.388...
+Percentage = 0.388... * 100 ≈ 38.9%
+
+#### 38.9"
+189,large,0.44001778922578993,1.5652966359630227,84,0,"Food cost = $20.25 - $4.50 = $15.75
+Total cost = $20.25 + $15.75 + (2 * $33) = $94.00
+Cost per person = $94.00 / 3 ≈ $31.33
+#### 31.33"
+190,small,0.7887732043228574,0.48032507789321244,80,1,"To find the total number of peaches John collects, multiply the duration in minutes by his collection rate: $3 \text{ hours} \times 60 \text{ minutes/hour} = 180 \text{ minutes}$, then multiply that by the rate per minute: $180 \times 2 = 360$.
+
+####360"
+191,small,0.5912393894909975,0.48202381981536746,79,1,"To find the daily insect requirement for the flock, first calculate the total weekly consumption by multiplying the number of ducks (10) by the weekly amount per duck (3.5), which equals 35 pounds. Then, divide this weekly total by 7 days in a week to get the daily rate: 35 divided by 7 is 5.
+
+#### 5"
+194,small,0.6130437379702225,0.4050947951618582,67,1,"To find the change, first calculate the total cost of the crayons by multiplying the number of colors (5) by the price per crayon ($2), which equals $10. Then subtract this total cost from the amount Violetta prepared ($20 - $10 = $10).
+
+#### 10"
+198,large,0.35881590425679016,1.6666386399883777,89,1,"First month collection: $3 \times 20 = 60$.
+Second month collection: $60 - 20 = 40$.
+Third month collection: $2 \times (60 + 40) = 200$.
+Total cards: $20 + 60 + 40 + 200 = 320$.
+
+#### 320"
+203,large,0.2942390536915075,1.2745954708661884,66,0,"Sandwiches: 5 days × 2 slices = 10 slices
+Omelets: 3 days × (2 + 1) slices = 9 slices
+Macaroni: 8 slices
+Total: 10 + 9 + 8 = 27
+#### 27"
+204,large,0.4396022129138842,1.2726297460030764,67,1,"Green pens: 22
+Yellow pens: 10
+Blue pens: 6 * 9 = 54
+Red pens: 2 * 6 = 12
+Total: 22 + 10 + 54 + 12 = 98
+#### 98"
+206,large,0.2592722593805666,0.8080724920146167,40,1,"5 * 25 * 4 + 2 * 60 * 3 = 500 + 360 = 860
+#### 860"
+207,small,0.6958647663354401,0.6009192918427289,100,0,"To find the total weight, first calculate the weight of one candied apple by dividing the chocolate bar's weight by two: $40 \div 2 = 20$ grams. Then, multiply this single unit weight by the total number of items (25 chocolate bars plus 80 apples): $(25 + 80) \times 20 = 105 \times 20 = 2100$.
+
+####2100"
+208,large,0.5032211858186443,1.141701339976862,60,1,"Monday: 4 cakes
+Tuesday: $4 \times 3 = 12$ cakes
+Wednesday: $12 \times 5 = 60$ cakes; Total: $4 + 12 + 60 = 76$
+#### 76"
+209,small,0.6572708560006139,0.4558592760004103,75,0,"To find the cost per cup, first calculate the total cost of the plates: $6000 \times 0.5 = 3000$. Then subtract this from the cup cost ($1200$) to get the price per cup ($1200 / 24 = 50$).
+
+#### 50"
+210,large,0.2848391908138325,1.6349522019736469,87,1,"Cost of items: $30 + 2 \times 20 = 70$
+Earnings from babysitting: $4 \times 5 = 20$, so total needed from mowing is $70 - 10 - 20 = 40$
+Number of lawns to mow: $40 / 4 = 10$
+#### 10"
+212,small,0.5790932077134395,0.6151482330169529,103,1,"To find the total time Gary spends walking, first calculate the perimeter of the rectangular park using the formula $P = 2 \times (length + width)$. The perimeter is $2 \times (1.5 + 6) = 2 \times 7.5 = 15$ miles. Next, divide the total distance by Gary's walking speed: $15 \text{ miles} / 3 \text{ mph} = 5$ hours.
+
+#### 5"
+213,small,0.5866263402761,0.7440876979380846,126,0,"To find the number of customers on the third day, we first determine the number of customers on the second day by adding 50 to the first day's count. Then, we subtract that second-day total from the third-day total to isolate the third-day count.
+
+1. Calculate the second day's count: $100 + 50 = 150$.
+2. Subtract the second day's count from the third day's total: $500 - 150 = 350$.
+3. The result is 350.
+
+####350"
+215,large,0.26481001155374306,1.0535111031495035,55,1,"Total cost = $320.00 + $32.00 = $352.00
+Hours needed = $352.00 / $8.00 per hour = 44 hours
+#### 44"
+217,small,0.8326832118462586,0.3590496510732919,58,1,"1. Calculate the number of dahlias: $7 + 4 = 11$.
+2. Add the roses and dahlias together: $4 + 11 = 15$.
+3. The total count is 15 flowers.
+
+####15"
+225,large,0.4523380847689529,0.7129995848517865,36,1,"Bus trip: 6 days
+Car trip: 6 / 2 = 3 days
+Total: 6 + 3 = 9 days
+#### 9"
+227,large,0.18214119199588258,1.2959634819999337,68,1,"6.50 + 2.00 + 1.00 + 1.00 + (2 * 0.25) + 3.00 = 14.00
+14.00 - 5.00 = 9.00
+#### 9"
+228,large,0.5468977110116582,1.062885426916182,56,1,"Total rate = 4 + (4/2) = 6 pieces per minute.
+Time required = 360 / 6 = 60 minutes.
+Hours required = 60 / 60 = 1 hour.
+#### 1"
+229,large,0.34656760321056196,1.3250976209528744,70,1,"120 * 0.30 = 36 (first harvest)
+120 - 36 = 84 (remaining)
+84 * (3/4) = 63 (second harvest)
+84 - 63 = 21 (not ready)
+
+#### 21"
+235,large,0.4590990708233844,0.9591507609002292,50,1,"Total slices needed = 20 friends × 4 slices/friend = 80 slices.
+Slices per pizza = 8, so pizzas needed = 80 / 8 = 10.
+#### 10"
+237,large,0.5354292411357762,0.5724024539813399,28,1,"$20 + $10 = $30
+$30 × 3 = $90
+#### 90"
+238,small,0.5594607508727514,0.4905399971175939,81,0,"To find the sum of their ages, first calculate Jessa's age as given (20). Then determine Joan's age by adding 5 to Jessa's age (25), and finally Mary's age by subtracting 2 from Joan's age (23). Adding these three values together yields the total.
+
+20 + 25 + 23 = 68"
+242,large,0.28269788451114214,1.8530330159701407,100,0,"Total active pen pals: $5 - 2 = 3$.
+Total letters per week (Mike's + replies): $3 \times 2 \times 2 = 12$ pages.
+Total time in minutes: $12 \text{ pages} \times 6 \text{ min/page} = 72$ minutes.
+Convert to hours: $72 / 60 = 1.2$ hours.
+
+#### 1.2"
+244,large,0.4145597464462699,2.0893342830240726,114,1,"Kyle took 5 fries; Billy took $2 \times 5 = 10$ fries.
+Colby took $5 - 3 = 2$ fries.
+Total removed: $5 + 10 + 2 = 17$ fries.
+Let $x$ be the amount Ginger gave. The equation is $24 - 17 + x = 27$.
+Solving for $x$: $7 + x = 27$, so $x = 20$.
+#### 20"
+248,small,0.7675667615275826,0.4562596019823104,75,1,"To find the total cost, first calculate the weight of all onions by multiplying the number of bags by the weight per bag ($4 \times 50 = 200$ pounds). Then, multiply the total weight by the price per pound ($200 \times 1.50 = 300$ dollars).
+
+####300"
+249,small,0.5790446694097837,0.8318439209833741,141,0,"To find the difference in calories consumed between Sue and her sister, we first calculate their total cookie counts for each day. On Monday, Sue ate $4 \times 5 = 20$ cookies while her sister ate 5. On Tuesday, Sue ate $2 \times 13 = 26$ cookies while her sister ate 13. The combined total of cookies eaten by both is $20 + 5 + 26 + 13 = 64$. Multiplying this sum by the calorie count per cookie ($200$) gives a total of $12,800$ calories.
+
+#### 12800"
+254,large,0.45180047514770705,0.8917389630805701,46,1,"Anne's count: $30 \times (1 - 0.30) = 21$
+Robert's count: $21 \times 4 = 84$
+#### 84"
+255,large,0.4436692504552632,1.264370216988027,67,0,"Total initial cows: $10 \times 20 = 200$.
+New cows per stall: $40 / 20 = 2$.
+Cows in 8 stalls: $(20 + 2) \times 8 = 176$.
+#### 176"
+261,small,0.8024677078621669,0.5975520231295377,99,0,"To find the number of pennies in the stack, first calculate two-thirds of 9,300: $9300 \div 2 = 4650$ and $4650 \times 3 = 13950$. Then convert that amount to dollars by dividing by 100: $13950 / 100 = 139.5$.
+
+#### 139.5"
+263,large,0.5307739586692758,1.0344341080635786,54,1,"Ferdinand has $6 / 2 = 3$ trees.
+Harry has $5 + (2 \times 3) = 11$ trees.
+The difference is $11 - 3 = 8$.
+#### 8"
+265,large,0.2932993750765354,2.0478198011405766,111,1,"Total fees = (0.05 + 0.12) × 350,000 = 0.17 × 350,000 = 59,500
+Total cost = 350,000 + 59,500 = 409,500
+Difference = 409,500 - 400,000 = 9,500
+#### 9500"
+268,small,0.6213975012124178,0.5029743700288236,82,0,"To calculate the total spending, first determine the cost per unit: $5 for newspapers plus $75 for televisions equals $80 per ad. Then multiply this unit cost by the total number of ads purchased (50 + 15 = 65). The final calculation is 65 times 80, which equals 5200.
+
+####5200"
+271,large,0.5455960840824748,0.6159393610432744,30,0,"2 * 3 * 2 + 4 = 16
+16 * 2 = 32
+#### 32"
+273,large,0.3830653457144224,1.6382746591698378,88,0,"Collar = 900 / 10 = 90 stitches
+Rosette = 2 * 90 = 180 stitches
+Sleeves total = 1800 - (900 + 90 + 180) = 530 stitches
+Each sleeve = 530 / 2 = 265 stitches
+#### 265"
+275,large,0.4018531094275893,1.4673504461534321,78,1,"Song: 54 lines
+Scene 1: (2 * 54) * (1/3) = 36 lines
+Scene 2: (54 + 6) * (4/5) = 48 lines
+Total: 54 + 36 + 48 = 138
+#### 138"
+276,large,0.5259695486395481,2.242688833968714,123,1,"Cards with A: $80 \times \frac{2}{5} = 32$
+Remaining cards: $80 - 32 = 48$
+Cards with B: $48 \times \frac{1}{2} = 24$
+Remaining cards (for C and D): $48 - 24 = 24$
+Cards with C: $24 \times \frac{5}{8} = 15$
+Cards with D: $24 - 15 = 9$
+
+#### 9"
+278,small,0.6126662207108827,0.3481664040591568,56,1,"If Mico and Marco's current combined age is 20, then in 10 years their combined age will increase by $10 + 10 = 20$.
+
+$20 + 20 = 40$
+
+####40"
+283,large,0.414912060012547,1.2040646511595696,62,1,"Total length occupied by gemstones = 8 * 1 = 8 inches.
+Remaining length for silver beads = 25 - 8 = 17 inches.
+Number of silver beads = 17 / (1/4) = 68.
+#### 68"
+285,large,0.404714072989791,0.8586135311052203,44,1,"Brother's current age = $9 \times 2 = 18$
+Brother's age in 3 years = $18 + 3 = 21$
+#### 21"
+289,large,0.5004043295366839,0.8059280409943312,41,1,"Slow lane speed = 60 / 2 = 30 mph
+Time = Distance / Speed = 480 / 30 = 16 hours
+#### 16"
+290,large,0.48470738860617635,1.1740295020863414,62,1,"Izzy's medals = 22 - 5 = 17
+Total medals held by Ali and Izzy = 22 + 17 = 39
+Total medals given out = 39 * 10 = 390
+#### 390"
+292,large,0.3370336858152831,1.4531804281286895,78,1,"Total work time = (11 - 8) hours - 0.5 hours = 2.5 hours = 150 minutes.
+Earnings rate = $5 / 10 minutes = $0.5 per minute.
+Total earnings = 150 minutes * $0.5/minute = $75.
+#### 75"
+293,large,0.3764349086943575,1.4082785681821406,74,1,"Mike: 21 points
+Jim: 21 - 3 = 18 points (does not get extra)
+Tony: 2 * 21 = 42 points (gets extra)
+Total: 21 + 18 + 42 + 1 + 1 = 83
+#### 83"
+294,large,0.3106349940426141,1.055035918019712,55,1,"Youngest son's age: $8 / 2 = 4$ years.
+Total washed oranges: $8 + 4 = 12$.
+Oranges left unwashed: $15 - 12 = 3$.
+#### 3"
+301,large,0.3944590493580917,0.9870160778518766,50,0,"To find the number of sheets, divide the total pages by 2 since each sheet contains two pages (one on the front and one on the back).
+$32 \div 2 = 16$
+#### 16"
+306,small,0.6545792392026973,0.6364665508735925,106,0,"To find the number of loaves sold in the afternoon, we first calculate how many were sold in the morning: 60 multiplied by two-thirds equals 40 loaves. Then, we take the remaining 20 loaves and divide them by two to get 10 loaves sold in the afternoon.
+
+#### 60 * (2/3) = 40
+#### 60 - 40 = 20
+#### 20 / 2 = 10"
+308,large,0.4641506486921061,1.348683841060847,72,1,"Savings per tub = $13 - $11 = $2.
+Total savings for 2 tubs = 2 * $2 = $4.
+Total savings for 4 milk packets = 4 * $0.5 = $2.
+Total savings = $4 + $2 = $6.
+#### 6"
+311,large,0.4887735044398151,0.9070677808485925,47,1,"3 \times 3 + 2 \times 2 = 13 \text{ eggs per day}
+13 \times 7 = 91 \text{ eggs per week}
+#### 91"
+314,small,0.7158740330988534,0.6702470660675317,110,1,"To find the number of players on the defense, let $d$ be the number of defenders. Since there are twice as many offensive players ($2d$) and half as many special team players ($0.5d$), we can set up the equation:
+$$105 = d + 2d + 0.5d$$
+$$105 = 3.5d$$
+$$d = \frac{105}{3.5} = 30$$
+
+#### 30"
+315,large,0.28719598713386557,0.9963437030091882,52,1,"Total guests = (2 × 6) + (3 × 4) - 8 - (1/4 × 8) = 12 + 12 - 8 - 2 = 14
+#### 14"
+318,large,0.5003092646848935,1.1940734181553125,63,1,"Girls = $3 \times 30 = 90$
+Nongendered = $\frac{1}{10} \times 30 = 3$
+Total = $30 + 90 + 3 = 123$
+#### 123"
+326,large,0.5158979774876301,1.0526982229202986,55,1,"Let $x$ be the number of people who got on at the terminal.
+$x + 5 - 7 + 8 = 20$
+$x + 6 = 20$
+$x = 14$
+#### 14"
+328,small,0.5652120932383404,0.6306885690428317,102,1,"To find the time required to reach 100%, we first determine how many percentage-points remain to be added: $100\% - 60\% = 40\%$. Since the recharging rate is 1 percentage-point per 3 minutes, it takes $40 \times 3 = 120$ minutes. Converting this to hours gives $\frac{120}{60} = 2$ hours.
+
+#### 2"
+331,large,0.2263924973520495,2.7259610989131033,149,1,"Job A Net: $15 \times 2000 = \$30,000$ gross; $\$30,000 \times (1 - 0.20) = \$24,000$.
+Job B Net: $\$42,000 - \$6,000 = \$36,000$ after property tax; $\$36,000 \times (1 - 0.10) = \$32,400$.
+Difference: $\$32,400 - \$24,000 = \$8,400$.
+
+#### 8400"
+332,small,0.630871650261237,0.3694289361592382,59,0,"To find the number of unmanned ruined castles, first calculate the total number of ruined castles by taking 40% of 220, which equals 88. Then, take half of that 88 to get the final count.
+
+#### 116"
+333,large,0.4551559264092111,1.8165332060307264,98,1,"Cost United = 1350 + (6 × 350) = 1350 + 2100 = 3450
+Cost Cozy = 1100 + (9 × 250) = 1100 + 2250 = 3350
+Difference = 3450 - 3350 = 100
+#### 100"
+334,large,0.4392093732586193,0.8917937420774251,46,1,"Total guns = 8 + 10 + 1 + 5 = 24
+Number of people = 4
+Guns per person = 24 / 4 = 6
+#### 6"
+336,small,0.6662996857715144,0.5241095288656652,86,0,"To find the final value, we first calculate the initial cost: $8 \times 8 = \$64$. Then, applying a 50% increase to the first year gives $64 \times 1.5 = \$96$, and finally applying a 25% decrease to that amount results in $96 \times 0.75 = \$72$.
+
+#### 8"
+340,large,0.290866166886308,0.4446147729177028,19,1,"3 + (1 × 4) - 3 = 4
+#### 4"
+345,small,0.6085444862586962,0.47065319679677486,76,1,"To calculate the total number of legs, we multiply the number of tables by their respective leg counts:
+1. $40 \times 4 = 160$
+2. $50 \times 3 = 150$
+3. $160 + 150 = 310$
+
+####310"
+348,large,0.3369332637755327,1.5722370881121606,84,1,"Old daily revenue: $10 \times 100 = 1000$
+New daily revenue: $5 \times 220 = 1100$
+Percentage increase: $\frac{1100 - 1000}{1000} \times 100\% = 10\%$
+#### 10"
+350,large,0.40033575176207253,1.4236590629443526,75,1,"Monday: 1 hour
+Tuesday: 3 × 1 = 3 hours
+Wednesday: 0.5 hours
+Thursday: 3 ÷ 2 = 1.5 hours
+Friday: 2 hours
+Total: 1 + 3 + 0.5 + 1.5 + 2 = 8
+
+#### 8"
+351,large,0.46905949721360274,1.0642747420351952,55,1,"Roses need: $30 \times 2 = 60$
+Total needed: $30 + 60 = 90$
+Leftover: $100 - 90 = 10$
+#### 10"
+354,large,0.31151617245010244,1.1579856008756906,60,1,"400 - (80 + 10*20 + 5*15) = 400 - (80 + 200 + 75) = 400 - 355 = 45
+#### 45"
+355,small,0.641126643852997,0.5422083879821002,90,1,"To find the height of the tallest tree, first calculate the heights of the other two trees: the second tree is $6 + 5 = 11$ feet, and the sum of the shorter two is $6 + 11 = 17$ feet. Then, multiply this sum by 2 to get the height of the tallest tree ($17 \times 2 = 34$).
+
+####34"
+358,large,0.39558852142339623,0.8349027358926833,42,1,"Daily savings = $5 - (4 \times \$0.25) = \$4$
+Total savings = $\$4 \times 5 = \$20$
+#### 20"
+361,large,0.4856012183204129,1.714137588860467,92,1,"75 + 100 = 175 (first two legs)
+175 - 50 = 125 (third leg); Total daily distance = 175 + 125 = 300 miles
+300 * 3 = 900 miles per day; 18,000 / 900 = 20 days
+#### 20"
+362,large,0.42447977086054234,0.7146249020006508,35,0,"8 * 4 + (8 + 2) / 2 * 3 = 32 + 15 = 47
+#### 47"
+366,small,0.6517622648716298,0.3141009258106351,50,1,"To find the minimum score for the third test, we subtract the known scores from the total required sum: $42 - (15 + 18) = 42 - 33 = 9$.
+
+#### 9"
+369,large,0.3854662743301068,2.0678922859951854,112,1,"Frame cost: 44 × ($20 + $20 × 0.20) = 44 × $24 = $1,056
+Pin cost: 2 × $5 = $10
+Cord cost: (44 ÷ 4) × $12 = 11 × $12 = $132
+Total: $1,056 + $10 + $132 = $1,198
+#### 1198"
+375,small,0.6671026296610356,0.37876494182273746,61,1,"1. Start with 12 rolls.
+2. Subtract 6 for the children: $12 - 6 = 6$ rolls left.
+3. Multiply the remaining rolls by 8: $6 \times 8 = 48$ pieces.
+
+####48"
+378,large,0.537819671581208,0.9874285559635609,51,1,"Total washed = (10 pairs × 2) + 15 loose = 35 socks.
+Missed socks = Total needed - Total washed = 50 - 35 = 15.
+#### 15"
+379,small,0.7044120156070459,0.4213276677764952,69,1,"To find the number of cookies left, first add Rachel's initial cookies (23) to Janet's contribution (42), resulting in a total of 65 cookies. Then subtract the cookies eaten by her brother (44) from that sum: 65 minus 44 equals 21.
+
+####21"
+385,large,0.24172322498364293,0.8893241679761559,45,1,"52 * 0.5 = 26 girls; 26 - 13 = 13 girls present; 13 + 3 = 16 total singers
+#### 16"
+393,large,0.4322726545459768,1.008422113955021,53,1,"Total time = 4 + (4/2) + 1.5 = 7.5 hours.
+Editing percentage = (1.5 / 7.5) * 100 = 20%.
+#### 20"
+394,large,0.5208259639218001,0.6046913720201701,30,1,"6 \times 6 = 36
+2 \times 36 + 20 = 92
+#### 92"
+407,large,0.31919294022906003,1.5183321028016508,81,0,"Total steps = 10,000. Steps before jog = (10,000 / 2) + 1,000 + 2,000 = 7,500. Jog steps = 10,000 - 7,500 = 2,500.
+#### 2500"
+408,large,0.43676350759757404,1.8542288828175515,100,1,"Total words = 45 pages × 200 words/page = 9,000 words.
+Reading time = 9,000 words ÷ 300 words/minute = 30 minutes.
+Arrival time = 30 minutes (reading) + 10 minutes (travel) = 40 minutes.
+Minutes early = 60 minutes - 40 minutes = 20 minutes.
+#### 20"
+418,small,0.603533901679158,0.64191954000853,108,0,"To find the size of Timothy's locker, we first determine Zack's size using Peter's information: since Peter's locker is $1/4$ as big as Zack's and Peter's is 5 cubic inches, Zack's locker must be $5 \times 4 = 20$ cubic inches. Then, since Zack's locker is half as big as Timothy's, we divide Zack's size by 2 to get Timothy's size: $20 / 2 = 10$.
+
+#### 10"
+419,large,0.5351604460929987,1.1117588127963245,57,1,"10,000 - 4,000 = 6,000 (comb elevation)
+6,000 - 3,000 = 3,000 (climb distance)
+#### 3000"
+423,large,0.33510398428629523,9.166459785075858,512,0,"Jogger jeans cost $28 - $6 = $22.
+Total cost is $28 + $22 = $50.
+Savings from tattered jeans: $50 - $6 (saved total) - ($6 saved from joggers? No, re-read).
+Re-reading carefully: ""He saved a total of $6."" This implies the discount on both items summed to $6.
+Let $D_t$ be discount on tattered, $D_j$ be discount on jogger.
+$D_t + D_j = 6$.
+Saved from joggers = $\frac{1}{3} \times 6 = 2$.
+Saved from tattered = $6 - 2 = 4$.
+The question asks: ""how much more do jogger jeans originally cost than the tattered jeans?""
+Original price of tattered = $28.
+Original price of jogger = $28 - $6 = $22.
+Difference = $22 - $28 = -$6.
+Wait, the phrasing ""how much more do jogger jeans originally cost"" implies a positive difference if they are more expensive, or just the magnitude of difference. Since tattered is $28 and jogger is $22, joggers cost $6 *less*. The question asks ""how much more"", which might be a trick or asking for the negative value, or perhaps I misread the price relation.
+""jogger jeans cost $6 less than the tattered jeans"". So Jogger = Tattered - 6.
+Difference (Jogger - Tattered) = -6.
+Usually ""how much more X costs than Y"" when X is cheaper expects a negative answer or the question implies absolute difference. However, strictly speaking, they cost $6 less.
+Let's re-read the savings part to ensure it doesn't change prices. Savings are discounts. Prices are fixed.
+Tattered = 28. Jogger = 22.
+Difference = 22 - 28 = -6.
+If the question implies magnitude: 6.
+But usually ""how much more"" with a negative result is phrased ""how much less"". Given the constraint of short lines, I will calculate the signed difference or clarify.
+Actually, maybe the savings info is irrelevant distractor for the price difference? Yes, prices are given directly.
+Tattered"
+429,small,0.6603768106666744,0.4544846180360764,74,0,"To find the number of letters in Indras' name, we start with the given value of 6.
+Next, we calculate half of that amount: $6 \div 2 = 3$.
+Then, we add 4 to this result to get the sister's count: $3 + 4 = 7$.
+
+#### 10"
+430,large,0.37563433202337754,1.254540503025055,66,0,"Total original cost = $120 + $20 + (5 × $5) = $145
+Discount amount = $145 × 0.20 = $29
+Final price = $145 - $29 = $116
+#### 116"
+432,large,0.4810909243261994,0.9985481349285692,51,1,"Arthur = 100 * (3/4) = 75
+Walter = 75 * 2 = 150
+Bruce = 150 / 5 = 30
+#### 30"
+435,small,0.6916641537568492,0.42683188198134303,68,1,"To find out how many lollipops each friend received, first subtract the ones Ray kept from the total: $25 - 5 = 20$. Then divide that remainder by the number of friends: $20 / 4 = 5$. Each friend got 5 lollipops.
+
+####5"
+438,large,0.365296812133001,1.343106715939939,70,1,"Total onion weight = 2 lbs × 2 = 4 lbs.
+Total cost = (4 lbs × $2/lb) + (2 boxes × $2/box) = $8 + $4 = $12.
+Cost per serving = $12 / 6 people = $2.
+
+#### 2"
+440,small,0.8613089443025229,0.6821246270556003,115,1,"To find the perimeter, first convert the length from yards to feet: $3 \text{ yards} \times 3 \text{ feet/yard} = 9 \text{ feet}$. Then calculate the width by dividing the area by the length ($360 / 9 = 40$ feet). Finally, compute the perimeter using the formula $2 \times (\text{length} + \text{width})$, which gives $2 \times (9 + 40) = 98$ feet.
+
+####98"
+441,small,0.6094502614048344,0.6065959990955889,100,1,"To find the difference in the number of beads, first calculate the total for Elizabeth: $1 + 2 = 3$ packs, which equals $3 \times 20 = 60$ beads. Then calculate Margareth's total: $3 + 4 = 7$ packs, which equals $7 \times 20 = 140$ beads. The difference is $140 - 60 = 80$.
+
+####80"
+444,small,0.6747759865792118,0.5829855899792165,97,1,"To find the duration of Movie A, first convert Movie C's time from hours to minutes: $1.25 \times 60 = 75$ minutes. Since Movie B is 5 minutes longer than Movie C, Movie B is $75 + 5 = 80$ minutes. Because Movie A is one-fourth the length of Movie B, divide 80 by 4 to get 20 minutes.
+
+#### 20"
+445,large,0.38968439480754985,1.211369358934462,63,0,"Distance = 32 mph × (30/60) hours = 16 miles.
+Cost = 16 miles × $3/mile = $48.
+Change = $30 - $48 = -$18 (insufficient funds).
+#### -18"
+446,large,0.5035843260120214,1.2531142588704824,66,1,"Total eggs = (4 dozen × 12) + 2 = 50 eggs.
+Total glasses = 50 eggs ÷ 5 eggs/glass = 10 glasses.
+Total trays = 10 glasses ÷ 5 glasses/tray = 2 trays.
+#### 2"
+447,small,0.7042985502113153,0.46169947902671993,74,0,"To find the difference between Joey's score and Marcy's score, we first calculate Joey's total: $214 + 26 = 240$. Then, we subtract Marcy's score from Joey's: $240 - 225 = 15$. The final answer is 15.
+
+####15"
+448,large,0.5228756531077537,2.0285999849438667,110,1,"Cost per sneaker: $576 / 48 = $12.
+Flash sale revenue: 17 * $20 = $340.
+Department store revenue: (48 - 17) * $25 = 31 * $25 = $775.
+Total profit: ($340 + $775) - $576 = $1115 - $576 = $539.
+#### 539"
+449,small,0.7231639749189851,0.5066115229856223,82,0,"To find the total number of colors, we calculate the contribution from each group:
+1.  Ten packets $\times$ eight colors/packet = 80 colors.
+2.  Four packets $\times$ sixteen colors/packet = 64 colors.
+3.  Summing these gives $80 + 64 = 144$.
+
+#### 144"
+451,small,0.5677745448014904,0.5651972710620612,94,0,"To find the total cost, first calculate the original price per balloon: $900 divided by 20 balloons equals $45 per balloon. Then add the $20 increase to get a new price of $65 per balloon. Finally, multiply this new price by the number of balloons Bentley fills (170) to get the final total cost.
+
+$65 \times 170 = 11050$"
+453,small,0.5610786333981268,0.708913859911263,120,0,"To calculate the total value of Jenna's jewels, first determine the cost of the traded sapphires: 3 sapphires at $800 each equals $2400. Subtract this from her starting amount to find the rubies' value: $8000 - $2400 = $5600. Finally, add the value of the rubies ($1200 each) to the sapphires' value ($2400) to get a total of $17600.
+
+####17600"
+457,large,0.4038324372181517,0.5106707268860191,24,1,"50 + (50 / 2) - 30 = 45
+#### 45"
+466,small,0.656392487798525,2.7240081031341106,476,0,"To find the difference in cost, first calculate Becky's total: she paid $45 \times 20 = 900$ cents, then subtracted the $1$ discount to get $899$ cents. Next, calculate Kelly's total: she paid $50 \times 20 = 1000$ cents, then applied a $10\%$ discount ($100 \times 0.10 = 10$ cents) to get $990$ cents. The difference is $899 - 990 = -91$ cents, meaning Kelly paid less. However, re-reading the prompt's phrasing ""How much more did Kelly pay than Becky?"", if the result is negative, it implies Kelly paid *less*. Let me re-calculate carefully.
+
+Becky: $45 \times 20 = 900$ cents. Discount $1$. Cost = $899$ cents.
+Kelly: $50 \times 20 = 1000$ cents. Discount $10\%$. Discount amount = $100$ cents. Cost = $990$ cents.
+
+Wait, the question asks ""How much more did Kelly pay than Becky?"". If Kelly paid less ($990 < 899$), the answer should be negative or phrased as ""Kelly paid less"". Let me re-read the numbers. Maybe I swapped them? No, Becky bought at $45, Kelly at $50. Becky's base is lower. But she got a $1 discount ($100 cents) while Kelly got a $10\%$ discount ($100 cents).
+Becky: $900 - 1 = 899$.
+Kelly: $1000 - 10 = 990$.
+So Becky paid $899$, Kelly paid $990$. Kelly actually paid *more* by $990 - 899 = 91$ cents.
+
+Ah, my previous mental math was wrong. $990 - 899 = 91$. So Kelly paid $91$ cents more.
+
+####91"
+468,large,0.5125653589639969,0.8493868180084974,43,0,"200 + (5 × 2) + (15 × 2) + (30 × 2) - 180 = 400
+#### 400"
+469,small,0.6044155300263278,0.4508354081772268,73,1,"To find the total number of cupcakes needed, first calculate the total capacity required by multiplying the number of jars by the cupcakes per jar ($6 \times 8 = 48$). Then, divide this total by the capacity of each pan to determine how many pans are needed ($48 / 12 = 4$).
+
+#### 4"
+472,large,0.38922255788043714,1.1531177661381662,60,1,"Let $c$ be the number of carrot sticks. The equation is $0.5c + 2 = 5$. Subtracting 2 from both sides gives $0.5c = 3$. Multiplying by 2 yields $c = 6$.
+#### 6"
+473,small,0.5874613107500191,0.6197680488694459,105,1,"To find the percentage, first convert all measurements to the same unit (inches): the shark is 10 feet, which equals 120 inches. The total length of the remoras is 2 times 6 inches, totaling 12 inches. Next, divide the combined length of the remoras by the shark's length and multiply by 100 to get the percentage: (12 / 120) * 100 = 10%.
+
+####10"
+475,large,0.43457290630770495,1.0913546939846128,57,1,"Total time needed = 240 minutes.
+Total days available = 3 weeks × 4 days/week = 12 days.
+Daily walking time = 240 minutes / 12 days = 20 minutes.
+#### 20"
+476,large,0.5469477818542887,0.7841926710680127,40,1,"Total books = $300 / $15 = 20 books.
+Books per child = 20 books / 4 kids = 5 books.
+#### 5"
+479,large,0.3688499977321831,1.5770139119122177,85,1,"Ticket cost: $5000 \times 2 = \$10,000$
+Hotel cost: $\$1500 \times 1.20 \times 3 = \$5400$
+Total cost: $\$10,000 + \$5400 = \$15,400$
+#### 15400"
+481,small,0.5978127958301964,0.5778265949338675,96,1,"To find the combined weight, first calculate the weight of the 2010 penny by multiplying the 1959 penny's weight (48 grains) by three-quarters ($0.75$). Then, add this result to the original weight of the 1959 penny.
+
+$$48 \times 0.75 = 36$$
+$$36 + 48 = 84$$
+
+####84"
+488,small,0.7426295931127929,0.40933471103198826,67,1,"To find the number of girl Pomeranians, first calculate two-thirds of the total puppies: $27 \times \frac{2}{3} = 18$. Then, take one-third of that group: $18 \times \frac{1}{3} = 6$.
+
+#### 6"
+489,small,0.6736236769919534,0.3424818799830973,55,1,"To find the average, first sum the temperatures: $-48 + 21 + (-3) = -30$. Then divide by the number of countries (3): $-30 / 3 = -10$.
+
+#### -10"
+490,large,0.4483936226357318,0.6839279988780618,34,1,"Remaining needed: $12 - $4 = $8.
+Days required: $8 / $2 per day = 4 days.
+#### 4"
+492,small,0.6467972727121328,0.3822502619586885,61,1,"To find the total cost, first calculate the price of the family-size pizza by multiplying the small pizza's price ($8) by 3, which equals $24. Then, add the cost of both pizzas together: $8 + $24 = $32.
+
+####32"
+493,large,0.44667052013015,2.1904272430110723,119,1,"Cost per pack = $4.00; Buy one get one free means 2 packs for $4.00.
+Subtract $2.00 coupon: Total cost = $4.00 - $2.00 = $2.00.
+Total razors = 2 packs * 4 razors/pack = 8 razors; Cost per razor = $2.00 / 8 = $0.25.
+Convert to cents: $0.25 = 25 cents.
+
+#### 25"
+494,large,0.4047204252063747,1.2340117180719972,64,0,"Total height = (9 × 64"") + (1 × 60"") = 576"" + 60"" = 636"".
+Pyramid height = 636"" ÷ 12""/ft = 53 ft.
+#### 53"
+498,large,0.47866809041318453,1.4142174369189888,75,1,"Ashley has $5 \times 10 = 50$ oranges.
+Brianne has $50 + 20 = 70$ oranges.
+Total oranges are $50 + 70 = 120$.
+Number of pies is $120 / 3 = 40$.
+#### 40"
+500,small,0.6481312763906962,1.004370948066935,170,1,"Let $B$ be the number of insects Bodhi found.
+Since David found half of what Bodhi found, David's count is $\frac{1}{2}B$.
+Lily found 7 more than David, so Lily's count is $\frac{1}{2}B + 7$.
+The sum of all three counts equals 43: $B + \frac{1}{2}B + (\frac{1}{2}B + 7) = 43$.
+Combining the terms gives $2B + 7 = 43$, which simplifies to $2B = 36$ or $B = 18$.
+Substituting back, David found 9 and Lily found $9 + 7 = 16$.
+
+####16"
+501,small,0.643006666442684,0.4666249279398471,75,1,"To find the total amount of yarn, first calculate the combined fraction of a skein: $1/4 + 1/2 = 3/4$. Then multiply this fraction by the total number of yards in a skein ($364 \times 3/4$). This results in 273 yards.
+
+#### 273"
+502,large,0.5461503183574026,0.7575231748633087,38,1,"(2 × 5) + (3 × 2) + 10 = 10 + 6 + 10 = 26
+#### 26"
+505,large,0.3787757963286467,2.092804166022688,113,1,"Cost per stick for 2x4: $4 / 200 = $0.02; Cost per stick for 2x8: $6 / 400 = $0.015.
+Cheapest option is the 2x8, so buy maximum 2x8s with $24: $24 / $6 = 4 pieces.
+Total sticks: 4 pieces * 400 sticks/piece = 1600 sticks.
+#### 1600"
+508,small,0.6227065003207555,0.5606864679139107,92,0,"To find the total number of animals, we first calculate the number of cows in the farm by dividing the zoo's cow count by two: $20 \div 2 = 10$. Then, we add the farm's sheep count (which is half the zoo's sheep count) to the farm's cows and the zoo's sheep count ($10 + 5 + 20 = 35$).
+
+#### 35"
+509,small,0.5716731330048636,0.6771040710154921,115,1,"To find the total number of onions and potatoes Sophia bought, we first determine how many items Rose bought based on the given ratio. Since Rose bought 4 times as many items as Sophia, we divide Rose's total count by 4 to get Sophia's count.
+
+1.  Calculate Sophia's onions: $12 \div 4 = 3$
+2.  Calculate Sophia's potatoes: $4 \div 4 = 1$
+3.  Sum the totals for Sophia: $3 + 1 = 4$
+
+####4"
+511,small,0.5913609296999996,0.49739725491963327,82,1,"To find out how much Gerald has left, first calculate his weekly earnings by multiplying his daily pay ($30) by the number of days in a week (7), which equals $210. Then subtract this total from his spending amount ($100) to get the remaining balance.
+
+$210 - 100 = 110$
+
+####110"
+512,small,0.6098633246762556,0.5094661498442292,84,1,"To find the total amount of water Hannah needs, first calculate the distance in kilometers by multiplying the number of laps (8) by the length per lap (0.25 km), which equals 2 km. Then multiply that distance (2 km) by the required water per kilometer (60 ml). The calculation is $2 \times 60 = 120$.
+
+####120"
+514,small,0.640010532316731,0.9082270511426032,156,1,"Let $h$ be the cost of the house and $l$ be the cost of the lot.
+The total cost is $h + l = 120,000$.
+Since the house costs three times as much as the lot, $h = 3l$.
+Substituting this into the first equation gives $3l + l = 120,000$, which simplifies to $4l = 120,000$.
+Solving for $l$ yields $l = 30,000$.
+Then solving for $h$ using $h = 3l$ gives $h = 90,000$.
+
+####90000"
+516,small,0.7343014989778522,0.2518551691900939,40,0,"To find the total number of punches, multiply the rate by the duration: $25 \times (5 \times 3) = 375$.
+
+#### 150"
+519,small,0.5897586113900768,0.5261897530872375,86,1,"First, convert Rob's time from hours to minutes: $2 \times 60 = 120$ minutes.
+Next, calculate double Rob's time: $120 \times 2 = 240$ minutes.
+Finally, add Royce's extra time to that amount: $240 + 40 = 280$ minutes.
+
+####280"
+521,small,0.60651763575066,1.0162352889310569,171,1,"To find out how many problems Chris has left to complete on Thursday, we first calculate his progress day by day.
+
+1.  **Monday:** He completed 12 problems.
+    *   Remaining problems: $100 - 12 = 88$.
+2.  **Tuesday:** He completed 3 times the Monday amount ($12 \times 3 = 36$).
+    *   Remaining problems: $88 - 36 = 52$.
+3.  **Wednesday:** He completed one-quarter of the remaining problems ($52 \div 4 = 13$).
+    *   Remaining problems: $52 - 13 = 39$.
+
+On Thursday, he has 39 math problems left to complete.
+
+####39"
+530,large,0.3234995240271882,1.482862938195467,79,1,"Total hours = (4 hours/week × 8 weeks) + 1 extra hour for the 5-hour weeks + 2 extra hours for the 6-hour week
+Calculation: (4 × 8) + (2 × 1) + (1 × 2) = 32 + 2 + 2 = 36
+#### 36"
+531,large,0.5387884123406916,0.806414415827021,41,0,"48 - 8 + (5 * 8) = 72
+72 - 21 + (21 / 3) = 60
+#### 60"
+533,small,0.7168828212457481,0.8475640448741615,143,1,"To find the cost of one monitor, we first determine the cost of the computer and the printer. Since the computer cost $1,100 and Errol paid $400 less for the printer, the printer cost $1,100 - $400 = $700. The total amount spent on all three items is $2,400. Therefore, the combined cost of the two monitors is $2,400 - ($1,100 + $700) = $600. Since there are two monitors, each one costs $600 / 2 = $300.
+
+#### 300"
+535,small,0.6872150860123376,0.41601075208745897,68,0,"To find out how many candies Nick has, we first determine George's original amount by adding the 5 he ate to his remaining 3 (8 total), then multiply that by 2 to get Nick's count.
+
+#### 8 + 5 = 13
+#### 13 * 2 = 26"
+536,large,0.42190691018933646,0.5928912330418825,29,1,"Alyana = 10 - 4 = 6
+Anne = 6 + 2 = 8
+#### 8"
+538,large,0.4813409690909089,0.8174629069399089,42,1,"Total vlogs made = 18 + 21 + 15 = 54
+Vlogs remaining = 72 - 54 = 18
+#### 18"
+541,large,0.5176870660189336,1.9947188929654658,109,1,"Let $x$ be the daily savings in the first half (15 days) and $2x$ be the daily savings in the second half (15 days).
+The total savings equation is: $15x + 15(2x) = 1125$.
+Simplifying gives $45x = 1125$, so $x = 25$.
+The required daily savings for the second half is $2x = 50$.
+
+#### 50"
+542,small,0.6384568327562501,1.3191659690346569,224,1,"To find the total cost of the fruit Verna bought, I will calculate the cost for apples, oranges, and peaches separately by multiplying the quantity by the price per item, then summing these amounts.
+
+1.  **Apples:** $3 \text{ apples} \times \$1.50 = \$4.50$
+2.  **Oranges:** $5 \text{ oranges} \times \$0.80 = \$4.00$
+3.  **Peaches:** $6 \text{ peaches} \times \$0.75 = \$4.50$
+
+Next, I will add the individual costs together to get the total bill: $\$4.50 + \$4.00 + \$4.50 = \$13.00$.
+
+Finally, I will subtract this total from the amount Verna gave ($20.00) to find the change: $\$20.00 - \$13.00 = \$7.00$.
+
+####7"
+543,small,0.5981055187672496,0.4720348210539669,76,1,"To find the difference in earnings, first calculate Jairus's total: $0.8 \times 20 = \$16$. Then calculate Jenny's total: $0.5 \times 20 = \$10$. Subtracting Jenny's total from Jairus's gives a difference of $16 - 10 = \$6$.
+
+####6"
+544,small,0.7136200276891824,0.4589660719502717,75,1,"Let $B$ be the amount Brad receives. Then Jeff receives $4B$.
+The total sum is $B + 4B = 5B$.
+We set $5B = 100$, so $B = 20$.
+Jeff's share is $4 \times 20 = 80$.
+
+####80"
+546,small,0.6165947291086213,0.8059052410535514,134,0,"To solve this problem, we first determine the length of the alphabet, which is 26 letters. Since Elise writes the alphabet in full twice, that accounts for $2 \times 26 = 52$ letters. Next, she writes half of it once, which is $\frac{1}{2} \times 26 = 13$ letters. Finally, she re-writes everything she has already written (the original 52 letters), adding another 52 letters to the count. Adding these together: $52 + 13 + 52 = 117$.
+
+####117"
+547,small,0.621835272923048,0.8309198080096394,140,0,"To determine the number of families notified in the fourth round, we start with the initial count of 3 families. In each subsequent round, every existing caller contacts exactly 3 new families. Therefore, the total number of callers doubles by a factor of 2 at each step (multiplication by 2).
+
+1. Round 1: $3 \times 2 = 6$
+2. Round 2: $6 \times 2 = 12$
+3. Round 3: $12 \times 2 = 24$
+4. Round 4: $24 \times 2 = 48$
+
+####48"
+548,small,0.7985316662705374,0.25150406709872186,39,0,"To find the initial weight, subtract the total weight lost from the final weight: $70 - (3 \times 10) = 40$.
+
+#### 60"
+549,small,0.5700599779531996,0.8972818839829415,153,0,"To find the number of toys Jonathan currently has, we first calculate James's total toys: $80 \times 5 = 400$. Since Jonathan needs 2 more than he already has to reach this target, his current count is $400 - 2 = 398$.
+
+#### 1. Calculate the target number of toys
+Multiply James's toy count by five:
+$$80 \times 5 = 400$$
+
+#### 2. Determine Jonathan's current count
+Subtract the required surplus from the target to find his existing inventory:
+$$400 - 2 = 398$$
+
+#### 3. Final Answer
+The numeric answer is 398"
+552,large,0.38718168196564995,1.983492708997801,108,1,"First, calculate the commission on the initial $1000: $1000 \times 0.30 = \$300$.
+Next, calculate the additional commission on the remaining $1500 ($2500 - $1000): $1500 \times 0.10 = \$150$.
+Finally, add both amounts together: $\$300 + \$150 = \$450$.
+
+#### 450"
+554,large,0.5357524165286156,1.1708621110301465,62,1,"Cold time per mile: 16 min.
+Warm time per mile: $2(16) + 2 = 34$ min.
+Difference for 3 miles: $3 \times (34 - 16) = 54$.
+#### 54"
+556,small,0.5746098628614221,0.4055016147904098,66,1,"To calculate the total cost, first determine the price of the six-inch cold-cut combo by multiplying the foot-long fish sub price ($40) by three, which equals $120. Then add this amount to the original $40 to get a total of $160.
+
+#### 160"
+563,large,0.5439802026445971,1.2246376210823655,65,1,"Son's age: 12 - 4 = 8; Total candles needed: 12 + 8 = 20.
+Packs required: 20 / 5 = 4 packs.
+Total cost: 4 * $3 = $12.
+#### 12"
+564,large,0.4555385302235468,1.5277281729504466,82,0,"Week 1: $15 \text{ min} \times (2 \text{ pages} / 1.5 \text{ min}) = 20 \text{ pages}$
+Week 2: $100 \text{ pages}$
+Total: $20 + 100 = 120 \text{ pages}$
+#### 120"
+567,large,0.3065327981615349,0.4998077310156077,23,0,"5 + 3(1) + 2(0.5) = 8
+#### 8"
+568,small,0.5846166081156131,0.6702615490648896,111,1,"To find the total number of goals scored by all three teenagers, we first determine Mark's and Anna's scores using Richie's known score of 80. Since Richie scored 20 more than Mark, Mark scored $80 - 20 = 60$ goals. Since Richie scored 45 more than Anna, Anna scored $80 - 45 = 35$ goals. Adding these together: $80 + 60 + 35 = 175$.
+
+####175"
+569,large,0.4566512431152126,0.7076421100646257,35,1,"Mitchell's earnings: 21 * $4 = $84
+Difference: $84 - $63 = $21
+#### 21"
+571,small,0.7224822175652257,0.43433489091694355,71,1,"To find the total cost, first calculate the spaying cost ($200) and the vaccine cost ($20 \times 3 = $60), then add the vase breakage cost ($12 \times 4 = $48). Summing these amounts gives a total of $308.
+
+####308"
+586,small,0.5615881872519626,0.8721895478665829,148,0,"To find the total calories burned, multiply the duration of each activity by its calorie burn rate: $2 \text{ hours} \times 500 \text{ cal/hr} = 1000 \text{ cal}$ and $1 \text{ hour} \times 600 \text{ cal/hr} = 600 \text{ cal}$, summing to a total of 1600 calories. Then, divide the total calories by the water-to-calorie ratio: $1000 / 200 = 5$ and $600 / 200 = 3$, resulting in a total of 8 ml.
+
+####8"
+589,large,0.46437105945498675,0.5921292458660901,29,0,"-0.625 - (-1.75) = 1.125
+#### 1.125"
+590,large,0.31793510817795717,0.7118257929105312,35,0,"100 + (100 × 2) + 10 + (8 × 2) = 346
+#### 346"
+592,large,0.43449217770621673,1.110815956024453,58,1,"Amazon total: $16 + $4 = $20
+eBay shipping: $4 × 2 = $8; eBay total: $13 + $8 = $21
+Difference: $21 - $20 = $1
+#### 1"
+593,small,0.6552724724685319,1.4472157249692827,250,1,"To solve this problem, we first calculate the initial height of the beanstalk: 4 feet. Since the window is 20 feet off the ground, the beanstalk must grow by at least 16 feet (20 - 4) to reach a height greater than the window.
+
+Starting with 4 feet, it takes 3 days to reach 8 feet, then 7 feet, and finally 15 feet on day 4. On day 5, the beanstalk doubles from 15 feet to 30 feet, which is taller than the 20-foot window.
+
+#### 3
+Day 4: $4 \times 2^3 = 32$ feet (Wait, let's re-calculate step-by-step carefully).
+Start: 4 ft.
+Day 1: $4 \times 2 = 8$ ft.
+Day 2: $8 \times 2 = 16$ ft.
+Day 3: $16 \times 2 = 32$ ft.
+
+The beanstalk is already taller than the window (20 feet) after just 3 days.
+
+#### 3
+3"
+594,small,0.6949107456964967,0.44772286899387836,72,0,"To calculate the total protein intake, first determine the daily amount by multiplying the weight of mushrooms eaten (200 grams) by the protein content per gram (3 grams), which equals 600 grams of protein. Then, multiply that daily total by 7 days in a week to get the weekly intake.
+
+#### 1800"
+595,small,0.5666434334595379,0.7974586009513587,132,1,"Let $x$ be Jerry's current age.
+Five years ago, his age was $x - 5$.
+The problem states that his current age ($x$) is twice his age five years ago ($x - 5$), so we have the equation: $x = 2(x - 5)$.
+Solving for $x$: $x = 2x - 10$, which gives $x = 10$.
+Jerry is currently 10 years old.
+In 3 years, Jerry will be $10 + 3 = 13$ years old.
+
+####13"
+598,small,0.6207021593228471,0.7395073261577636,123,1,"To calculate the total number of coins Colby has, sum the values of his quarters, dimes, nickels, and pennies:
+$8 \times 25 + 6 \times 10 + 14 \times 5 + 15 \times 1 = 200 + 60 + 70 + 15 = 345$.
+
+Then, divide the total value by the cost per gumball (a nickel worth 5 cents):
+$345 / 5 = 69$.
+
+####69"
+600,large,0.47841355272208724,0.5463197429198772,26,1,"8 * 1.5 = 12
+12 - 2 = 10
+#### 10"
+601,large,0.13251626450413848,2.2864733999595046,123,0,"Initial games: 5 (birthday) + 5 (Christmas) = 10.
+Year 1 purchases: 12 months × 1 game + 5 (Christmas) = 17.
+Year 2 & 3 purchases: (12 months × 2 games) + (12 months × 4 games) + 10 (Christmas) = 24 + 48 + 10 = 82.
+Total: 10 + 17 + 82 = 109.
+
+#### 109"
+602,small,0.758375355827506,0.554244029102847,91,1,"To find the time required for the additional distance, first calculate the plane's speed using the initial data: $1200 \text{ miles} / 3 \text{ hours} = 400 \text{ mph}$. Then, divide the additional distance by this speed: $2000 \text{ miles} / 400 \text{ mph} = 5$ hours.
+
+#### 5"
+603,large,0.40690895363035273,1.566676712129265,83,1,"Ruiz's rate: 120 lbs / 2 hrs = 60 lbs/hr.
+Marissa's hourly rate: (3/4) * 120 lbs = 90 lbs/hr.
+Total production in 12 hours: (60 + 90) * 12 = 1800 lbs.
+#### 1800"
+605,large,0.4095854297750677,1.2217520049307495,64,1,"First 4 hours: 4 * 15 * 0.50 = 30
+Next 2 hours: 2 * 10 * 0.60 = 12
+Total earnings: 30 + 12 = 42
+#### 42"
+606,large,0.49091559613299385,1.5698618181049824,84,1,"400 miles / 2 miles = 200 sets of rotations per month.
+200 * 725 = 145,000 rotations per month.
+10,440,000 / 145,000 = 72 months.
+72 / 12 = 6 years.
+#### 6"
+608,large,0.5232136112510467,1.1705369530245662,61,0,"Total cost = ($25 × 0.7) + $35 = $17.50 + $35 = $52.50
+Money left = $50 - $52.50 = -$2.50
+#### -2.5"
+609,large,0.37979931390317906,0.7018396221101284,35,1,"4 dozen/day × 7 days = 28 dozen total
+28 dozen × (1/4 pound/dozen) = 7 pounds
+#### 7"
+616,large,0.5087325245752665,0.8221146760042757,42,1,"Week 1: 3 inches
+Week 2: 3 × 2 = 6 inches
+Week 3: 6 + 4 = 10 inches
+#### 10"
+617,large,0.4658204610908049,0.9191679460927844,47,1,"Prince sells $15 \times 10 = 150$ kg per day.
+It takes $750 / 150 = 5$ days to sell the bull.
+#### 5"
+619,large,0.5257397508089147,0.9843899880070239,51,1,"Total lights = 4 lights/pole × 6 poles/intersection × 4 intersections = 96 lights
+Functioning lights = 96 total lights - 20 non-functioning lights = 76
+#### 76"
+620,large,0.5446492494365545,1.0047843400388956,52,1,"1000 - 356 = 644
+1000 - 135 = 865
+644 + 865 = 1509
+#### 1509"
+622,large,0.35141470962863525,1.7199480629060417,92,1,"Gum used at school: $8 \div 2 = 4$ pieces.
+Total gum used (school + home + dinner): $4 + 1 + 1 = 6$ pieces.
+Gum remaining before giving to sister: $20 - 6 = 14$ pieces.
+Gum given to sister and left: $14 \div 2 = 7$ pieces.
+
+#### 7"
+623,large,0.4515292966525642,0.6076612467877567,30,1,"Current age = 16 - 12 = 4
+Future age = 4 + 4 = 8
+#### 8"
+629,large,0.48221835396279555,1.990896605886519,109,1,"Total revenue = 10 * $25,000 = $250,000
+Company cost = 30% of $250,000 = $75,000; Profit = $250,000 - $75,000 = $175,000
+Commission = 10% of $175,000 = $17,500
+#### 17500"
+631,small,0.6070324288126441,0.9675069169607013,165,0,"To solve this problem, we first determine the price of the diamond Jewell, which is given as $2000. Since the gold Jewell's price is 4/5 times the diamond's price, we calculate that: $2000 \times \frac{4}{5} = 1600$. Next, since the silver Jewell is $400 less than the gold Jewell, we subtract $400 from $1600 to get $1200. Finally, summing all three prices ($2000 + 1600 + 1200$) yields the total cost.
+
+#### 2000 + 1600 + 1200 = 4800"
+636,small,0.6304789343603846,0.6624679211527109,112,1,"To find the total weekly production, first calculate Jewel's rate: she processes 50 customers per day, so her daily output is 50. Since Julie works twice as fast, her daily output is $50 \times 2 = 100$. Together, their combined daily output is $50 + 100 = 150$ customers. Over a standard 7-day week, the total production is $150 \times 7 = 1050$.
+
+####1050"
+644,large,0.2997973710743865,0.9824855120386928,51,1,"Wife age = 60 + 4 = 64
+Son age = 64 / 2 = 32
+Daughter-in-law age = 32 - 3 = 29
+#### 29"
+646,small,0.6598775388837431,0.4160157539881766,68,1,"To find the total distance, calculate Alisa's distance ($12 \times 4.5 = 54$) and Stanley's distance ($10 \times 2.5 = 25$), then add them together ($54 + 25 = 79$).
+
+#### 79"
+647,small,0.6227233382024023,0.6603356041014194,111,0,"To find the total time, first calculate Bill's digging speed in both materials: he digs at $4 \div 2 = 2$ feet per hour through clay. Then multiply his soil speed by the soil distance ($4 \times 24 = 96$ hours) and his clay speed by the clay distance ($2 \times 8 = 16$ hours). Finally, add these two times together to get the total duration: $96 + 16 = 112$.
+
+####112"
+648,large,0.496998969054394,1.1611887200269848,61,0,"Total people = Howie + Teacher + 25 classmates = 28 people.
+Cupcakes per person = 1 vanilla + 1 chocolate = 2 cupcakes.
+Total cupcakes = 28 people × 2 cupcakes/person = 56.
+#### 56"
+652,large,0.3847512727476903,1.44063654798083,77,1,"Total time = 4 hours; Free time = 1 hour; Paid hours = 3.
+Cost structure: Hour 1 = $15; Hours 2 & 3 = $15 × 2 = $30 each.
+Total cost = $15 + $30 + $30 = $75.
+#### 75"
+653,large,0.5156046113274372,1.243234673049301,66,1,"Total expected balance = Initial balance + Weekly wage = $200 + $300 = $500.
+Actual balance = $420.
+Withheld amount = Total expected balance - Actual balance = $500 - $420 = $80.
+#### 80"
+655,small,0.6437399100613427,0.2829958030488342,43,1,"To find the number of pages remaining, subtract the completed portion from the total: $15 - (15 \times \frac{1}{3}) = 10$.
+
+#### 10"
+656,small,0.6566147514030493,0.5927733720745891,99,0,"To calculate the remaining time, subtract the total number of pages (200) from the daily reading rate (10) over the full period (30), resulting in 600 pages read; then divide this by the daily rate to find the days needed.
+
+#### 200 / 10 = 20
+#### 20 * 30 = 600
+#### 600 / 10 = 60"
+663,small,0.6153607320366972,0.6257326591294259,104,1,"To find the number of newspapers delivered to District B, we subtract the newspapers delivered to District A and District C from the total number of newspapers James delivers in a day.
+
+1.  Start with the total: $600$.
+2.  Subtract District A's delivery: $600 - 198 = 402$.
+3.  Subtract District C's delivery: $402 - 209 = 193$.
+
+####193"
+664,large,0.31801181974849735,0.9977707399521023,52,1,"Total hours = 4 classes/week × 2 hours/class × 6 weeks = 48 hours.
+Recipes learned = 48 hours ÷ 1.5 hours/recipe = 32 recipes.
+#### 32"
+665,small,0.5738704382989307,0.6677865739911795,112,1,"First, determine the number of math teachers by subtracting the history teachers from the total: $150 - (0.60 \times 150) = 30$. Next, calculate the total hours these math teachers sleep by multiplying their count by the daily hours per teacher: $30 \times 6 = 180$. Finally, sum the individual sleeping times to get the collective total: $180 + 180 = 360$ hours.
+
+####### 360"
+667,large,0.49826951611140824,0.40031616599299014,18,1,"4 * 12 + 5 = 53
+#### 53"
+675,large,0.3269642217975411,1.0809555179439485,56,0,"Initial dogs: 4 + 8 = 12.
+After buying toys, dogs doubled: 12 * 2 = 24.
+After 3 dogs left: 24 - 3 = 21.
+#### 21"
+682,large,0.4603570923292979,1.9284495851024985,105,1,"Let $x$ be the original length. The new length is $x + 0.5x + 20 = 1.5x + 20$.
+Given the final length is 140cm: $1.5x + 20 = 140 \Rightarrow 1.5x = 120$.
+Solving for $x$: $x = 120 / 1.5 = 80$.
+#### 80"
+685,small,0.7333114052551181,0.7422436089254916,126,1,"To calculate the total cost, we multiply the quantity by the price per unit for each item:
+1. Apples: $1 \text{ kg} \times \$4/\text{kg} = \$4$
+2. Bananas: $2 \text{ kg} \times \$2/\text{kg} = \$4$
+3. Oranges: $2 \text{ kg} \times \$3/\text{kg} = \$6$
+
+Summing these amounts gives the total payment: $\$4 + \$4 + \$6 = \$14$.
+
+####14"
+689,small,0.5947123208950549,0.8272102971095592,141,0,"To find the total cost for 10 lollipops and 10 candies, first calculate the cost of one candy: $3.20 divided by 4 equals $0.80 per candy. Then, multiply the cost of a single candy ($0.80) by 10 to get the total candy cost ($8.00). Next, multiply the cost of a single lollipop ($0.40) by 10 to get the total lollipop cost ($4.00). Finally, add the two totals together: $8.00 plus $4.00 equals $12.00.
+
+####12"
+691,large,0.4346421841208532,1.5894239170011133,85,1,"Cost of vaccines = 2 * $20 = $40.
+Let T be the total bill; then Heartworm = 0.6T and Vaccines = 0.4T.
+Since 0.4T = $40, T = $100.
+Amount left = $125 - $100 = $25.
+#### 25"
+693,small,0.6596620826019695,1.191670186119154,205,1,"To find the total area of the quilt in square feet, we first need to determine the number of colored squares by counting them step-by-step:
+
+1.  **Red squares**: The problem states there are **14** red squares.
+2.  **Blue squares**: There are 4 more blue squares than red squares ($14 + 4 = 18$).
+3.  **Green squares**: There are 6 more green squares than blue squares ($18 + 6 = 24$).
+4.  **White squares**: There are 12 fewer white squares than green squares ($24 - 12 = 12$).
+
+Next, we calculate the total number of squares by summing these counts: $14 + 18 + 24 + 12 = 68$. Since each square is 1 foot by 1 foot, the total area in square feet equals the total count.
+
+####68"
+695,small,0.6240074010182795,0.3419445639010519,55,0,"To find the number of 8-point bucks, first calculate the number of bucks by taking 50% of the total deer (25). Then, take 20% of that buck count to get the final answer.
+
+#### 12.5"
+696,large,0.3482034174052149,2.018298951908946,109,0,"Betty's points: $50 \times 1.3 = 65$.
+Tom's points: $65 - 30 = 35$.
+Marta's points: $35 \times 3 = 105$.
+Missing points: $(50 + 65 + 105 + 35) - 400 = 255 - 400 = -145$ (class exceeds threshold).
+
+#### -145"
+702,large,0.5222171696757338,1.336425320012495,70,1,"Gordy's capacity = 4,000 + 800 = 4,800 pounds.
+Gary's capacity = 11,600 - (4,000 + 4,800) = 2,800 pounds.
+#### 2800"
+704,small,0.8088732395203228,0.5866290919948369,96,1,"To find out how much money Gerald had left, we first determine his initial share of the $100 using the ratio 3:2. The total parts are 3 + 2 = 5. Gerald's share is $\frac{3}{5}$ of $100, which equals $60. After spending $10 on a book, he has $60 - $10 = $50 left.
+
+#### 50"
+705,small,0.7582046999807617,0.43137350981123745,69,1,"To find the distance the turtle can cover, first determine the turtle's speed by dividing the cat's speed by 5 ($15 \div 5 = 3$ feet/second). Then multiply this speed by the time given ($3 \times 40 = 120$ feet).
+
+#### 120"
+708,small,0.6889650876129391,0.302451595896855,47,1,"To find the total cost, multiply the daily rate by the number of days in two weeks (which is 14 days): $12 \times 14 = 168$.
+
+#### 168"
+711,small,0.563463945455162,0.6081781371030957,100,0,"To solve this problem, we first determine the cost per full set of the deal (2 scoops + 1 free), which is $3.00. Then, we divide Erin's total budget of $6.00 by the cost per set to find the number of sets she can afford.
+
+$3.00 \times 2 = \$6.00$
+$6.00 / 3.00 = 2$
+
+#### 2"
+719,large,0.5494247294972657,0.7490277809556574,38,1,"Total sacks given = 3 + 4 = 7 sacks.
+Total kilograms = 7 × 25 = 175 kg.
+#### 175"
+720,small,0.6421680425425497,0.3763116931077093,60,1,"To find the difference in the number of boxes, subtract the amount bought last week from the amount bought this week: $3 + 5 = 8$ (this week) and $8 - 4 = 4$ (last week). The result is 4.
+
+####4"
+722,large,0.37468140845085285,1.0518712571356446,54,1,"Cost to fix = (3 * $25) + $120 = $195
+Damage avoided = $450
+Savings = $450 - $195 = $255
+#### 255"
+723,small,0.7501216377056523,0.4712253550533205,76,1,"To find the number of chairs remaining, first subtract the repaired chairs from the total count: $170 + 23 = 193$. Then subtract the repaired normal chairs ($20$) and baby chairs ($13$): $193 - 20 - 13 = 160$.
+
+#### 160"
+726,large,0.4940371790364207,2.1639405509922653,118,1,"Let $B$ be the length of Bobby's shoe in inches.
+Topher's shoe length is given as $8 \text{ ft } 4 \text{ in} = (8 \times 12) + 4 = 100$ inches.
+The equation based on the problem statement is: $100 = 9B + 10$.
+Subtracting 10 from both sides gives $90 = 9B$, so dividing by 9 yields $B = 10$.
+
+#### 10"
+727,large,0.48871503949945255,1.2264133940916508,64,1,"Student windows smashed: (1/4) * 64 * 4 = 64
+Teacher windows smashed: (3/4) * 32 * 2 = 48
+Total smashed: 64 + 48 = 112
+#### 112"
+729,large,0.3234885261314067,1.8581800810061395,101,1,"Total initial voters = 5000.
+Voted by midday = (2/5) * 5000 = 2000; Remaining = 3000.
+Voted by 16:00 = (2/3) * 3000 = 2000; Not voted = 3000 - 2000 = 1000.
+#### 1000"
+733,large,0.5361106048206381,0.6656144841108471,33,1,"Greg has 4 people in total (himself + 3 siblings).
+$20 / 4 = $5 per person.
+#### 5"
+735,large,0.5255376090297832,1.4144836738705635,76,1,"Candidate A received $0.20 \times 100 = 20$ votes.
+Candidate B received $20 + (0.50 \times 20) = 30$ votes.
+Candidate C received $100 - 20 - 30 = 50$ votes.
+#### 50"
+737,large,0.28112567355724366,1.1862121920567006,62,1,"Total used = (3 × 4) + (7 × 2) + (8 × 0.5) = 12 + 14 + 4 = 30 ounces.
+Remaining = 32 - 30 = 2 ounces.
+#### 2"
+738,large,0.5440645123365686,1.060357018839568,56,1,"Steven has $20 / 2 = 10$ books.
+Alice has $10 + 6 = 16$ books.
+Clara has $20 - 16 = 4$ more books than Alice.
+#### 4"
+740,large,0.483736760672378,1.2285864250734448,65,1,"Total students = 50. Bakers = 10. Basketball players = 5.
+Music lovers = 2 * 5 = 10.
+Video game players = 50 - (10 + 5 + 10) = 25.
+#### 25"
+741,large,0.4313342970410628,0.6679811580106616,33,0,"12 - (1/3 * 12) + 20 = 4 + 20 = 24
+#### 24"
+745,large,0.4988387682329656,1.3541376441717148,71,0,"Cost = 3 * $1800 = $5400
+Revenue = $4000 + $1000 + (30 * $50) = $5500
+Profit = $5500 - $5400 = $100
+#### 100"
+747,large,0.501107014948437,1.1095974238123745,58,1,"Daily savings = $0.50 - $0.40 = $0.10 per tomato.
+Weekly savings = $0.10 * 500 tomatoes/day * 7 days/week = $350.
+#### 350"
+748,small,0.5980992118076336,0.607824623119086,100,0,"To find the total number of marbles Carl and Cal have combined, we first determine how many marbles each person has based on the given relationships. Since Sean has 56 marbles, Carl has $56 \times 4 = 224$ marbles, and Cal has $56 \div 2 = 28$ marbles. Adding these together gives $224 + 28 = 252$.
+
+#### 252"
+750,large,0.5040304591894111,2.53068823996,138,1,"Weekdays per month: $4 \text{ weeks} \times 5 \text{ days/week} = 20 \text{ days}$; Weekends per month: $4 \text{ weeks} \times 2 \text{ days/week} = 8 \text{ days}$.
+Total chairs per month: $(20 \times 60) + (8 \times 100) = 1200 + 800 = 2000$.
+Total for two months: $2000 \times 2 = 4000$.
+#### 4000"
+752,small,0.6836515386338506,0.4590940729249269,74,0,"To calculate the total annual cost, multiply the monthly bill by 12 months ($100 \times 12 = 1200$), then divide that sum by the number of roommates (4) to find each person's share ($1200 / 4 = 300$).
+
+#### 300"
+754,large,0.19408532697447675,2.0461918918881565,109,0,"Small stickers traded: $30 \times 0.9 = 27$ (worth 27 large buttons).
+Large stickers traded for large buttons: $40 \times 0.5 = 20$ (worth 60 large buttons); remaining large stickers ($20$) trade for $20 \times 3 = 60$ small buttons.
+Total buttons: $27 + 60 + 60 = 147$.
+
+#### 147"
+755,large,0.49613177209652826,0.8366685179062188,43,1,"Monday: 2 matches
+Friday: 1 match
+Saturday: 2 × 2 = 4 matches
+Total: 2 + 1 + 4 = 7 matches
+#### 7"
+758,small,0.8118976196160432,0.517461532028392,86,0,"To find the final price, first calculate the discounted amount by multiplying the marked price by 95% (or subtracting 5%). Then, divide that result by 100 to get the decimal value.
+
+$140 \times 0.95 = 133$
+$133 / 100 = 1.33$
+
+####1.33"
+760,large,0.3441448135627338,1.3621199750341475,72,0,"50 * 0.20 = 10 (people for horse #2)
+(50 - 10) * 0.60 = 36 (people for horse #7)
+50 - 10 - 36 = 4 (people for horse #12)
+#### 4"
+767,small,0.7101850433486828,0.45248699095100164,73,0,"To find the total cost, first calculate the cost per liter by dividing the price per kilogram by the amount needed for one liter ($3 / 5 = $0.60). Then multiply that unit cost by the target volume of 4 liters ($0.60 * 4 = $2.40).
+
+#### 2.40"
+768,large,0.4906665258978504,0.9670023899525404,50,0,"Ahmed read $300 / 2 = 150$ books.
+Total books read is $300 + 150 + 150 = 600$.
+#### 600"
+775,large,0.4923941322793507,0.936740580946207,48,1,"57 * 4 + 73 * 2 = 228 + 146 = 374
+650 - 374 = 276
+#### 276"
+777,large,0.2807421361292605,2.19702839711681,118,0,"Normal movies count: $600 - (600/3) = 400$.
+Series movies cost: $(600/3) \times (\$10/3) = \$200$.
+Older movies cost: $(40\% \text{ of } 400) \times \$5 = 160 \times \$5 = \$800$.
+Total cost: $\$200 + \$800 = \$1000$.
+
+#### 1000"
+778,large,0.2761484846843289,1.7311694701202214,92,1,"Peaches: 6 × $2.00 = $12.00
+Plums: 8 × $1.00 = $8.00
+Apricots: 6 × $3.00 = $18.00
+Total: $12.00 + $8.00 + $18.00 = $38.00
+#### 38"
+780,large,0.2805006997366897,3.3674334038514644,184,0,"Let $E$ be the number of enemies Emma jumps on, $B$ be the berries she collects, and $T$ be her remaining time. Ava's score is $(E+8) \times 10 + (B+3) \times 5 + (T-4) \times 30$.
+Emma's score is $E \times 10 + B \times 5 + T \times 30$.
+The difference is $[(E+8) \times 10 + (B+3) \times 5 + (T-4) \times 30] - [E \times 10 + B \times 5 + T \times 30]$.
+Simplifying the expression: $(80 + 15 - 120) = -25$.
+#### -25"
+787,small,0.6595495147983984,0.6421819080132991,108,1,"To find the number of OLED TVs sold, first calculate the combined fraction of smart TVs and analog TVs: $1/4 + 1/8 = 2/8 + 1/8 = 3/8$. This means the remaining fraction for OLED TVs is $1 - 3/8 = 5/8$.
+
+Multiply the total sales (40) by this fraction: $40 \times (5/8) = 200/8 = 25$.
+
+####25"
+792,large,0.5039749528125923,0.8639492769725621,44,1,"10 caps/day × $0.25/cap = $2.50/day
+$2.50/day × 30 days = $75.00
+#### 75"
+794,small,0.6839650067984936,0.4049212040845305,65,1,"To find the total number of lions, first calculate the number of males by taking half of the females ($12 \div 2 = 6$). Then add the females, males, and cubs together ($12 + 6 + 14 = 32$).
+
+#### 32"
+800,small,0.7487527126445955,0.4259151080623269,71,1,"To find the total, first calculate Nikita's score: half of 278 is 139, so 139 plus 11 equals 150. Then add Pierson's 278 to Nikita's 150 for a sum of 428.
+
+####428"
+801,large,0.48669433271737544,1.8763012799900025,101,1,"Total students = 40 classes × 25 students/class = 1000 students (each plants 1 tree).
+Total teachers = 40 classes × 3 teachers/class = 120 teachers (each plants 2 trees).
+Total trees = (1000 × 1) + (120 × 2) = 1000 + 240 = 1240.
+#### 1240"
+802,large,0.541208299650635,1.7090430490206927,92,1,"Total current animals = 3 + 5 + 2 + 4 = 14.
+Let $x$ be the number of goats; then $x / (14 + x) = 0.30$.
+Solving for $x$: $x = 0.3(14 + x) \Rightarrow 0.7x = 4.2 \Rightarrow x = 6$.
+#### 6"
+807,large,0.48255402323685237,1.363560272147879,72,1,"Total chips = 2 bags × 72 chips/bag = 144 chips.
+Area possible = 144 chips ÷ 12 chips/in² = 12 in².
+Length = Area ÷ Height = 12 in² ÷ 3 inches = 4 inches.
+#### 4"
+808,large,0.47957312369093963,1.4657943958882242,79,1,"Total quarts consumed = (4 × 1.5) + (16 × 2) = 6 + 32 = 38 quarts.
+Initial total quarts = 38 + 10 = 48 quarts.
+Convert to gallons: 48 ÷ 4 = 12 gallons.
+#### 12"
+810,small,0.6233041789294793,1.5831460780464113,274,0,"To solve this problem, we first determine the total number of students after one full year. Since there are 10 students at the start and the number doubles every month for 12 months, the final population is $10 \times 2^{12}$. Calculating $2^{12}$ gives 4096, so the total students at the end of the year is 40,960.
+
+Next, we calculate how many students joined during the first five months (from Jan to May). The number of new students in each month follows a geometric progression: Month 1 adds 10, Month 2 adds 20, Month 3 adds 40, Month 4 adds 80, and Month 5 adds 160. Summing these values ($10 + 20 + 40 + 80 + 160$) yields a total of 310 additional students in the first half of the year.
+
+Finally, we subtract the initial number of students (10) from the total count at the end of the year to find the net increase above the starting population. The difference is $40,960 - 10 = 40,950$.
+
+####40950"
+811,large,0.45975304887447377,1.0849744039587677,56,1,"Total branches climbed = $105 / $0.25 = 420 branches.
+Days in a week = 7 days.
+Average branches per day = 420 / 7 = 60 branches.
+#### 60"
+813,small,0.6001735526246056,0.6446649569552392,106,0,"To find out how many S'mores each kid can have, first calculate the total number of marshmallows used: $9 + 9 = 18$. Then subtract the lost marshmallows from the original count: $35 - 18 = 17$. Finally, divide the remaining marshmallows by the number of kids to get the amount each can have: $17 / 2 = 8.5$, which rounds to 9 S'mores per kid.
+
+####9"
+814,large,0.18163355825492206,1.9886659779585898,106,1,"Total games = (Jack: 240/20) + (Friend 1: 120/10) + (Friend 2: 120/10) + (Friend 3: 240/30) = 12 + 12 + 12 + 8 = 44 games.
+Total cost = 44 games × $0.25/game = $11.00.
+#### 11"
+815,large,0.41962580076506095,2.8720408098306507,156,0,"Let $z$ be the amount of zest (and fragrance), $s$ be the amount of salt (and sugar), and $o$ be the amount of oil.
+Given: $z = s$, $s = 2z$, and $o = 2s$.
+Substituting these relationships into the total weight equation: $z + z + 2z + 2z + 2(2z) = 10$.
+Simplifying: $9z = 10 \Rightarrow z = 10/9$.
+The amount of oil is $o = 2s = 4z = 4(10/9) = 40/9$.
+
+#### 4.44"
+816,small,0.735614531970439,0.5324453238863498,89,1,"To calculate the total cost, multiply the number of goats by their price per goat ($3 \times 500 = 1500$) and add it to the cost of the cows ($2 \times 1500 = 3000$), then sum both amounts ($1500 + 3000 = 4500$).
+
+#### 4500"
+821,large,0.36814168401802333,0.7303592809475958,36,1,"50 + 20 = 70 (total before lunch)
+70 / 2 = 35 (cars that left)
+#### 35"
+822,large,0.4016211378833908,0.877375571988523,45,1,"30 * 5 * 1.20 = 180 (daily earnings)
+180 * 7 = 1260 (weekly earnings)
+#### 1260"
+827,large,0.29486800729331947,5.159895088989288,287,1,"Shipping cost = (4 * 0.35) + (20 * 0.08) = 1.40 + 1.60 = $3.00
+Refund amount = 32 * 0.75 = $24.00
+Total loss = Shipping cost + Refund amount - Purchase price = 3.00 + 24.00 - 32 = -$2.00 (Net gain of $2)
+Wait, ""lose"" implies the net financial impact relative to keeping the book? No, she returns it. She loses the shipping cost and gets a partial refund.
+Loss = Shipping Cost - Refund Amount = 3.00 - 24.00 = -$21.00?
+Let's re-read carefully: ""how much money will Milly lose?""
+She spent $32. She gets back $24. She pays $3 to ship.
+Net position change = -$32 (buy) + $24 (refund) - $3 (shipping) = -$11.
+Alternatively, Loss = (Purchase Price - Refund) + Shipping Cost = (32 - 24) + 3 = 8 + 3 = 11.
+Milly loses $11.
+
+#### 11"
+828,small,0.6520200139349429,0.475039801094681,76,0,"To find the remaining money, first calculate the total cost of the items: two pairs of jeans ($30 \times 2 = 60$) plus a bag ($20$), which equals $80$. Then subtract this total from Mulan's starting amount ($40 - 80$).
+
+#### -100
+-10"
+829,large,0.40190217384072124,0.9124355390667915,46,1,"50,000 - (8,000 + 4,000 + 24,000) = 14,000
+#### 14000"
+833,small,0.5978309885359022,0.49985129781998694,82,0,"To find the total height, we multiply the individual lifting capacities: $1 \text{ inch} \times 12 \times 4 \times 10$.
+
+$1 \times 12 = 12$
+$12 \times 4 = 48$
+$48 \times 10 = 480$
+
+####480"
+834,small,0.6328884980708539,0.6149939990136772,100,1,"To find the total distance traveled, multiply the speed by the time spent traveling each segment:
+1. $8 \text{ mph} \times 4 \text{ hours} = 32 \text{ miles}$
+2. $8 \text{ mph} \times 6 \text{ hours} = 48 \text{ miles}$
+3. Add the two distances together: $32 + 48 = 80$
+
+####80"
+838,large,0.4231221283932853,0.8194232389796525,42,1,"Total slices = (3 × 5) + (5 × 3) - 15 = 15 + 15 - 15 = 15
+#### 15"
+840,small,0.5517080841599153,1.4841389108914882,257,0,"To find the total length of unused glue sticks, I will calculate the remaining length for each stick individually and then sum them up.
+
+First, calculate the unused length of the first stick: $12 \text{ mm} - \frac{1}{6} = 71\frac{5}{6} \text{ mm}$.
+Second, calculate the unused length of the second stick: $12 \text{ mm} - \frac{2}{3} = 11\frac{1}{3} \text{ mm}$.
+Third, calculate the unused length of the third stick: $12 \text{ mm} - \frac{1}{2} = 11.5 \text{ mm}$.
+
+Summing these values: $71\frac{5}{6} + 11\frac{1}{3} + 11.5 = 84.0833...$ mm.
+However, since the problem asks for a single numeric answer without units or commas, I will round to two decimal places as is standard for such problems unless exact fractions are preferred. The sum is approximately $84.08$.
+
+####84.08"
+844,large,0.49798187799146626,1.6063274361658841,87,1,"Jack's dishes = 60.
+Peter's dishes = 60 / 2 = 30.
+Jack's socks = 60 / 2 = 30.
+Peter's socks = 30 * 2 = 60.
+Total = 60 + 30 + 30 + 60 = 180.
+
+#### 180"
+846,large,0.4969461530870982,1.3164201870094985,70,1,"Total time per group = 2 + 6 + 2 = 10 minutes.
+Time available for performances = (2 hours × 60 minutes) - 10 minutes = 110 minutes.
+Number of groups = 110 / 10 = 11.
+#### 11"
+847,small,0.607652999923335,0.705420718062669,116,0,"To find the total amount Brenda will have, we first calculate the annual interest by taking three-quarters of the initial $300, which equals $225. Over a period of 3 years, this interest accumulates to $675. Adding this to the original principal gives a total sum of $975.
+
+#### 300 * (3/4) = 225
+#### 225 * 3 = 675
+#### 300 + 675 = 975"
+850,small,0.6148411271849109,0.4731578801292926,76,0,"To find the total number of goats remaining, first calculate how many were sold: 10 from Farm X plus twice that amount (20) from Farm Y equals 30 goats sold. Subtracting these from the original counts gives 45 left in Farm Y and 45 left in Farm X, totaling 90 goats.
+
+#### 90"
+857,large,0.5498823914868138,1.2111403460148722,63,1,"Day 1: 4000 gallons
+Day 2: 4000 * 2 = 8000 gallons
+Day 3: 8000 + 6000 = 14000 gallons
+#### 14000"
+858,small,0.6400502396554026,1.550338382134214,263,0,"To solve this problem, we calculate the number of new infections for each day:
+1. **Day 1**: 10 people start being infected, resulting in $10 \times 6 = 60$ new cases. Total infected becomes $10 + 60 = 70$.
+2. **Day 2**: The 70 newly infected people each infect 6 others ($70 \times 6 = 420$), while the original 10 continue to infect, adding another 60 cases. Total new infections are $420 + 60 = 480$.
+3. **Day 3**: The 70 people from Day 2 plus the 70 people from Day 1 (who were infected on Day 1) now infect others. Specifically, the 70 infected on Day 2 infect $70 \times 6 = 420$, and the 70 infected on Day 1 infect $70 \times 6 = 420$. Total new infections are $420 + 420 = 840$.
+
+The total number of people infected after three days is 840.
+
+####840"
+859,small,0.6419531786013264,0.36854559602215886,59,0,"To calculate the total amount received by both, first determine how much Julieta received: $20 \times (1 - 0.10) = 18$. Then add their amounts together: $20 + 18 = 38$.
+
+####38"
+864,small,0.6554281839805252,0.49652944994159043,82,0,"To find the total number of leftover burritos, first calculate how many burritos were distributed to students: $50 \text{ students} \times 10 \text{ burritos/student} = 500$ burritos. Then subtract the ones George ate from the total ordered: $600 - 500 = 100$.
+
+####100"
+865,large,0.2808149099247201,1.5646382251288742,84,1,"Red cars = 12; Green cars = 12 - 2 = 10; Blue cars = 3 * 10 = 30.
+Total non-yellow cars = 12 + 10 + 30 = 52.
+Yellow cars = Total (75) - Non-yellow (52) = 23.
+#### 23"
+874,small,0.6399194421733997,0.5627784649841487,92,1,"To find out how much Ella earns in 12 hours, first determine her hourly rate by dividing her total earnings ($33) by the number of hours worked (3), which equals $11 per hour. Then, multiply this hourly rate by the new time period (12 hours).
+
+$33 / 3 = 11$
+$11 * 12 = 132$
+
+####132"
+875,small,0.653119824781508,0.47648953390307724,78,1,"First, add the initial number of marbles to the ones received: $52 + 28 = 80$.
+Next, calculate one-quarter of that total: $80 \div 4 = 20$.
+Finally, subtract the lost marbles from the current count: $80 - 20 = 60$.
+
+####60"
+882,large,0.3615752837870801,2.222141242120415,119,1,"Bacon cost: $10.
+Chicken cost: 6 × (2 × $10/5) = 6 × $4 = $24.
+Strawberries cost: 3 × $4 = $12.
+Apples cost: 7 × ($4/2) = 7 × $2 = $14.
+Total spent: $10 + $24 + $12 + $14 = $60.
+Remaining budget: $65 - $60 = $5.
+
+#### 5"
+889,small,0.6031775593870395,0.5507813210133463,91,1,"To find the difference in the number of petals between the daisies and the orchids, first calculate the total petals for each type: $5 \times 5 = 25$ petals for orchids and $4 \times 10 = 40$ petals for daisies. Then subtract the orchid count from the daisy count: $40 - 25 = 15$.
+
+####15"
+891,small,0.7501064087199897,0.732359595131129,120,1,"First, determine the speed of a thingamabob by dividing the speed of a whatchamacallit (121 m/s) by the ratio given in the second sentence (11).
+$121 \div 11 = 11$ meters per second.
+
+Next, calculate the speed of a whirligig by multiplying the speed of a thingamabob (11 m/s) by the ratio given in the first sentence (5).
+$11 \times 5 = 55$ meters per second.
+
+####55"
+893,large,0.41379643718514647,1.1416599589865655,60,1,"New hourly rate = $10 + $2 = $12
+Weekly hours = 8 hours/day * 5 days/week = 40 hours
+Total weekly pay = $12/hour * 40 hours = $480
+#### 480"
+898,large,0.3740217461419437,1.018421859946102,53,1,"Anis rowed $50 + \frac{1}{5} \times 50 = 60$ miles.
+Total distance is $50 + 60 = 110$ miles.
+#### 110"
+899,small,0.6406655478031474,0.4007355540525168,64,1,"To find the number of cookies each nephew gets, first subtract the cookies taken by the husband from the total: $100 - 4 = 96$. Then divide this remaining amount equally among the 6 nephews: $96 / 6 = 16$.
+
+#### 16"
+905,large,0.5281887503825281,1.15311921807006,61,1,"Sleep: 10 hours; Work: 8 hours; Dog walking: 1 hour.
+Total occupied time = 10 + 8 + 1 = 19 hours.
+Free time = 24 - 19 = 5 hours.
+#### 5"
+908,small,0.6470395725039396,0.5651051080785692,93,1,"To find out how many marbles Dean has left, we first calculate the amount given away: he gave $1/5$ of 30 marbles to Jamie, which is 6 marbles, and then gave 10 more to Donald. The total marbles given away is $6 + 10 = 16$. Subtracting this from the original 30 gives 14 marbles remaining.
+
+#### 14"
+911,large,0.4520337391583386,1.1011929870583117,58,1,"Packages per hour = 50 - 10 = 40
+Total packages in 8 hours = 40 * 8 = 320
+Total earnings = 320 * $0.20 = $64
+#### 64"
+913,small,0.6055702399783041,0.5013327070046216,82,1,"To find the number of yellow balloons, we first calculate the total number of red balloons by multiplying the quantity per balloon (2) by the count of red balloons (20), which gives 40. Then, subtracting this from the total pieces thrown (58) leaves 18 pieces for yellow balloons. Dividing 18 by 3 yields 6.
+
+#### 6"
+919,large,0.50990690252215,1.4203352178446949,75,1,"30 students * 10 lollipops/student = 300 total lollipops sold.
+Profit per lollipop = $0.8 - $0.5 = $0.3.
+Total profit = 300 lollipops * $0.3/lollipop = $90.
+#### 90"
+926,large,0.1523537624075605,2.000330035109073,107,0,"Total spent = (13 Fri/Sat tickets × $10) + (17 other day tickets × $7) + (2 popcorn × $8) + (4 candy × $2) = $130 + $119 + $16 + $8 = $273.
+Remaining budget = $150 - $273 = -$123 (deficit).
+Since he is already over budget, he cannot see any more movies.
+#### 0"
+928,large,0.45946868190441825,1.3846272439695895,74,1,"Tuesday: $39 \times 2 = 78$
+Wednesday: $39 \times 2 = 78$
+Average: $(39 + 78 + 78 + 48 + 57) / 5 = 300 / 5 = 60$
+#### 60"
+930,large,0.5073568190848282,0.6152537430170923,29,1,"31 + 8 + 9 = 48
+62 - 48 = 14
+#### 14"
+933,large,0.39968894739423083,1.383497173897922,74,1,"Total boxes = (10 people × 5 boxes) + 10 existing boxes = 60 boxes.
+Tables needed = 60 boxes ÷ 2 boxes per table = 30 tables total.
+New tables required = 30 total tables - 15 existing tables = 15 tables.
+#### 15"
+938,large,0.4933882327262079,2.3400366690475494,128,1,"John's total earnings are $50 \times 6 = 300$ dollars.
+After spending $50 on gas and $50 on pencils ($5 \times 10$), he has $300 - 50 - 50 = 200$ dollars remaining.
+He deposits $100 in the bank, leaving him with $200 - 100 = 100$ dollars for pens.
+The number of $25 pens he can buy is $100 / 25 = 4$.
+
+#### 4"
+939,large,0.44388176578855937,1.2639494219329208,66,0,"Craig's total letters: $10 \times 20 = 200$.
+Brother's total letters: $200 + 50 = 250$.
+Combined total: $200 + 250 = 450$.
+#### 450"
+940,small,0.5672321047232597,0.35385376983322203,56,0,"To find the total number of children, we multiply the number of rows by the number of children per row. Since there are 7 rows and each row has 8 children, the calculation is $7 \times 8 = 56$.
+
+#### 56"
+941,small,0.5768490900158493,0.5606951881200075,92,0,"To find out how many bottles the teacher has left, we first calculate the total number of bottles needed for students: 29 students multiplied by 2 bottles per student equals 58 bottles. Next, we subtract the 9 coupons (worth 100 bottles each) from the total available to get the remaining amount.
+
+58 - 9 = 49
+49 - 9 = 40
+
+####40"
+942,large,0.4887877245303235,1.253023331053555,66,1,"$40 + \lceil 2.25 \rceil \times 35 + 60 = 40 + 3 \times 35 + 60 = 40 + 105 + 60 = 205$
+#### 205"
+943,large,0.4656107120323979,1.4335314170457423,76,0,"Cost = 10 * $15 * (1 - 0.40) = $90
+Loss on disliked CDs = 5 * ($15 - $40) = -$125 (a gain of $125)
+Net loss = $90 - $125 = -$35
+#### -35"
+945,large,0.3158165999662617,2.388624677900225,129,1,"Total distance = 20 miles.
+First leg: Distance = $20 \times 0.6 = 12$ miles; Time = $12 / 2 = 6$ hours.
+Rest time = $6 / 2 = 3$ hours.
+Second leg: Distance = $20 - 12 = 8$ miles; Speed = $2 / 2 = 1$ mph; Time = $8 / 1 = 8$ hours.
+Total time = $6 + 3 + 8 = 17$ hours.
+
+#### 17"
+946,small,0.6276391580734034,0.4364357499871403,72,1,"To find the number of loaves in the bakery, first calculate seven times Sam's amount: $7 \times 70 = 490$. Then subtract 40 from that result: $490 - 40 = 450$. The bakery has 450 loaves.
+
+#### 450"
+948,large,0.3298798057926945,1.41825184202753,75,1,"NYT Commission: 6 × $5 × 0.10 = $3.00
+WSJ Commission: 10 × $15 × 0.08 = $12.00
+Total Commission: $3.00 + $12.00 = $15.00
+#### 15"
+950,small,0.6634487441716651,1.3322204088326544,226,0,"Let $A$ be Azibo's score, $D$ be Dinar's score, and $B$ be Bahati's score.
+We are given:
+1. $B + A + D = 45$ (Total points)
+2. $B = A + 20$ (Bahati scored 20 more than Azibo)
+3. $B = D + 10$ (Bahati scored 10 more than Dinar)
+
+Substituting equation 2 into equation 3 gives $A + 20 = D + 10$, which simplifies to $D = A + 10$.
+Now substitute $B = A + 20$ and $D = A + 10$ into the total sum:
+$(A + 20) + A + (A + 10) = 45$
+$3A + 30 = 45$
+$3A = 15$
+$A = 5$
+
+Azibo scored 5 points."
+953,large,0.20832604647771646,1.7795168492011726,94,0,"Total sleep duration = (6:00 - 10:00) + (2:15 - 2:38) = 4 hours 45 mins + 23 mins = 287 minutes.
+Waking up early time = 5 minutes.
+Sleep on bed = Total sleep duration - Early waking time = 287 - 5 = 282.
+#### 282"
+954,small,0.5947592319647007,0.7511457728687674,124,0,"To find the total number of utensils Jonathan has remaining, we first determine how many measuring spoons he initially had by calculating $2/3$ of two dozen cups (which is 24). Then, we subtract the 6 spoons Pedro received from that initial count.
+
+1. Calculate the initial number of spoons: $24 \times \frac{2}{3} = 16$.
+2. Subtract the spoons given to Pedro: $16 - 6 = 10$.
+3. The final remaining count is 10.
+
+####10"
+959,large,0.3407378017537165,0.9043299190234393,45,1,"Jason carried 2 balls; Jeffrey carried half of that (1 ball); Jordan carried twice Jason's amount (4 balls). The total is $2 + 1 + 4 = 7$.
+#### 7"
+961,large,0.4275631220280342,1.3183099150191993,70,1,"Let $x$ be the number of chips each of Amora and Lainey received ($x=70$).
+The third person receives $x + 15 = 85$ chips.
+Total chips = $70 + 70 + 85 = 225$.
+#### 225"
+962,small,0.5697271341662286,0.3765845929738134,58,0,"To find the total travel cost, first calculate the supply cost by adding 50% of $400 to get $200, then add that amount to the original $400 to reach a total of $600.
+
+#### 600"
+967,large,0.4802707847399711,1.205366370966658,63,1,"Brother's age: $8 \times 2 = 16$
+Sister's age: $8 - (0.25 \times 8) = 6$
+Total age: $8 + 16 + 6 = 30$
+#### 30"
+972,large,0.5186867462986844,1.6156678048428148,86,0,"Total oranges given away: $2 \times 2 = 4$ boxes.
+Remaining boxes: $12 - 4 = 8$ boxes, so kept oranges are $\frac{1}{4} \times (8 \times 20) = 40$.
+Oranges sold: $(8 - 4) \times 20 = 80$.
+
+#### 80"
+974,large,0.37625235448803335,0.9775921911932528,50,1,"Total cost = 18 + 13 + 8 = 39
+Amount needed = 39 - 14 = 25
+Hours required = 25 / 5 = 5
+#### 5"
+981,small,0.5972974600818501,0.7125441620592028,121,1,"To find the total number of servings, first calculate the total weight of crawfish caught over the three days:
+1. Thursday: 3 pounds.
+2. Friday: $3 \times 4 = 12$ pounds.
+3. Saturday: $12 / 2 = 6$ pounds.
+Total weight = $3 + 12 + 6 = 21$ pounds.
+
+Since 1 serving equals 3 pounds, divide the total weight by the weight per serving:
+$21 / 3 = 7$.
+
+####7"
+988,large,0.47537965937076876,1.3476877980865538,72,1,"Monthly savings: $2,000 \times 0.25 = \$500$.
+Annual savings: $\$500 \times 12 = \$6,000$.
+Number of pairs: $\$6,000 / \$1,000 = 6$.
+
+#### 6"
+996,large,0.2553501684404815,2.2505839378573,123,1,"Let $W$ be Wilfred's age. The average age of the four children is $\frac{20}{4} = 5$. Helene's age is twice this average, so Helene is $2 \times 5 = 10$. The sum of the ages is Akbar + Alessandro + Helene + Wilfred = $3 + 4 + 10 + W = 17 + W$. Since the total age is 20, we have $17 + W = 20$, which gives $W = 3$.
+#### 3"
+1001,large,0.28219391578282543,1.664323392091319,89,0,"Total preparation time = 20 + 30 + (2 × 60) + 10 = 170 minutes.
+Convert total time to hours and minutes: 170 minutes = 2 hours 50 minutes.
+Latest start time = 5:00 pm - 2 hours 50 minutes = 2:10 pm.
+#### 14:10"
+1002,small,0.6223423095576022,0.5549217120278627,92,1,"To find the number of chocolate bars per box, first calculate the total number of bars sold by adding Lisa's (3.5) and Peter's (4.5) sales: $3.5 + 4.5 = 8$ boxes. Then, divide the total count of bars (64) by the total number of boxes sold to get the average per box: $64 / 8 = 8$.
+
+####8"
+1005,large,0.4458872286570204,1.593149372143671,86,1,"Female porcupines = (3/5) * 50 = 30.
+Total births per month = 30 * 4 = 120.
+Total births per year = 120 * 12 = 1440.
+Final population = 50 + 1440 = 1490.
+
+#### 1490"
+1006,large,0.3286894976082159,1.3696138311643153,72,1,"Volume = 14 × 25 × 4 = 1,400 cubic feet; Gallons needed = 1,400 × 5.9 = 8,260 gallons; Cost = 8,260 × $0.10 = $826
+#### 826"
+1008,small,0.7220366406055921,0.6466784121003002,107,1,"To find the difference in distance, first calculate Matteo's total distance by multiplying his speed (55 mph) by his time (4 hours), which equals 220 miles. Next, calculate Shandy's total distance by multiplying his speed (45 mph) by his time (10 hours), which equals 450 miles. Finally, subtract Matteo's distance from Shandy's distance to find the difference: 450 minus 220 is 230.
+
+####230"
+1015,small,0.658369963366674,0.6272407921496779,104,1,"To find the number of pieces of sweets each friend received, we first calculate the total number of pieces by multiplying the number of packs by the pieces per pack ($15 \times 60 = 900$). Then, subtract the two packs Anne kept ($900 - (2 \times 60) = 780$). Finally, divide this remainder by the number of friends ($780 / 10 = 78$).
+
+#### 78"
+1016,large,0.5255215986617217,1.249379670014605,66,0,"120 * (1 + 0.05)^3 = 120 * 1.157625 = 138.915
+Rounding 138.915 to the nearest integer gives 139.
+#### 139"
+1017,small,0.552297642291573,0.3535417898092419,56,0,"To find the total number of portraits and selfies, subtract the number of selfie-only albums from the total number of albums: $8 - 3 = 5$. Then add the portraits to get the final count: $5 + 2 = 7$.
+
+####7"
+1022,large,0.5377654564549821,2.5455318049062043,140,1,"Let $s$ be the number of small animals and $l$ be the number of large animals.
+The price of a large animal is $3 \times 4 = 12$.
+Given $s = 2l$, the total earnings equation is $4(2l) + 12(l) = 120$.
+Simplifying gives $8l + 12l = 120$, so $20l = 120$, which means $l = 6$.
+Since $s = 2l$, then $s = 2 \times 6 = 12$.
+
+#### 12"
+1023,large,0.5453574461019574,0.7532117071095854,38,1,"Total daily consumption = 5 + 4 + 2 = 11 sandwiches
+Weekly consumption = 11 * 7 = 77 sandwiches
+#### 77"
+1024,large,0.5221584428399964,0.8710195608437061,45,1,"80 * 1 + 60 * 4 - (2 * 10) = 80 + 240 - 20 = 300
+#### 300"
+1026,large,0.20628818997771034,1.6327198660001159,88,1,"Iron pickaxe rate = $12 \times 2 = 24$ lbs/day.
+Steel pickaxe rate = $24 \times 1.5 = 36$ lbs/day.
+Total for 40 dwarves in 30 days = $40 \times 36 \times 30 = 43,200$.
+#### 43200"
+1034,small,0.7502802591071747,0.4879474251065403,79,1,"To find the total amount Ted spent, first calculate the cost of the books: $3 \times 16 = 48$. Next, calculate the cost of the pencils: $3 \times 6 = 18$. Finally, add these two amounts together to get the total expenditure.
+
+$48 + 18 = 66$
+
+####66"
+1036,small,0.7763458442412968,0.4409947420936078,71,1,"To find the total number of packs, first calculate the total apples by multiplying the number of boxes (2) by the apples per box (40), which equals 80 apples. Then divide the total apples (80) by the number of apples per pack (8). The result is exactly 10 packs.
+
+####10"
+1037,large,0.5001668878732909,0.9305632000323385,48,1,"Cost = (2 × $11) + (3 × $6) = $22 + $18 = $40
+Remaining = $50 - $40 = $10
+#### 10"
+1040,small,0.5834186800958105,0.6352027109824121,105,0,"To find the total number of letters delivered from Monday to Wednesday, we first calculate Tuesday's delivery: one-fifth of 425 is 85, so adding 17 gives 102. Then, we calculate Wednesday's delivery by doubling Tuesday's amount (204) and adding 5, resulting in 209. Finally, summing Monday's 425 with Wednesday's 209 yields a total of 634.
+
+####634"
+1042,large,0.37649716656451804,3.0847869510762393,170,0,"Race 1 loss: -$5
+Race 2 win: $1 + 2(-$5) = -$9 (net change is -$9, but problem says ""won"", implying positive gain relative to previous state? Re-reading: ""won $1 more than twice the amount he previously lost"". Previous loss was $5. Twice that is $10. Won $1 more than $10 is $11. So Race 2 change = +$11.)
+Race 3 loss: -1.5 * ($11) = -$16.5
+Total net change: -$5 + $11 - $16.5 = -$10.5
+Average loss per race: -$10.5 / 3 = -$3.5
+
+#### -3.5"
+1047,small,0.5692531103520938,0.8238056700211018,137,1,"Let $x$ be the number of balls retrieved in the second set.
+Then the first set has $x + 4$ balls, and the third set has $\frac{1}{2}x$ balls.
+The total is $(x + 4) + x + \frac{1}{2}x = 19$.
+Simplifying the equation: $2x + 4 + 0.5x = 19$, which gives $2.5x = 15$, so $x = 6$.
+The first set has $6 + 4 = 10$ balls.
+
+#### 10"
+1051,small,0.6067728668591139,0.44584993296302855,73,1,"To find the total gallons, first calculate the daily consumption: $8 \text{ cups} \times 30 \text{ days} = 240 \text{ cups}$. Then convert to gallons by dividing by the cup-to-gallon ratio: $240 / 16 = 15$.
+
+#### 15"
+1052,large,0.40308314048791816,0.7018039210233837,35,0,"120 + 20 - 50 + (2 * 50) - 80 = 160
+#### 160"
+1057,large,0.4476295687342339,1.0773576719220728,57,1,"Saturday: 4 movies; Sunday: 4 / 2 = 2 movies.
+Total per weekend: 4 + 2 = 6 movies.
+Total for 4 weeks: 6 * 4 = 24 movies.
+#### 24"
+1059,small,0.6518218411712149,0.30101994588039815,47,0,"To find out how many days the food lasts, divide the total amount of food by the daily consumption: $720 \div (3 \times 2) = 120$.
+
+#### 120"
+1065,small,0.7370445320941837,0.30724869295954704,49,0,"To calculate the average, sum all scores (100 + 80 = 180) and divide by the number of tests (4).
+180 / 4 = 45.
+####45"
+1069,large,0.4268559939199688,0.9096695380285382,46,1,"20 trucks × 20 tons/truck = 400 tons total capacity
+400 tons × (1 - 1/4) = 300 tons delivered
+#### 300"
+1073,large,0.37934626597050786,1.2288656618911773,65,1,"Total daily consumption = $315 \div 7 = 45$ bananas.
+First monkey eats 10, second eats $10 + 4 = 14$, so third eats $45 - 10 - 14 = 21$.
+#### 21"
+1074,small,0.6381196217871992,0.4780888301320374,76,0,"To find the total number of pieces placed, we first calculate the pieces from the first puzzle: half of 500 is 250. Then, we add the pieces from the second puzzle, which is also 500. Adding these two amounts together gives us the final count.
+
+250 + 500 = 750"
+1079,large,0.528476537766198,1.6584572719875723,89,1,"Bought price = $2000 \times 0.75 = 1500$
+Sold price = $1500 \times 1.20 = 1800$
+Discount % = $(2000 - 1800) / 2000 \times 100\% = 10\%$
+
+#### 10"
+1083,small,0.5648417111208835,0.8614058920647949,143,1,"To find the savings, first calculate the cost of buying 10 bunches: $3.00 \times 10 = \$30.00$. Next, determine the total number of individual bananas purchased by multiplying the bunch count (10) by the average per bunch (4), which equals 40 bananas. Then, calculate the cost for buying these 40 bananas individually: $0.80 \times 40 = \$32.00$. Finally, subtract the bunch purchase price from the individual purchase price to find the savings: $\$32.00 - \$30.00 = \$2.00$.
+
+####2"
+1086,large,0.2390266400170353,2.254309844924137,122,1,"BMX price = $500 / 2 = $250
+MTB count = 300 - (150 Trekking + 45 BMX) = 105
+Total earnings = (105 * $500) + (45 * $250) + (150 * $450) = $52,500 + $11,250 + $67,500 = $131,250
+#### 131250"
+1087,large,0.4326769190773275,0.8248501520138234,42,1,"Net change per hour = 5 - 3 = 2 bales remaining.
+Total bales after 6 hours = 2 * 6 = 12.
+#### 12"
+1089,small,0.7094904182391261,0.47107156994752586,75,1,"To find the height of the second bounce, first calculate the drop height: $24 \times \frac{2}{3} = 16$ feet. Then apply the bounce ratio again to that result: $16 \times \frac{2}{3} = \frac{32}{3}$ feet.
+
+#### 32/3"
+1092,small,0.6541779050628316,0.6427975380793214,105,1,"To find the original amount, we can work backward from the final amount:
+1. The Allosaurus ate the last 270 kg, leaving nothing for the raptors.
+2. Before the raptors ate, there was $270 \div 0.5 = 540$ kg left.
+3. Before the T-Rex ate, there was $540 \times 2 = 1080$ kg.
+
+#### 1080"
+1093,large,0.5249436498510399,1.2979068690910935,69,0,"Total area = (2 × 10×8) + (2 × 5×8) = 160 sq ft.
+Gallons needed = 160 / 20 = 8 gallons.
+Total cost = 8 × $12 = $96.
+#### 96"
+1094,large,0.30902799253733676,2.2637010291218758,123,1,"Total shaken cans initially: 3. Total unshaken cans initially: 9.
+Ellen takes 1 unshaken (remaining unshaken: 8). Brother takes 1 shaken and 2 unshaken (remaining shaken: 2, remaining unshaken: 6).
+Total cans left for the friend: 2 + 6 = 8. Probability of picking a shaken can: 2/8 = 0.25.
+Converted to percentage: 0.25 * 100 = 25%.
+
+#### 25"
+1097,large,0.4716941781255325,0.9084831739310175,47,1,"Total people = (20 cars × 3 people/car) + (12 buses × 35 people/bus) = 60 + 420 = 480.
+#### 480"
+1098,large,0.519790706974756,0.7641527308151126,39,1,"Mike = 24
+Martha = 24 - 4 = 20
+Jeff = 20 + 10 = 30
+#### 30"
+1103,large,0.49659569971289297,1.8208024629857391,98,1,"Let $N$ be the total number of jellyfish.
+The number of large jellyfish is $\frac{1}{5}N$, and the number that change color is $\frac{1}{3}$ of those, which equals $\frac{1}{15}N$.
+Given that 6 jellyfish changed color, we solve $\frac{1}{15}N = 6$ to find $N = 90$.
+#### 90"
+1104,small,0.6310692291619304,0.42224142188206315,69,1,"1. Start with Chris's age: $4$.
+2. Calculate Ben's age by multiplying Chris's age by 2: $4 \times 2 = 8$.
+3. Calculate Caroline's age by multiplying Ben's age by 3: $8 \times 3 = 24$.
+
+####24"
+1107,small,0.785852721049121,0.41463828505948186,68,1,"To find the total school population, first calculate the number of students: $240 \div 0.4 = 600$. Then, determine the number of girls by subtracting the boys from the total: $600 - 240 = 360$.
+
+#### 360"
+1108,small,0.5622314183227943,0.36667120992206037,58,1,"To find the total cost, first add the price of the pots and soil: 19 + 26 = 45. Then subtract the discount: 45 - 7 = 38. The final amount spent is 38.
+
+####38"
+1114,small,0.7723306784165842,0.4262147890403867,68,1,"To find the remaining amount of money, we first calculate how much Raymond has after saving: $21 + $11 = $32. Then, subtract the costs for the comic book ($5) and the puzzle ($19): $32 - $5 - $19 = $8.
+
+#### 8"
+1115,large,0.3770483844879124,0.9197696400806308,47,0,"Total spent = Initial budget - Remaining budget = $16 - $2 = $14.
+Cost per book = Total spent / Number of books = $14 / 2 = $7.
+#### 7"
+1116,small,0.7948232349328549,0.2963851720560342,47,1,"To find the number of students this year, multiply the last year's enrollment by 1.2 (representing a 20% increase).
+
+50 * 1.2 = 60
+
+####60"
+1117,small,0.7351712199409054,0.5535677059087902,91,0,"To find the time required for 459 blinks, first determine the rate by dividing the total blinks (255) by the total time (5 minutes), which gives 51 blinks per minute. Then, multiply this rate by the target number of blinks (459) to get the final duration: $51 \times 9 = 459$ minutes.
+
+#### 459"
+1122,large,0.28924893895392817,1.7007826569024473,91,1,"Total production needed = 400 - 20 = 380 toys.
+Production from first four workers = (2 * 6 + 2 * 4) * 10 = 200 toys.
+Fifth worker's production = 380 - 200 = 180 toys in 10 hours, so 18 toys/hour.
+#### 18"
+1126,small,0.5579286547412486,0.6976440828293562,116,0,"To find the number of days, first calculate half of the Earth's circumference: $40,000 \div 2 = 20,000$ kilometers. Then divide the daily flight distance by this target distance: $400 \div 20,000 = 0.02$. Finally, multiply by the number of days in a year (365) to get the total time: $0.02 \times 365 = 7.3$ days.
+
+####7.3"
+1128,large,0.4159201450977215,1.195650439010933,63,1,"Two years ago, Liam was $16 - 2 = 14$ years old.
+At that time, Vince's age was $14 / 2 = 7$ years old.
+Vince's current age is $7 + 2 = 9$.
+#### 9"
+1130,large,0.4288966691174628,1.0997655522078276,57,1,"200 / 8 = 25 boxes; Total weight = (25 * 8) + (200 * 1) = 400 ounces; 400 / 16 = 25 pounds
+#### 25"
+1139,small,0.6025799229880764,0.7353040091693401,124,0,"To find the cost per single bagel after the discount, first calculate the total cost for 4 packs: $10 \times 9 = \$90$ per pack, so $90 \times 4 = \$360$. Then apply the 10% discount to the total order of 36 bags ($360 \times 0.9 = \$324$). Finally, divide the discounted total by the number of bagels ordered (36) to get the unit price: $324 / 36 = \$9$.
+
+####9"
+1140,small,0.6017491424318712,0.832342870067805,141,0,"To find the number of scoops Gomer ate, we first determine the total amount of mashed potatoes required for his specific portion. He ate 5 fewer scoops than 23, which equals $23 - 5 = 18$ scoops. Next, we calculate how many potatoes are needed to make these 18 scoops: since it takes 3 less than 6 (which is 3) potatoes per scoop, that is $18 \times 3 = 54$ potatoes. Finally, subtract the amount Gomer ate from the total required to find the difference: $54 - 18 = 36$.
+
+####36"
+1141,large,0.4974954078448034,0.7855204348452389,40,1,"3 * 30 + 5 * 30 = 240 eggs total.
+240 / 12 = 20 dozens.
+#### 20"
+1146,large,0.40510764566130264,1.018531986977905,53,1,"Cost = 100 / 5 = 20 rocks; Revenue = 20 * 0.6 * 7 = $84; Loss = 100 - 84 = $16
+#### 16"
+1149,small,0.6948794150879225,0.5112429549917579,82,1,"To calculate the total cost for Jen's three fish over the month of May, we first determine the daily cost: 3 fish multiplied by $1 per fish equals $3 per day. Since there are 31 days in May, multiplying the daily cost by the number of days gives us the final amount spent.
+
+$3 \times 31 = 93$
+
+####93"
+1153,large,0.4918969734042695,1.3901163269765675,74,1,"Jim: 27; Carlos: $27 - 5 = 22$; Carrey: $22 / 2 = 11$. Total shells: $27 + 22 + 11 = 60$. Each person gets: $60 / 3 = 20$.
+#### 20"
+1157,small,0.5609602486453988,1.0562682549934834,178,0,"To find the length of Carl's cane, we first determine Isabel's height by adding her 2-foot difference to Ned's height (which is 1 foot less than Carl), then calculate Carl's height based on his relationship to Ned. Finally, we subtract half of that height from 7 feet to get the cane's length.
+
+1. Start with Isabel's height: $7$ feet.
+2. Subtract 2 feet to find Ned's height: $7 - 2 = 5$ feet.
+3. Add 1 foot to find Carl's height: $5 + 1 = 6$ feet.
+4. Calculate half of Carl's height: $6 / 2 = 3$ feet.
+5. Subtract the cane length from Isabel's total height: $7 - 3 = 4$ feet.
+
+####4"
+1159,small,0.5553533239571256,0.9602651759050786,161,0,"To find the percentage chance a baby wearing a bow is wearing purple, we first calculate the total number of babies by setting the octuplets to 8. Carla dresses $3/4$ of them in purple and $1/4$ in blue, which totals $75\%$. Then, among the blue-wearers ($25\%$), $1/3$ wear bows, while among the purple-wearers ($75\%$), no specific bow percentage is mentioned, so we assume they do not wear bows unless specified. The probability of a baby wearing a bow depends entirely on their color: only blue-wearers have a chance. Therefore, the conditional probability that a bow-wearer is purple is $0$.
+
+#### 0
+0"
+1161,large,0.40043112590629987,1.7171293920837343,92,0,"80 / 2 = 40 (sold for $50)
+(80 - 40) * 1/4 = 20 (sold for $30)
+Remaining: 80 - 40 - 20 = 20 sq m; Total earnings = 50 + 30 + (20 * 3) = 110
+#### 110"
+1170,small,0.5532701608174423,0.6415126391220838,107,0,"To find the amount of red paint used, we first determine the total number of colors by adding the distinct types mentioned: red, white, purple, and yellow. This gives us 4 different colors. Since there are equal amounts of each color, we divide the total amount of paint (12 pints) by the number of colors to find the quantity per color: $12 \div 4 = 3$ pints per color. The mural uses 3 pints of red paint.
+
+#### 3"
+1176,large,0.15079100210121513,1.9528112481348217,103,0,"Day 1 usage: $5 \times 0.45 = 2.25$ inches remaining.
+Daily usage thereafter: $5 \times 0.20 = 1$ inch per day.
+Days until recycling ($<2$ inches): $(2.25 - 2) / 1 = 0.25$ days (cannot complete a full day).
+Total days including Monday: $1 + 0 = 1$.
+
+#### 1"
+1180,large,0.34293872271478326,0.8633282489608973,43,1,"4000 * (2/5) = 1600 gallons returned
+1600 * $3.5 = $5600 refund
+#### 5600"
+1182,small,0.5922734493592425,0.5487317740917206,91,0,"To find the number of books Bob can buy per school, first calculate the total number of books he can afford with his budget: divide the total amount ($27,000) by the cost per book ($500), which equals 54 books. Then, divide this total quantity (54) by the number of schools (3) to get the amount per school.
+
+54 / 3 = 18"
+1183,large,0.40791697345820616,0.476073615020141,21,0,"2 + (5 - 1) + 6 = 12
+#### 12"
+1186,small,0.8208540152630399,0.24552218592725694,38,1,"To find the total distance, add the distances from each day: $3 + 3 + 3 + 5 + 5 = 19$.
+
+#### 19"
+1187,large,0.3905287521852299,0.8552453138399869,44,1,"Rate of gain = 20 - (2 * 4) = 12 snowballs per hour.
+Time required = 60 / 12 = 5 hours.
+#### 5"
+1191,large,0.43374362700835806,1.0108963819220662,53,1,"Cost = $40 + ($30 × (10 - 8))
+Cost = $40 + ($30 × 2)
+Cost = $40 + $60 = $100
+#### 100"
+1192,large,0.24577311783148661,0.8115177259314805,41,0,"7.5 * 6 * 1.5 + 10 = 68.5
+68.5 * 4 = 274
+#### 274"
+1193,large,0.27801217210523377,2.1713577008340508,118,1,"Laundry: $3.00 \times 1 = \$3.00$
+Room cleaning: $1.50 \times 1 = \$1.50$
+Trash: $0.75 \times 2 = \$1.50$
+Dishwasher: $0.50 \times 6 = \$3.00$
+Total: $\$3.00 + \$1.50 + \$1.50 + \$3.00 = \$9.00$
+
+#### 9"
+1200,small,0.7162018015410315,0.608464882010594,101,1,"Let $x$ be the number of coffee mugs.
+The phrase ""four times the number"" translates to $4x$.
+Adding eight gives $4x + 8$.
+This expression equals 40, so we solve the equation:
+$$4x + 8 = 40$$
+Subtract 8 from both sides:
+$$4x = 32$$
+Divide by 4:
+$$x = 8$$
+
+#### 8"
+1204,large,0.45528461338225606,1.5789894459303468,84,1,"Remaining shells after Alphas: $700 \times (1 - 0.40) = 420$
+Shells found by The Finders: $420 \times 0.60 = 252$
+Shells found by Gogetters: $420 - 252 = 168$
+
+#### 168"
+1205,small,0.5803423017205415,0.5986270550638437,98,0,"To find the total distance walked by the first three dogs, we add their individual distances: $1 + 4 + 3 = 8$ miles. Since the average is 3 miles per dog, the sum of the first three dogs' distances must be equal to 3 times the last dog's distance ($3 \times x = 8$). Therefore, the last dog needs to walk $8 / 3$ miles.
+
+#### 2.667"
+1206,large,0.35289447089567033,1.7754465530160815,96,1,"Loan amount = $250,000 \times 0.40 = $100,000$
+Debt payment = $100,000 \times 0.60 = $60,000$
+Leftover money = $100,000 - $60,000 = $40,000$
+#### 40000"
+1207,large,0.4842737669221705,0.8600287770386785,44,1,"Total weight = 56 + 46 + 26 = 128 kg
+Total earnings = 128 * 0.50 = $64
+#### 64"
+1209,large,0.269207323532305,1.6672246719244868,88,1,"Low speed: 1 L/day. Medium speed: 2 * 1 = 2 L/day. High speed: 2 * 2 = 4 L/day.
+Total water = (3 days * 1 L) + (3 days * 2 L) + (5 days * 4 L) = 3 + 6 + 20 = 29 liters.
+#### 29"
+1211,small,0.7470696319624295,0.5569174950942397,90,1,"To find the total volume for 8 doses, first calculate the combined volume per dose: $14 \text{ mL} + (3 \times 14 \text{ mL}) = 14 + 42 = 56 \text{ mL}$. Then multiply by the number of doses: $56 \times 8 = 448 \text{ mL}$.
+
+#### 448"
+1216,large,0.46587819948921544,2.1362417431082577,115,1,"Initial passengers: 20
+After stop 1 (40 enter): 20 + 40 = 60
+Stop 2 entry (3/4 of first stop's 40): 0.75 * 40 = 30; Total: 60 + 30 = 90
+After stop 3 (doubles): 90 * 2 = 180
+Remaining space needed: 200 - 180 = 20
+#### 20"
+1217,large,0.2996931034811857,1.9181621009483933,104,1,"Initial annual cost: $2 \times 3 = \$6$.
+Cost after 5 years (150% increase): $\$2 \times (1 + 1.5) = \$5$ per visit, so $\$5 \times 3 = \$15$ per year.
+Total spent: $(\$6 \times 5) + (\$15 \times 3) = \$30 + \$45 = \$75$.
+#### 75"
+1218,large,0.3305729897522457,1.5798405520617962,84,1,"Total eligible students: $10 \text{ grades} \times 4 \text{ students/grade} = 40$ students.
+Groups needed: $40 \div 8 = 5$ groups.
+Total time: $5 \text{ groups} \times 45 \text{ minutes/group} = 225$ minutes.
+
+#### 225"
+1219,small,0.6555638068907146,0.3908802189398557,61,1,"To calculate the total cost, multiply the number of items by their respective prices: (4 tables $\times$ \$20) + (2 frames $\times$ \$10). This sums to \$80 plus \$20, which equals \$100.
+
+####100"
+1220,small,0.6112396640333698,0.5745312229264528,96,1,"Let $x$ be the length of the shorter piece and $y$ be the length of the longer piece.
+1. $y = 4x$
+2. $x + y = 40$
+3. Substitute (1) into (2): $x + 4x = 40 \Rightarrow 5x = 40 \Rightarrow x = 8$. Then $y = 32$.
+
+#### 32"
+1224,small,0.6998612386329938,0.4587279390543699,74,1,"To find the amount of rain on Tuesday, first calculate Monday's total: $2 + 0 = 2$ inches. Then, calculate twice that amount: $2 \times 2 = 4$ inches. Finally, add the expected additional rain to get the total for Tuesday: $4 + 1 = 5$ inches.
+
+####5"
+1225,large,0.5080581087129024,2.1756622130051255,119,1,"Let $c$ be the number of cupcakes and $b$ be the number of brownies.
+The total number of treats is $5 \text{ people} \times 2 \text{ treats/person} = 10$.
+The relationship between treats is $b = 3c - 2$, so $c + (3c - 2) = 10$.
+Solving for $c$: $4c - 2 = 10 \Rightarrow 4c = 12 \Rightarrow c = 3$.
+
+#### 3"
+1230,large,0.1693556571376282,1.5240082759410143,81,1,"Standard lesson revenue: $80 \times 4 = 320$
+Veteran lesson revenue: $80 \times (1 - 0.25) \times 2 = 60 \times 2 = 120$
+Total revenue: $320 + 120 = 440$
+#### 440"
+1232,small,0.5794771336832184,0.5249818349257112,85,1,"To find out how many pomelos Eve gave away, we first calculate what fraction of the original amount remains: $1/4$ of 20 is 5. Since the total number of pieces is 20 and she has 5 left, the number given away is the difference between the original amount and the remaining amount ($20 - 5 = 15$).
+
+#### 15"
+1234,small,0.7050974264257337,0.6614153180271387,108,1,"To find the total number of novels Regina wrote this year, we need to determine what one quarter represents and then multiply it by four (since there are four quarters in a whole).
+
+1.  Divide the known quantity by the fraction: $9 \div 3 = 3$. This means each quarter contains 3 novels.
+2.  Multiply the result by the number of quarters: $3 \times 4 = 12$.
+3.  The total count is 12.
+
+####12"
+1235,large,0.503143909446884,1.3549335259012878,72,1,"Total hours = 24 hours/day × 3 days = 72 hours.
+Total distance = 50 km/hr × 72 hours = 3600 km.
+Percentage covered = (3600 / 6000) × 100 = 60%.
+#### 60"
+1236,large,0.3898024344707687,1.1104884468950331,58,1,"Brother's grapes: $6 \times 5 = 30$
+Pies' grapes: $4 \times 12 = 48$
+Total: $6 + 30 + 48 = 84$
+#### 84"
+1241,small,0.6306504000295211,0.585905232001096,95,0,"To find the profit, first calculate the cost per egg: $2.40 divided by 12 equals $0.20 per egg. Then multiply that cost by the number of eggs sold (5 dozens times 3 equals 15 eggs) to get a total cost of $3.00. Subtract this from the selling price of $15.00 to find the profit is $12.00.
+
+####12"
+1245,large,0.44521013470269827,2.1286993969697505,116,1,"Let $s$ be the number of strawberry cubes and $b$ be the number of blueberry cubes.
+Given $b = 5s - 4$ and $s + b = 116$, substitute to get $s + (5s - 4) = 116$.
+Solving for $s$: $6s = 120 \implies s = 20$.
+Calculate $b$: $b = 5(20) - 4 = 96$.
+
+#### 96"
+1246,large,0.452222133763352,0.5173287990037352,25,1,"4 \times 40 \times 21 = 3360
+#### 3360"
+1247,large,0.2808340480082541,0.5192804469261318,24,0,"10 - (10 / 2) + 3 - 1 = 8
+#### 8"
+1253,large,0.43289120870622577,1.3074245769530535,70,1,"Total minutes worked = 6 hours/day × 60 minutes/hour × 5 days = 1800 minutes.
+Calls per minute = 1/15.
+Total calls = 1800 minutes ÷ 15 minutes/call = 120 calls.
+#### 120"
+1258,small,0.6569507182456201,0.5698078281711787,92,1,"To find the total cost, first calculate the cost of the additional four phones by dividing the main phone's price ($20) by 2 to get $10 per phone. Then multiply that amount by 4 to get $40 for the remaining phones. Finally, add the main phone's cost ($20) to the total of the additional phones ($40) to reach a final sum of $60.
+
+####60"
+1266,large,0.5147830112220818,1.1667148959822953,61,1,"German Shepherds: 3 × 5 = 15 kg/day; Bulldogs: 2 × 3 = 6 kg/day; Total daily: 21 kg; Weekly total: 21 × 7 = 147 kg.
+#### 147"
+1267,small,0.6418130278894851,0.8379735529888421,142,1,"To find the total number of leg pairs, we first calculate the total number of individual legs by multiplying the count of each type of animal by its number of legs:
+1.  $10 \times 2 = 20$ legs from the 2-legged animals.
+2.  $15 \times 4 = 60$ legs from the 4-legged animals.
+3.  Summing these gives $20 + 60 = 80$ total legs.
+
+Since each pair consists of 2 legs, we divide the total number of legs by 2:
+$80 / 2 = 40$.
+
+####40"
+1269,small,0.5919109842746678,0.7543078169692308,124,0,"To find the total distance traveled, multiply the speed by the time for each leg of the trip: $18 \text{ mph} \times 5 \text{ hours} = 90 \text{ miles}$ (west) and $18 \text{ mph} \times 8 \text{ hours} = 144 \text{ miles}$ (east). Since he traveled west then east, the total distance from his starting point is the sum of these two distances: $90 + 144 = 234$ miles.
+
+####234"
+1273,small,0.7003021359902851,0.6340843071229756,104,0,"To find out how many marbles Mazie gave to Darla, we first calculate the number of marbles Dallas received. Since Dallas had 21 marbles and dropped 4, he has $21 - 4 = 17$ marbles remaining. This means Mazie gave him 17 marbles.
+
+Next, we subtract this amount from Mazie's total to find what was left for Darla: $52 - 17 = 35$.
+
+####3"
+1275,large,0.33822337661061913,1.250646147876978,66,1,"Total weight = 1200 + 250 + (2 * 75) = 1600 pounds.
+Required force = 1% of 1600 = 0.01 * 1600 = 16 pounds.
+#### 16"
+1276,small,0.7440237378992193,0.645292405039072,106,1,"To find the total length of crepe paper needed, we calculate the perimeter of the rectangular fence by adding the lengths of all four sides together.
+
+First, add the two shorter sides: $15 + 15 = 30$ feet.
+Next, add the two longer sides: $20 + 20 = 40$ feet.
+Finally, sum these results to get the total perimeter: $30 + 40 = 70$ feet.
+
+####70"
+1277,large,0.4474316124017401,1.2925473931245506,69,1,"Emma's age = Mia's age + 16 = 40 + 16 = 56
+Average age = (Mia's age + Emma's age) / 2 = (40 + 56) / 2 = 96 / 2 = 48
+#### 48"
+1279,large,0.3519948204665203,1.0026429330464453,51,1,"Total cost = 12 × ($6.00 + $5.00 + $4.00) = 12 × $15.00 = $180.00
+#### 180"
+1280,small,0.5583755736803299,0.35416864790022373,55,1,"To find out how long it took Anna, first calculate half of Steve's time: $10 \div 2 = 5$ hours. Then add 2 hours to that result: $5 + 2 = 7$ hours.
+
+#### 7"
+1283,small,0.6685965458576965,0.5477927317842841,90,1,"To find the remaining money, first calculate the total sales: 20 cupcakes $\times$ $2 = $40, plus 40 cookies $\times$ $1 = $40, totaling $80 in revenue. Then subtract the cost of the trays: 5 trays $\times$ $4 = $20. The remaining amount is $80 - $20 = $60.
+
+####60"
+1284,large,0.3468577524013323,1.9655454161111265,106,1,"Start: 5 children.
+Street 2: Each of the 5 joins with 1 new child, totaling $5 \times (1+1) = 10$ children.
+Street 3: Each of the 10 joins with 2 new children, totaling $10 \times (1+2) = 30$ children.
+Final step: The original 5 leave, leaving $30 - 5 = 25$ children.
+
+#### 25"
+1287,large,0.38315646761518163,1.3993440449703485,74,1,"Sisters' total age: $3 \times 16 = 48$
+Older brother's age: $12 \times 2 = 24$
+Younger brother's age: $12$
+Total age: $48 + 24 + 12 = 84$
+#### 84"
+1289,large,0.44667087274926753,0.8263516579754651,41,1,"11 * 3 + 8 * 4 + 6 * 6 = 33 + 32 + 36 = 101
+#### 101"
+1291,large,0.43472821528693184,0.9089718090835959,47,1,"George has 18 pens.
+Timothy has $3 \times 18 = 54$ pens.
+Sarah has $54 / 2 = 27$ pens.
+#### 27"
+1294,large,0.3640540369285785,1.5754472550470382,84,1,"T-shirts: Buy one get one 50% off means paying full price for one and half price for the second ($8 + $4 = $12).
+Shoes: 40% off $40 is a discount of $16, leaving a final price of $24.
+Total: $12 + $24 = $36.
+#### 36"
+1297,large,0.20897973015071752,1.7234861969482154,91,1,"Cost per jar = (2 × $6) + (1.5 × $8) + (2 × $10) = $12 + $12 + $20 = $44.
+Profit per jar = Selling price - Cost = $50 - $44 = $6.
+Total profit for 10 jars = 10 × $6 = $60.
+#### 60"
+1298,small,0.620320217420781,0.8672748277895153,148,1,"To find the total dollar amount, I will calculate the value of each denomination by multiplying the count by its face value (quarters = $0.25, dimes = $0.10, nickels = $0.05, pennies = $0.01) and summing the results.
+
+$32 \times 0.25 + 95 \times 0.10 + 120 \times 0.05 + 750 \times 0.01 = 8.00 + 9.50 + 6.00 + 7.50 = 31.00$
+
+####31"
+1300,large,0.36953923240332176,1.6439992310479283,88,1,"Days worked per week = 5 days (Monday, Tuesday, Thursday, Friday, Saturday).
+Cars serviced per week = 5 days × 3 cars/day = 15 cars.
+Total cars in 2 weeks = 15 cars/week × 2 weeks = 30 cars.
+Total earnings = 30 cars × $4/car = $120.
+#### 120"
+1301,large,0.45629974792198347,1.3418227958027273,70,1,"Initial total: $9 + 4 + 5 = 18$
+Subtract eaten and given away: $18 - (3 + 2 + 2) = 11$
+Add newly baked cookies: $11 + (4 \times 3) = 23$
+#### 23"
+1304,small,0.7144177540179885,0.4861542370636016,80,1,"To find the difference in enrollment between the two schools, first calculate the number of students at Butler High School by multiplying Norman's enrollment (4000) by 3/4, which equals 3000. Then subtract Butler's enrollment from Norman's: 4000 - 3000 = 1000.
+
+####1000"
+1305,small,0.686893398642693,0.39152150601148605,63,1,"To find the number of chocolate chip cookies, subtract the known cookie types from the total: $7995 - (2595 + 3075) = 7995 - 5670 = 2325$.
+
+#### 2325"
+1306,large,0.36263604058476323,1.1736425780691206,60,0,"Test tubes gathered: $16 / 2 = 8$
+Petri dishes gathered: $14 + 2 = 16$
+Beakers lost: $8 + 16 + x = 29 \Rightarrow x = 5$
+#### 5"
+1308,small,0.7664433237464158,0.3746222530025989,61,1,"To find the total number of eggs, first calculate the number in the second basket by multiplying the first basket's count by 2 (10 * 2 = 20). Then, add the two quantities together (10 + 20 = 30).
+
+####30"
+1309,large,0.5488957976352818,1.7025813481304795,92,0,"Alexandra raised $430, so Kim raised $430 + $320 = $750.
+Sarah raised $300, so Maryam raised $300 + $400 = $700.
+The total amount is $430 + $750 + $300 + $700 = $2180.
+#### 2180"
+1310,large,0.5127095384851864,2.4626104799099267,134,1,"Let $v_A$ be Aaron's speed and $v_V$ be Vanessa's speed; let $d_A = 4$ miles and $t_A = 16$ minutes.
+Given $v_A = 2v_V$ and $d_V = 2d_A$, we find $d_V = 8$ miles.
+Time for Vanessa is $t_V = d_V / v_V = (2d_A) / (v_A/2) = 4(d_A/v_A) = 4t_A$.
+$t_V = 4 \times 16 = 64$.
+
+#### 64"
+1311,large,0.5387912825483813,1.0913799640256912,57,1,"Total line needed = 200 feet (dock) × 3 = 600 feet.
+Line already owned = 6 feet.
+Line to buy = 600 - 6 = 594 feet.
+#### 594"
+1312,small,0.6064745423388613,0.41138843004591763,67,0,"1. Calculate the daily revenue: (6 reservations × $5 meal) + ($5 wine) = $30 + $5 = $35 per day.
+2. Calculate weekly revenue for 2 operating days: $35/day × 2 days = $70.
+3. #### 70"
+1314,large,0.3280541429650835,3.981277887010947,221,1,"Dora's current age is $12 - 3 = 9$.
+James is twice Dora's age, so James is $2 \times 9 = 18$.
+The youngest son will be born when John is 32; since James is currently 18 and John was 19 when James was born, the youngest son is not yet born or the timeline implies a specific future state where we calculate his age in 3 years relative to the current moment (James is 18 now). Wait, re-reading: ""John's youngest son, who was born when John was 32"". This implies the youngest son exists now? No, if James is 18 and John was 19 then, John is $19+18=37$ now. If the youngest son was born when John was 32, he is currently $37-32=5$ years old.
+In 3 years, the youngest son will be $5 + 3 = 8$.
+
+#### 8"
+1315,large,0.34753460093463956,0.8065968339797109,41,0,"Ana peels 12 oranges (60 / 3) while Jane peels 15 oranges (60 / 4). The difference is 3 oranges.
+#### 3"
+1316,large,0.31274052719093903,1.4245171658694744,76,1,"Cost of radiator: $400 \times (1 - 0.8) = \$80$
+Labor cost: $3 \text{ hours} \times \$50/\text{hour} = \$150$
+Total paid: $\$80 + \$150 = \$230$
+#### 230"
+1317,small,0.7834382302122481,1.368751921923831,237,1,"Let $c$ be the number of chickens and $x$ be the number of cows.
+We know that $c + x = 20$.
+Since chickens have 2 legs and cows have 4 legs, the total number of legs is $2c + 4x = 70$.
+Substituting $c = 20 - x$ into the leg equation gives $2(20 - x) + 4x = 70$, which simplifies to $40 - 2x + 4x = 70$, or $2x = -30$. Wait, let me recheck the algebra.
+$2c + 4x = 70 \Rightarrow c + 2x = 35$.
+Since $c = 20 - x$, then $(20 - x) + 2x = 35 \Rightarrow 20 + x = 35 \Rightarrow x = 15$.
+So there are 15 cows. Therefore, the number of chickens is $20 - 15 = 5$.
+
+####5"
+1318,large,0.44650859776467516,1.116970923030749,59,1,"Total people = Henry + 3 friends = 4 people.
+Total slices = 7 pizzas × 8 slices/pizza = 56 slices.
+Slices per person = 56 slices ÷ 4 people = 14 slices.
+#### 14"
