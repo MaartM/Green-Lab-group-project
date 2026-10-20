@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-EXPERIMENT_DIR = Path(__file__).resolve().parents[1] / "data" / "experiments" / "llm_routing"
+EXPERIMENT_DIR = Path(__file__).resolve().parents[1] / "data" / "experiments" / "llm_routing_500"
 STRATEGIES = ["S", "L", "R"]
 STRATEGY_NAMES = {"S": "small-only", "L": "large-only", "R": "routing"}
 

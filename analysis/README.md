@@ -1,6 +1,6 @@
 # Analysis
 
-Notebooks that analyse `data/experiments/llm_routing/`
+Notebooks that analyse the 500-question experiment, `data/experiments/llm_routing_500/`
 They are saved with their outputs, so you should be able to read them without running them.
 
 Shared code:
