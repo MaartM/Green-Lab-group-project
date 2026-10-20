@@ -4,7 +4,7 @@ __pycache__/
 *.egg-info/
 .venv/
 
-# Downloaded GSM8K and router labels (recreate with download_dataset and generate_labels)
+# Downloaded GSM8K and router labels (recreate with download_dataset)
 /data/dataset/
 
 # Ollama server logs and PID files
@@ -15,4 +15,3 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
-.ipynb_checkpoints/

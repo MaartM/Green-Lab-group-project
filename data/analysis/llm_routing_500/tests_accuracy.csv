@@ -1,0 +1,4 @@
+"comparison","accuracy_difference_pp","only_first_correct","only_second_correct","exact_mcnemar_p","p_bh"
+"R - L",-12.6,6,69,1.16416613787654e-14,1.16416613787654e-14
+"R - S",21.2,117,11,1.57567926375035e-23,1.89081511650042e-23
+"S - L",-33.8,17,186,4.07614027005424e-37,6.11421040508136e-37

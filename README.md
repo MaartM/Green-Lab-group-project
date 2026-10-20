@@ -1,6 +1,6 @@
 # LLM routing: when is a larger model worth it?
 
-Green Lab 2026/2027 (VU Amsterdam), team 42. We compare the energy use and accuracy of three ways to answer 500 GSM8K math questions:
+Green Lab 2026/2027 (VU Amsterdam), team 42. We compare the energy use and accuracy of three ways to answer GSM8K math questions:
 
 - **S**: every question goes to Qwen3.5 2B.
 - **L**: every question goes to Qwen3.5 9B.
@@ -13,15 +13,16 @@ The router is a logistic regression on TF-IDF and question features that predict
 | Path | Contents |
 |---|---|
 | `llm-routing/` | Experiment: Experiment Runner config, Ollama servers, query script, answer checking |
-| `llm-routing/questions_500.jsonl` | The 500 GSM8K test questions |
+| `llm-routing/questions_500.jsonl` | The 500 GSM8K test questions of the main experiment |
+| `llm-routing/questions.jsonl` | The 100 GSM8K test questions of the first experiment |
 | `llm-routing/router/` | Router features, training and evaluation |
 | `scripts/` | Download GSM8K, sample questions, label questions, plot the router figure |
-| `analysis/` | Notebooks: data preparation, exploration, hypothesis tests, accuracy and trade-off |
-| `data/experiments/llm_routing_500/` | Raw results of the experiment |
-| `data/experiments/llm_routing/` | Raw results of the earlier 100-question run (pilot) |
+| `analysis/` | R analysis: data preparation, exploration, hypothesis tests, accuracy and trade-off (`main.R`) |
+| `data/experiments/llm_routing_500/` | Raw results of the main experiment (500 questions) |
+| `data/experiments/llm_routing/` | Raw results of the first experiment (100 questions) |
 | `data/labels/` | Whether each model answers each GSM8K question correctly |
 | `data/router_model/router.joblib` | The trained router |
-| `data/analysis/figures/` | Figures |
+| `data/analysis/` | Processed data, test results and figures, per experiment |
 | `experiment-runner/` | [Experiment Runner](https://github.com/S2-group/experiment-runner), submodule pinned to `56620fa` |
 
 ## Setup
@@ -43,18 +44,26 @@ ssh glg2 'python3 ollama_server.py pull'
 
 ## Run the experiment
 
+Main experiment (500 questions, results in `data/experiments/llm_routing_500/`):
+
 ```bash
 EXPERIMENT_NAME=llm_routing_500 QUESTIONS=questions_500.jsonl \
   caffeinate -i uv run python experiment-runner/experiment-runner/ llm-routing/RunnerConfig.py
 ```
 
-Without the two variables it runs the 100-question pilot. `caffeinate -i` keeps a Mac awake (on Linux use `systemd-inhibit`). The laptop must stay connected for the whole run, about 15 hours.
+First experiment (100 questions, results in `data/experiments/llm_routing/`):
+
+```bash
+caffeinate -i uv run python experiment-runner/experiment-runner/ llm-routing/RunnerConfig.py
+```
+
+`caffeinate -i` keeps a Mac awake (on Linux use `systemd-inhibit`). The laptop must stay connected for the whole run: about 15 hours for 500 questions, 4.5 hours for 100.
 
 The runner copies the code to the testbed, warms it up for 5 minutes, then does 3 strategies × 30 repetitions = 90 runs in random order with 60 s between runs. 9B runs on GPU 0 and 2B on GPU 1, each in its own Ollama server. Models are loaded before EnergiBridge starts, so the energy covers only answering the questions.
 
 ## Results
 
-`data/experiments/llm_routing_500/`:
+Each experiment folder in `data/experiments/` contains:
 
 - `run_table.csv`: one row per run. `run_0` is S, `run_1` is L, `run_2` is R.
 - `run_<i>_repetition_<j>/energibridge.csv`: EnergiBridge samples (every 200 ms).
@@ -74,12 +83,12 @@ The runner copies the code to the testbed, warms it up for 5 minutes, then does 
 
 ## Analysis
 
-See [analysis/README.md](analysis/README.md). The router figure:
-
 ```bash
-uv run download_dataset
-uv run --group analysis python scripts/plot_router_test_split.py   # writes data/analysis/figures/router_test_split.png
+Rscript analysis/main.R                # main experiment; needs R with ggplot2
+Rscript analysis/main.R llm_routing    # first experiment
 ```
+
+See [analysis/README.md](analysis/README.md).
 
 ## Router
 
@@ -100,8 +109,9 @@ uv run label_questions --split test --models small large
 
 Model answers differ slightly between machines, so new labels may not match the committed ones.
 
-The question file was made with:
+The question files were made with:
 
 ```bash
+uv run sample_test_questions                                     # llm-routing/questions.jsonl
 uv run sample_test_questions --n 500 --include llm-routing/questions.jsonl --out llm-routing/questions_500.jsonl
 ```

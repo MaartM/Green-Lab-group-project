@@ -18,12 +18,9 @@ dependencies = [
 ]
 
 [dependency-groups]
-# Analysis notebooks (analysis/): uv sync --group analysis
+# Router figure (scripts/plot_router_test_split.py): uv sync --group analysis
 analysis = [
-    "jupyterlab",
     "matplotlib",
-    "scipy",
-    "statsmodels",
 ]
 
 [project.scripts]

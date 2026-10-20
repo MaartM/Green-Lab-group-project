@@ -4,6 +4,8 @@ For each share of questions sent to the large model, the router sends the questi
 it rates least likely to be answered by the small model. The figure compares the
 resulting accuracy with choosing the model at random, and marks the router's
 threshold used in the experiment. Labels come from data/labels/test_{small,large}.jsonl.
+Also writes the router's predictions to data/analysis/router_test_predictions.csv,
+which analysis/04_accuracy_tradeoff.R reads.
 
   uv run --group analysis python scripts/plot_router_test_split.py
 """
@@ -17,15 +19,17 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 from sklearn.metrics import roc_auc_score
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path[:0] = [str(REPO_ROOT / "llm-routing"), str(REPO_ROOT / "analysis")]
+sys.path.insert(0, str(REPO_ROOT / "llm-routing"))
 
 import config  # noqa: E402
-import style  # noqa: E402
 
 OUT = REPO_ROOT / "data" / "analysis" / "figures" / "router_test_split.png"
+PREDICTIONS = REPO_ROOT / "data" / "analysis" / "router_test_predictions.csv"
+GREEN, INK, SECONDARY, MUTED = "#1baf7a", "#0b0b0b", "#52514e", "#898781"
 
 
 def labels(model: str) -> np.ndarray:
@@ -39,6 +43,9 @@ def main() -> None:
     router = joblib.load(config.ROUTER_FILE)
     p_small = router.predict_proba(questions)[:, list(router.classes_).index(1)]
     n = len(questions)
+    PREDICTIONS.parent.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame({"qid": range(n), "p_small_correct": p_small, "threshold": config.ROUTER_THRESHOLD,
+                  "small_correct": small_ok, "large_correct": large_ok}).to_csv(PREDICTIONS, index=False)
 
     order = np.argsort(p_small)  # least likely to be solved by the small model first
     share = 100 * np.arange(n + 1) / n
@@ -51,24 +58,28 @@ def main() -> None:
 
     gap = point_correct - np.interp(point_share, share, random_choice)
 
-    style.apply()
-    green = style.COLORS["R"]
+    plt.rcParams.update({
+        "figure.facecolor": "#fcfcfb", "axes.facecolor": "#fcfcfb", "axes.edgecolor": "#c3c2b7",
+        "axes.labelcolor": SECONDARY, "axes.spines.top": False, "axes.spines.right": False,
+        "axes.grid": True, "grid.color": "#e1e0d9", "grid.linewidth": 0.6, "xtick.color": MUTED,
+        "ytick.color": MUTED, "text.color": INK, "lines.linewidth": 2, "font.size": 10, "legend.frameon": False,
+    })
     fig, ax = plt.subplots(figsize=(7.2, 5.4))
 
-    ax.plot(share, random_choice, ":", color=style.MUTED, linewidth=2,
+    ax.plot(share, random_choice, ":", color=MUTED, linewidth=2,
             label="random choice: same share sent to 9B, questions picked at random")
-    ax.plot(share, routed, color=green,
+    ax.plot(share, routed, color=GREEN,
             label="router: questions it rates hardest for 2B go to 9B")
-    ax.scatter([point_share], [point_correct], s=80, color=green, edgecolor=style.INK, zorder=3)
+    ax.scatter([point_share], [point_correct], s=80, color=GREEN, edgecolor=INK, zorder=3)
     ax.annotate(f"threshold {config.ROUTER_THRESHOLD} (used in the experiment)\n"
                 f"{point_share:.1f}% of questions go to 9B\n"
                 f"accuracy {point_correct:.1f}% ({gap:+.1f} vs random)",
                 (point_share, point_correct), xytext=(point_share + 4, point_correct - 13),
-                fontsize=8.5, color=style.INK, arrowprops=dict(arrowstyle="-", color=style.MUTED))
+                fontsize=8.5, color=INK, arrowprops=dict(arrowstyle="-", color=MUTED))
     ax.annotate(f"all questions to 2B\naccuracy {random_choice[0]:.1f}%", (0, random_choice[0]),
-                xytext=(2, -26), textcoords="offset points", fontsize=8.5, color=style.SECONDARY)
+                xytext=(2, -26), textcoords="offset points", fontsize=8.5, color=SECONDARY)
     ax.annotate(f"all questions to 9B\naccuracy {random_choice[-1]:.1f}%", (100, random_choice[-1]),
-                xytext=(-2, 8), textcoords="offset points", fontsize=8.5, color=style.SECONDARY, ha="right")
+                xytext=(-2, 8), textcoords="offset points", fontsize=8.5, color=SECONDARY, ha="right")
     ax.set_xlim(-2, 104)
     ax.set_ylim(45, 95)
     ax.set_xlabel("Questions sent to the 9B model (%)")
@@ -86,14 +97,14 @@ def main() -> None:
     top.grid(False)
     top.spines["top"].set_visible(True)
 
-    ax.axvline(point_share, color=style.MUTED, linewidth=0.8, zorder=0)
+    ax.axvline(point_share, color=MUTED, linewidth=0.8, zorder=0)
 
     fig.suptitle("Does the router send the right questions to the 9B model?", x=0.01, ha="left",
-                 fontsize=11, color=style.INK)
+                 fontsize=11, color=INK)
     fig.text(0.01, 0.92, f"Each point = one threshold applied to all {n} questions, then the answers are scored.",
-             fontsize=8.5, color=style.SECONDARY)
+             fontsize=8.5, color=SECONDARY)
     fig.text(0.01, 0.01, f"All {n} GSM8K test questions; correctness of both models measured on a Mac.",
-             fontsize=7.5, color=style.MUTED)
+             fontsize=7.5, color=MUTED)
     fig.subplots_adjust(left=0.12, right=0.97, top=0.80, bottom=0.13)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT, dpi=150)
@@ -103,7 +114,7 @@ def main() -> None:
     print(f"at threshold {config.ROUTER_THRESHOLD}: {point_share:.1f}% to large, {point_correct:.1f}% correct "
           f"({gap:+.1f} pp vs random choice at the same share)")
     print(f"average gain over random choice across all shares: {np.mean(routed - random_choice):+.2f} pp")
-    print(f"wrote {OUT.relative_to(REPO_ROOT)}")
+    print(f"wrote {OUT.relative_to(REPO_ROOT)} and {PREDICTIONS.relative_to(REPO_ROOT)}")
 
 
 if __name__ == "__main__":
