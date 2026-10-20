@@ -1,0 +1,6 @@
+{"model": {"type": "tower"},
+ "configuration": {"cpu": {"units": 1, "core_units": 16, "die_size": 538, "manufacturer": "AMD", "model_range": "Ryzen Threadripper PRO"},
+                   "ram": [{"units": 4, "capacity": 16}],
+                   "disk": [{"units": 1, "type": "ssd", "capacity": 1000}],
+                   "power_supply": {"units": 1}},
+ "usage": {"usage_location": "NLD"}}

@@ -1,0 +1,424 @@
+{
+    "impacts": {
+        "gwp": {
+            "unit": "kgCO2eq",
+            "description": "Total climate change",
+            "embedded": {
+                "value": 500.0,
+                "min": 306.4,
+                "max": 750.7,
+                "warnings": [
+                    "End of life is not included in the calculation"
+                ]
+            },
+            "use": {
+                "value": 4200.0,
+                "min": 910.0,
+                "max": 7268.0
+            }
+        }
+    },
+    "verbose": {
+        "duration": {
+            "value": 35040.0,
+            "unit": "hours"
+        },
+        "ASSEMBLY-1": {
+            "impacts": {
+                "gwp": {
+                    "unit": "kgCO2eq",
+                    "description": "Total climate change",
+                    "embedded": {
+                        "value": 6.68,
+                        "min": 6.68,
+                        "max": 6.68,
+                        "warnings": [
+                            "End of life is not included in the calculation"
+                        ]
+                    },
+                    "use": "not implemented"
+                }
+            },
+            "units": {
+                "value": 1,
+                "status": "ARCHETYPE",
+                "min": 1,
+                "max": 1
+            },
+            "duration": {
+                "value": 35040.0,
+                "unit": "hours"
+            }
+        },
+        "CPU-1": {
+            "impacts": {
+                "gwp": {
+                    "unit": "kgCO2eq",
+                    "description": "Total climate change",
+                    "embedded": {
+                        "value": 19.74,
+                        "min": 19.74,
+                        "max": 19.74,
+                        "warnings": [
+                            "End of life is not included in the calculation"
+                        ]
+                    },
+                    "use": {
+                        "value": 2900.0,
+                        "min": 560.8,
+                        "max": 4100.0
+                    }
+                }
+            },
+            "units": {
+                "value": 1,
+                "status": "INPUT"
+            },
+            "core_units": {
+                "value": 16,
+                "status": "INPUT"
+            },
+            "die_size_per_core": {
+                "value": 33.625,
+                "status": "COMPLETED",
+                "unit": "mm2",
+                "source": "INPUT : die_size / core_units",
+                "min": 33.625,
+                "max": 33.625
+            },
+            "die_size": {
+                "value": 538.0,
+                "status": "INPUT",
+                "unit": "mm2"
+            },
+            "model_range": {
+                "value": "Ryzen Threadripper PRO",
+                "status": "INPUT"
+            },
+            "duration": {
+                "value": 35040.0,
+                "unit": "hours"
+            },
+            "avg_power": {
+                "value": 182.23,
+                "status": "COMPLETED",
+                "unit": "W",
+                "min": 35.563,
+                "max": 260.05
+            },
+            "time_workload": {
+                "value": 50.0,
+                "status": "ARCHETYPE",
+                "unit": "%",
+                "min": 0.0,
+                "max": 100.0
+            },
+            "usage_location": {
+                "value": "NLD",
+                "status": "INPUT",
+                "unit": "CodSP3 - NCS Country Codes - NATO"
+            },
+            "use_time_ratio": {
+                "value": 1.0,
+                "status": "ARCHETYPE",
+                "unit": "/1",
+                "min": 1.0,
+                "max": 1.0
+            },
+            "hours_life_time": {
+                "value": 35040.0,
+                "status": "COMPLETED",
+                "unit": "hours",
+                "source": "from device",
+                "min": 35040.0,
+                "max": 35040.0
+            },
+            "params": {
+                "value": {
+                    "a": 171.2,
+                    "b": 0.0354,
+                    "c": 36.89,
+                    "d": -10.13
+                },
+                "status": "ARCHETYPE",
+                "source": "From CPU model range"
+            },
+            "gwp_factor": {
+                "value": 0.45,
+                "status": "COMPLETED",
+                "unit": "kg CO2eq/kWh",
+                "source": "https://www.sciencedirect.com/science/article/pii/S0306261921012149",
+                "min": 0.45,
+                "max": 0.45
+            }
+        },
+        "RAM-1": {
+            "impacts": {
+                "gwp": {
+                    "unit": "kgCO2eq",
+                    "description": "Total climate change",
+                    "embedded": {
+                        "value": 130.0,
+                        "min": 80.16,
+                        "max": 246.2,
+                        "warnings": [
+                            "End of life is not included in the calculation"
+                        ]
+                    },
+                    "use": {
+                        "value": 208.0,
+                        "min": 171.3,
+                        "max": 244.7
+                    }
+                }
+            },
+            "units": {
+                "value": 4,
+                "status": "INPUT"
+            },
+            "capacity": {
+                "value": 16,
+                "status": "INPUT",
+                "unit": "GB"
+            },
+            "density": {
+                "value": 1.2443636363636363,
+                "status": "COMPLETED",
+                "unit": "GB/cm2",
+                "source": "Average of 11 rows",
+                "min": 0.625,
+                "max": 2.375
+            },
+            "duration": {
+                "value": 35040.0,
+                "unit": "hours"
+            },
+            "avg_power": {
+                "value": 13.192,
+                "status": "COMPLETED",
+                "unit": "W",
+                "min": 10.864,
+                "max": 15.52
+            },
+            "time_workload": {
+                "value": 50.0,
+                "status": "ARCHETYPE",
+                "unit": "%",
+                "min": 0.0,
+                "max": 100.0
+            },
+            "usage_location": {
+                "value": "NLD",
+                "status": "INPUT",
+                "unit": "CodSP3 - NCS Country Codes - NATO"
+            },
+            "use_time_ratio": {
+                "value": 1.0,
+                "status": "ARCHETYPE",
+                "unit": "/1",
+                "min": 1.0,
+                "max": 1.0
+            },
+            "hours_life_time": {
+                "value": 35040.0,
+                "status": "COMPLETED",
+                "unit": "hours",
+                "source": "from device",
+                "min": 35040.0,
+                "max": 35040.0
+            },
+            "params": {
+                "value": {
+                    "a": 3.88,
+                    "idle_ratio": 0.7
+                },
+                "status": "COMPLETED",
+                "source": "((dimm_base_power: 3.0) + (dimm_power_per_gb: 0.055) * (ram_capacity: 16)) * ((idle_ratio: 0.7) + (1 - idle_ratio) * workload / 100)"
+            },
+            "gwp_factor": {
+                "value": 0.45,
+                "status": "COMPLETED",
+                "unit": "kg CO2eq/kWh",
+                "source": "https://www.sciencedirect.com/science/article/pii/S0306261921012149",
+                "min": 0.45,
+                "max": 0.45
+            }
+        },
+        "SSD-1": {
+            "impacts": {
+                "gwp": {
+                    "unit": "kgCO2eq",
+                    "description": "Total climate change",
+                    "embedded": {
+                        "value": 50.0,
+                        "min": 23.53,
+                        "max": 140.5,
+                        "warnings": [
+                            "End of life is not included in the calculation"
+                        ]
+                    },
+                    "use": "not implemented"
+                }
+            },
+            "units": {
+                "value": 1,
+                "status": "INPUT"
+            },
+            "capacity": {
+                "value": 1000,
+                "status": "INPUT",
+                "unit": "GB"
+            },
+            "density": {
+                "value": 54.8842105263158,
+                "status": "COMPLETED",
+                "unit": "GB/cm2",
+                "source": "Average of 19 rows",
+                "min": 16.4,
+                "max": 128.0
+            },
+            "duration": {
+                "value": 35040.0,
+                "unit": "hours"
+            }
+        },
+        "POWER_SUPPLY-1": {
+            "impacts": {
+                "gwp": {
+                    "unit": "kgCO2eq",
+                    "description": "Total climate change",
+                    "embedded": {
+                        "value": 73.0,
+                        "min": 24.3,
+                        "max": 121.5,
+                        "warnings": [
+                            "End of life is not included in the calculation"
+                        ]
+                    },
+                    "use": "not implemented"
+                }
+            },
+            "units": {
+                "value": 1,
+                "status": "INPUT"
+            },
+            "unit_weight": {
+                "value": 2.99,
+                "status": "ARCHETYPE",
+                "unit": "kg",
+                "min": 1.0,
+                "max": 5.0
+            },
+            "duration": {
+                "value": 35040.0,
+                "unit": "hours"
+            }
+        },
+        "CASE-1": {
+            "impacts": {
+                "gwp": {
+                    "unit": "kgCO2eq",
+                    "description": "Total climate change",
+                    "embedded": {
+                        "value": 150.0,
+                        "min": 85.9,
+                        "max": 150.0,
+                        "warnings": [
+                            "End of life is not included in the calculation"
+                        ]
+                    },
+                    "use": "not implemented"
+                }
+            },
+            "units": {
+                "value": 1,
+                "status": "ARCHETYPE",
+                "min": 1,
+                "max": 1
+            },
+            "case_type": {
+                "value": "rack",
+                "status": "ARCHETYPE"
+            },
+            "duration": {
+                "value": 35040.0,
+                "unit": "hours"
+            }
+        },
+        "MOTHERBOARD-1": {
+            "impacts": {
+                "gwp": {
+                    "unit": "kgCO2eq",
+                    "description": "Total climate change",
+                    "embedded": {
+                        "value": 66.1,
+                        "min": 66.1,
+                        "max": 66.1,
+                        "warnings": [
+                            "End of life is not included in the calculation"
+                        ]
+                    },
+                    "use": "not implemented"
+                }
+            },
+            "units": {
+                "value": 1,
+                "status": "ARCHETYPE",
+                "min": 1,
+                "max": 1
+            },
+            "duration": {
+                "value": 35040.0,
+                "unit": "hours"
+            }
+        },
+        "avg_power": {
+            "value": 267.91126,
+            "status": "COMPLETED",
+            "unit": "W",
+            "min": 57.71240000000001,
+            "max": 460.91200000000003
+        },
+        "usage_location": {
+            "value": "NLD",
+            "status": "INPUT",
+            "unit": "CodSP3 - NCS Country Codes - NATO"
+        },
+        "use_time_ratio": {
+            "value": 1.0,
+            "status": "ARCHETYPE",
+            "unit": "/1",
+            "min": 1.0,
+            "max": 1.0
+        },
+        "hours_life_time": {
+            "value": 35040.0,
+            "status": "COMPLETED",
+            "unit": "hours",
+            "source": "from device",
+            "min": 35040.0,
+            "max": 35040.0
+        },
+        "other_consumption_ratio": {
+            "value": 0.33,
+            "status": "ARCHETYPE",
+            "unit": "ratio /1",
+            "min": 0.2,
+            "max": 0.6
+        },
+        "gwp_factor": {
+            "value": 0.45,
+            "status": "COMPLETED",
+            "unit": "kg CO2eq/kWh",
+            "source": "https://www.sciencedirect.com/science/article/pii/S0306261921012149",
+            "min": 0.45,
+            "max": 0.45
+        },
+        "units": {
+            "value": 1,
+            "status": "ARCHETYPE",
+            "min": 1,
+            "max": 1
+        }
+    }
+}

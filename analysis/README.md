@@ -8,10 +8,12 @@
 | `config.R` | Constants, variable names, plot theme |
 | `load_data.R` | One row per run and correctness per question, from the raw files |
 | `stats.R` | Statistical tests, Benjamini-Hochberg correction per research question |
+| `grid_intensity.R` | Hourly Dutch grid carbon intensity from NED, cached in `data/grid_intensity/` |
 | `01_data_preparation.R` | Completeness, timeline, energy per run, determinism |
 | `02_exploration.R` | Descriptive statistics, distributions, temporal dependence, outliers |
 | `03_hypothesis_tests.R` | Run-level tests between S, L and R |
 | `04_accuracy_tradeoff.R` | Accuracy tests, energy saving (RQ2), router on the full test split |
+| `05_carbon_sci.R` | Carbon footprint with the [SCI specification](https://sci.greensoftware.foundation/) |
 
 The script reports results only; interpretation is in the report.
 
@@ -34,6 +36,19 @@ uv run download_dataset
 uv run --group analysis python scripts/plot_router_test_split.py
 ```
 
+## Carbon footprint (SCI)
+
+Section 5 computes SCI = (E × I + M) per R for every run of the main experiment (it is skipped for `llm_routing`):
+
+- **E**: the measured CPU + GPU energy (kWh). DRAM, PSU losses, other components, data centre overhead and the time between runs are not measured, so they are not included.
+- **I**: the hourly CO2 emission factor of the Dutch electricity mix from the [Nationaal Energie Dashboard](https://ned.nl) (NED), weighted by how long each hour overlaps the run. This is an average, not a marginal, intensity.
+- **M**: embodied emissions TE × (TS / EL) × RS, with TE from the Boavizta API, EL = 4 years and RS = 1 (`config.R`). TE covers glg2's Threadripper PRO 9955WX, 64 GB DDR5 and two RTX 4000 Ada GPUs; the Boavizta requests and responses are in `data/embodied/`. Boavizta does not list the RTX 4000 Ada, so its die area goes through Boavizta's wafer-yield formula, on the board of the RTX A4500. The disk, power supply, motherboard and case are not known and use Boavizta's defaults.
+- **R**: one question, and one correct answer.
+
+The NED values are cached in `data/grid_intensity/<experiment>.csv`.
+
+## Results
+
 Results are printed and saved to `data/analysis_results/`:
 
 ```
@@ -42,6 +57,9 @@ data/analysis_results/
 │   ├── processed_data/
 │   │   ├── runs.csv                    # one row per run, all run-level variables
 │   │   └── answers.csv                 # correctness per question and strategy
+│   ├── carbon/
+│   │   ├── sci_per_run.csv             # E, I, M and SCI per run
+│   │   └── sci_summary.csv             # mean SCI per strategy
 │   ├── statistical_tests/
 │   │   ├── omnibus_tests.csv           # assumption checks and overall test per variable
 │   │   ├── pairwise_tests.csv          # pairwise tests and effect sizes
@@ -49,7 +67,7 @@ data/analysis_results/
 │   └── figures/
 │       ├── final/                      # figures for the report
 │       └── exploratory/
-├── first_experiment_100_questions/     # Rscript analysis/main.R llm_routing (same structure)
+├── first_experiment_100_questions/     # Rscript analysis/main.R llm_routing (same structure, without carbon/)
 └── router_full_test_split/             # from scripts/plot_router_test_split.py
     ├── router_predictions.csv          # router predictions, threshold and both models' correctness, 1,319 questions
     └── router_vs_random.png

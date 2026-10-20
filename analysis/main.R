@@ -8,6 +8,7 @@
 #   statistical_tests/     omnibus, pairwise and accuracy tests
 #   figures/final/         figures for the report
 #   figures/exploratory/   exploratory figures
+#   carbon/                carbon footprint (SCI) per run and per strategy (main experiment only)
 
 # Folder of this script: from Rscript's --file, or from source(), or analysis/ under the working directory.
 script <- sub("^--file=", "", grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE))
@@ -30,8 +31,10 @@ EXPLORATORY <- file.path(OUT_DIR, "figures", "exploratory")
 for (dir in c(PROCESSED, TESTS, FINAL_FIGURES, EXPLORATORY)) dir.create(dir, recursive = TRUE, showWarnings = FALSE)
 ROUTER_PREDICTIONS <- file.path(RESULTS_DIR, "router_full_test_split", "router_predictions.csv")
 
-for (file in c("config.R", "load_data.R", "stats.R",
-               "01_data_preparation.R", "02_exploration.R", "03_hypothesis_tests.R", "04_accuracy_tradeoff.R")) {
+# The carbon footprint (section 5) is reported for the main experiment only.
+for (file in c("config.R", "load_data.R", "stats.R", "grid_intensity.R",
+               "01_data_preparation.R", "02_exploration.R", "03_hypothesis_tests.R", "04_accuracy_tradeoff.R",
+               if (EXPERIMENT == "llm_routing_500") "05_carbon_sci.R")) {
   source(file.path(ANALYSIS_DIR, file))
 }
 

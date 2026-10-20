@@ -1,0 +1,114 @@
+{
+    "impacts": {
+        "gwp": {
+            "unit": "kgCO2eq",
+            "description": "Total climate change",
+            "embedded": {
+                "value": 119.6,
+                "min": 119.6,
+                "max": 119.6
+            },
+            "use": "not implemented"
+        }
+    },
+    "verbose": {
+        "impacts": {
+            "gwp": {
+                "unit": "kgCO2eq",
+                "description": "Total climate change",
+                "embedded": {
+                    "value": 119.6,
+                    "min": 119.6,
+                    "max": 119.6
+                },
+                "use": "not implemented"
+            },
+            "adp": {
+                "unit": "kgSbeq",
+                "description": "Use of minerals and fossil ressources",
+                "embedded": "not implemented",
+                "use": "not implemented"
+            },
+            "pe": {
+                "unit": "MJ",
+                "description": "Consumption of primary energy",
+                "embedded": "not implemented",
+                "use": "not implemented"
+            }
+        },
+        "units": {
+            "value": 1,
+            "status": "ARCHETYPE"
+        },
+        "name": {
+            "value": "Large GPU",
+            "status": "ARCHETYPE"
+        },
+        "weight": {
+            "value": 1.06,
+            "status": "INPUT",
+            "unit": "kg"
+        },
+        "heatsink_weight": {
+            "value": 0.714,
+            "status": "INPUT",
+            "unit": "kg"
+        },
+        "pwb_surface": {
+            "value": 230.04,
+            "status": "INPUT",
+            "unit": "cm2"
+        },
+        "casing_weight": {
+            "value": 0.1976,
+            "status": "INPUT",
+            "unit": "kg"
+        },
+        "gpu_surface": {
+            "value": 624.03,
+            "status": "INPUT",
+            "unit": "mm2"
+        },
+        "vram": {
+            "value": 20,
+            "status": "INPUT",
+            "unit": "gb"
+        },
+        "vram_dies": {
+            "value": 10,
+            "status": "INPUT"
+        },
+        "vram_surface": {
+            "value": 422.19206415861186,
+            "status": "COMPLETED",
+            "unit": "mm2",
+            "min": 422.19206415861186,
+            "max": 422.19206415861186
+        },
+        "transport_boat": {
+            "value": 19000.0,
+            "status": "ARCHETYPE",
+            "unit": "km",
+            "min": 19000.0,
+            "max": 19000.0
+        },
+        "transport_truck": {
+            "value": 1000.0,
+            "status": "ARCHETYPE",
+            "unit": "km",
+            "min": 1000.0,
+            "max": 1000.0
+        },
+        "transport_plane": {
+            "value": 0.0,
+            "status": "ARCHETYPE",
+            "unit": "km",
+            "min": 0.0,
+            "max": 0.0
+        },
+        "duration": {
+            "value": 26280.0,
+            "unit": "hours"
+        }
+    }
+}

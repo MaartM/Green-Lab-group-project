@@ -32,3 +32,8 @@ save_plot <- function(plot, dir, name, width, height) {
 }
 
 section <- function(title) cat("\n\n==========", title, "==========\n")
+
+GRID_INTENSITY_DIR <- file.path(REPO_ROOT, "data", "grid_intensity")
+EMBODIED_KG <- c(host = 500, gpu0 = 119.6, gpu1 = 119.6)
+LIFESPAN_YEARS <- 4
+RESOURCE_SHARE <- 1
