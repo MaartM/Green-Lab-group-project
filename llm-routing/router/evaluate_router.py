@@ -6,8 +6,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 
 import config
 from config import ROUTER_THRESHOLD
-from router.generate_labels import generate_labels
-
+from router import labelled
 
 
 def main() -> None:
@@ -23,9 +22,7 @@ def main() -> None:
 
     print(f"Loading router from {model_path}")
     router = joblib.load(model_path)
-    rows = generate_labels()["test"]
-    questions = [row["question"] for row in rows]
-    labels = [row["correct"] for row in rows]
+    questions, labels = labelled.load("test")
     probabilities = router.predict_proba(questions)[:, 1]
     predictions = (probabilities > ROUTER_THRESHOLD).astype(int)
 

@@ -9,15 +9,13 @@ from sklearn.preprocessing import FunctionTransformer, StandardScaler
 
 import config
 from router.features import question_features
-from router.generate_labels import generate_labels
+from router import labelled
 
 
 def main() -> None:
     argparse.ArgumentParser(description="Train the router and save it as the experiment's router.").parse_args()
 
-    rows = generate_labels()["train"]
-    questions = [row["question"] for row in rows]
-    labels = [row["correct"] for row in rows]
+    questions, labels = labelled.load("train")
     X_train, X_test, y_train, y_test = train_test_split(
         questions, labels, test_size=0.2, stratify=labels, random_state=42
     )

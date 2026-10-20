@@ -84,13 +84,14 @@ see `data/experiments/llm_routing/` has one row per run:
 
 ## Rebuild the router (optional)
 
-The experiment uses the committed `data/router_model/router.joblib`. To rebuild it, with Ollama installed locally:
+The experiment uses the committed `data/router_model/router.joblib`. It was trained on the committed labels in `data/labels/train_small.jsonl` (whether the small model answers each GSM8K training question correctly). To rebuild it:
 
 ```bash
-uv run download_dataset       # GSM8K into data/dataset/
-uv run generate_labels        # small model answers every train and test question
-uv run train_router           # overwrites data/router_model/router.joblib
-uv run evaluate_router        # router accuracy on the GSM8K test split
+uv run download_dataset       # GSM8K (pinned revision) into data/dataset/
+uv run train_router           # trains on data/labels/, overwrites data/router_model/router.joblib
+uv run evaluate_router        # router accuracy on the GSM8K test split (data/labels/test_small.jsonl)
 ```
+
+Retraining from the committed labels reproduces the committed router exactly. To regenerate the labels themselves (with Ollama installed): `uv run label_questions --split train --models small`. Model answers can differ slightly between machines, so regenerated labels, and a router trained on them, may differ from the committed ones.
 
 The question sample is committed too; `uv run sample_test_questions` recreates it from the downloaded test split.

@@ -6,8 +6,11 @@ describe the models exactly as the experiment runs them. Results are appended
 to one JSONL file per model and split, so an interrupted run resumes where it
 stopped.
 
-  uv run python scripts/label_questions.py --split test --models small large
-  uv run python scripts/label_questions.py --questions llm-routing/questions.jsonl --name experiment
+  uv run label_questions --split train --models small      # the router's training labels
+  uv run label_questions --split test --models small large  # both models on the test split
+
+Answers can differ slightly between machines, so regenerated labels may not match the
+committed ones exactly; the committed labels are the ones the router was trained on.
 """
 
 import argparse
