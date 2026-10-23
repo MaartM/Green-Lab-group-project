@@ -5,7 +5,7 @@
 #
 # Prints every result, and writes to data/analysis_results/<experiment folder>/:
 #   processed_data/        one row per run, correctness per question
-#   statistical_tests/     omnibus, pairwise and accuracy tests
+#   statistical_tests/     drift, omnibus, pairwise and accuracy tests
 #   figures/final/         figures for the report
 #   figures/exploratory/   exploratory figures
 #   carbon/                carbon footprint (SCI) per run and per strategy (main experiment only)

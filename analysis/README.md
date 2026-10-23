@@ -10,7 +10,7 @@
 | `stats.R` | Statistical tests, Benjamini-Hochberg correction per research question |
 | `grid_intensity.R` | Hourly Dutch grid carbon intensity from NED, cached in `data/grid_intensity/` |
 | `01_data_preparation.R` | Completeness, timeline, energy per run, determinism |
-| `02_exploration.R` | Descriptive statistics, distributions, temporal dependence, outliers |
+| `02_exploration.R` | Descriptive statistics, distributions, drift and carry-over checks, temporal dependence, outliers |
 | `03_hypothesis_tests.R` | Run-level tests between S, L and R |
 | `04_accuracy_tradeoff.R` | Accuracy tests, energy saving (RQ2), router on the full test split |
 | `05_carbon_sci.R` | Carbon footprint with the [SCI specification](https://sci.greensoftware.foundation/) |
@@ -61,6 +61,7 @@ data/analysis_results/
 │   │   ├── sci_per_run.csv             # E, I, M and SCI per run
 │   │   └── sci_summary.csv             # mean SCI per strategy
 │   ├── statistical_tests/
+│   │   ├── drift_checks.csv            # residual correlations, lag-1 Ljung–Box and maximum deviations
 │   │   ├── omnibus_tests.csv           # assumption checks and overall test per variable
 │   │   ├── pairwise_tests.csv          # pairwise tests and effect sizes
 │   │   └── accuracy_tests.csv          # McNemar tests on accuracy

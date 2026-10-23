@@ -1,5 +1,5 @@
-# 2. Exploration: descriptive statistics, distributions, temporal
-# dependence, GPU temperatures, and outliers.
+# 2. Exploration: descriptive statistics, distributions, drift and carry-over
+# checks, temporal dependence, GPU temperatures, and outliers.
 
 section("2. Exploration")
 
@@ -95,10 +95,38 @@ save_plot(
   EXPLORATORY, "strategy_mean_comparison.png", 13, 8
 )
 
-# 2.2 Chronological order and temporal dependence -----------------------------
+# 2.2 Drift, carry-over checks, and temporal dependence -----------------------
 
-cat("\n2.2 Chronological order and temporal dependence (energy per query)\n")
+cat("\n2.2 Drift and carry-over checks on strategy-centred residuals\n")
+drift_variables <- c("energy_per_query_j", "efficiency_correct_per_kj", "time_s",
+                     "latency_mean_s", "latency_p95_s", "gpu0_util_pct",
+                     "gpu1_util_pct", "host_memory_peak_mib")
+drift_checks <- do.call(rbind, lapply(drift_variables, function(variable) {
+  # Utilization includes only strategies that use the GPU, as in the hypothesis tests.
+  strategies <- if (is.null(COMPARED[[variable]])) STRATEGIES else
+    STRATEGIES[STRATEGIES %in% COMPARED[[variable]]]
+  data <- runs[runs$strategy %in% strategies, ]
+  data <- data[order(data$order), ]
+  strategy_mean <- ave(data[[variable]], data$strategy, FUN = mean)
+  residuals <- data[[variable]] - strategy_mean
 
+  # Pool the centred residuals across strategies and check both starting temperatures.
+  position <- cor.test(data$order, residuals, method = "spearman", exact = FALSE)
+  temperature_gpu0 <- cor.test(data$gpu0_start_temp_c, residuals, method = "spearman", exact = FALSE)
+  temperature_gpu1 <- cor.test(data$gpu1_start_temp_c, residuals, method = "spearman", exact = FALSE)
+  lb <- Box.test(residuals, lag = 1, type = "Ljung-Box")
+  data.frame(variable = variable, strategies = paste(strategies, collapse = ", "),
+             n_runs = nrow(data),
+             run_position_rho = unname(position$estimate), run_position_p = position$p.value,
+             gpu0_start_temp_rho = unname(temperature_gpu0$estimate), gpu0_start_temp_p = temperature_gpu0$p.value,
+             gpu1_start_temp_rho = unname(temperature_gpu1$estimate), gpu1_start_temp_p = temperature_gpu1$p.value,
+             ljung_box_lag1_p = lb$p.value,
+             max_abs_residual_pct = max(100 * abs(residuals) / strategy_mean))
+}))
+print(drift_checks, row.names = FALSE, digits = 3)
+write.csv(drift_checks, file.path(TESTS, "drift_checks.csv"), row.names = FALSE)
+
+cat("\nEnergy per query: additional temporal diagnostics\n")
 runs$residual_energy_per_query_j <-
   runs$energy_per_query_j -
   ave(runs$energy_per_query_j, runs$strategy)
